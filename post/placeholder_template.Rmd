@@ -1,0 +1,16 @@
+---
+title: "RMarkdown"
+author: "Tony Towry"
+date: 2010-05-15
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# R Markdown
+
+Holding
+

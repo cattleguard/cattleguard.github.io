@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on One Scenario</title>
+    <link>/blog/index.xml</link>
+    <description>Recent content in Blogs on One Scenario</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Just a Test Post From Blogdown</title>
+      <link>/blog/just-a-test-post-from-blogdown/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/just-a-test-post-from-blogdown/</guid>
+      <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
+
+&lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
