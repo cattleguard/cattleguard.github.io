@@ -291,7 +291,7 @@ Sankey diagrams for infosec</a></h2>
 <p>It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.</p>
 <p>It was the <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options">Sankey Chart</a>.</p>
 <div class="figure">
-<img src="/static/img/main/twittersankey2.png" alt="tweet from @wendynather" />
+<img src="/img/main/twittersankey2.png" alt="tweet from @wendynather" />
 <p class="caption">tweet from <span class="citation">@wendynather</span></p>
 </div>
 <p>You can view the original tweet <a href="https://twitter.com/jwgoerlich/status/865262781100167169">here</a>.</p>
@@ -318,12 +318,12 @@ Sankey &lt;- gvisSankey(flowing.threat.model, from=&quot;From&quot;, to=&quot;To
 
 plot(Sankey)</code></pre>
 <!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package -->
-<!-- Sat May 20 00:04:56 2017 -->
+<!-- Sat May 20 00:06:37 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID1a25223da64d () {
+function gvisDataSankeyID1a5a4a3b35ff () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -386,8 +386,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID1a25223da64d() {
-var data = gvisDataSankeyID1a25223da64d();
+function drawChartSankeyID1a5a4a3b35ff() {
+var data = gvisDataSankeyID1a5a4a3b35ff();
 var options = {};
 options["width"] = 800;
 options["height"] = 400;
@@ -396,7 +396,7 @@ options["sankey"] = {link: {color: { fill: '#cccccc', fillOpacity: 80 } },
                        label: { color: '#000000', bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID1a25223da64d')
+    document.getElementById('SankeyID1a5a4a3b35ff')
     );
     chart.draw(data,options);
     
@@ -420,9 +420,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID1a25223da64d);
+callbacks.push(drawChartSankeyID1a5a4a3b35ff);
 })();
-function displayChartSankeyID1a25223da64d() {
+function displayChartSankeyID1a5a4a3b35ff() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -445,9 +445,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID1a25223da64d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID1a5a4a3b35ff"></script>
 <!-- divChart -->
-<div id="SankeyID1a25223da64d" style="width: 800; height: 400;">
+<div id="SankeyID1a5a4a3b35ff" style="width: 800; height: 400;">
 
 </div>
 <p>That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.</p>
