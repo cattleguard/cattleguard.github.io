@@ -1,0 +1,60 @@
+---
+title: "Get Sankey!\nSankey diagrams for infosec"
+author: "Tony Towry"
+date: '2017-05-19'
+tags:
+- Dataviz
+- infosec
+categories: 
+- R
+- Dataviz
+---
+
+Yesterday, a tweet caught my eye.  
+
+It was something that I know I'd seen before, but it somehow had escaped my memory as to what it was called or how it was constructed.   Well, it bugged me enough that I had to track it down.
+
+It was the [Sankey Chart](https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options).
+
+![tweet from @wendynather](/static/img/main/twittersankey2.png)
+
+You can view the original tweet [here](https://twitter.com/jwgoerlich/status/865262781100167169).
+
+As I am currently neck deep in writing an annual risk report it'd be easy for me to agree with the thought.
+
+Visualization done well **CAN'T** make all the difference, but it can make a little difference.  Moreover, there are some relationships, linear layers of abstraction, that are particularly well suited for display by Sankey diagram.
+
+So, let's play with them in the googleVis package for R.  There are other packages that should be able to produce Sankey charts, but none appeared to be as aesthetically pleasing out of the box (or with lower effort applied at least).
+
+First make sure you have googleVis installed.
+`install.packages("googleVis")`
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
+```
+
+The first thing of note is that we need to have the data frame such that there is a column of start nodes and a column of end nodes.  gvisSankey() will create all of the layers necessary to accommodate the links.  For example, if A -> B and B -> C, gvisSankey() will create the flow from A->B->C.  
+
+```{r results='asis'}
+library(googleVis)
+options(gvis.plot.tag='chart')
+
+# Create some edges
+flowing.threat.model <- data.frame(From = c("Web App Vuln (XSS)", "Web App Vuln (XSS)", "Phishing Email", "Default Creds", "Control 1", "Control 2","Control 3", "Control 4","Default Creds","Control 5"),
+                                   To = c("Control 1", "Control 2", "Control 3", "Control 4", "Application security", "Security monitoring","Security monitoring", "Configuration management","Control 5","Security monitoring"),
+                                Weight = c(rep(1,10))) # This last one is just setting uniform weight across each link
+
+# Plot your Sankey!
+
+Sankey <- gvisSankey(flowing.threat.model, from="From", to="To", weight="Weight",
+                     options=list(
+                       sankey="{link: {color: { fill: '#cccccc', fillOpacity: 80 } },
+                       node: { color: { fill: '#a61d4c' }, nodePadding:40,
+                       label: { color: '#000000', bold:true } }}", width = 800))
+
+plot(Sankey)
+```
+
+That's it!  The creation of the diagram isn't particularly hard.  The genius part is coming up with the ideas you'd like to represent.
+

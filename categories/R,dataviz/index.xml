@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>One Scenario</title>
-    <link>/index.xml</link>
-    <description>Recent content on One Scenario</description>
+    <title>R,dataviz on One Scenario</title>
+    <link>/categories/rdataviz/index.xml</link>
+    <description>Recent content in R,dataviz on One Scenario</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/rdataviz/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Get Sankey!
+      <title>Let&#39;s Get Sankey!
 Sankey diagrams for infosec</title>
       <link>/post/sankey/</link>
-      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 May 2010 00:00:00 +0000</pubDate>
       
       <guid>/post/sankey/</guid>
       <description>&lt;!-- BLOGDOWN-HEAD --&gt;
@@ -21,21 +20,14 @@ Sankey diagrams for infosec</title>
 
 &lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
 &lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
-&lt;p&gt;It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.&lt;/p&gt;
-&lt;p&gt;It was the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options&#34;&gt;Sankey Chart&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;/static/img/main/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;tweet from &lt;span class=&#34;citation&#34;&gt;@wendynather&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;You can view the original tweet &lt;a href=&#34;https://twitter.com/jwgoerlich/status/865262781100167169&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.&lt;/p&gt;
-&lt;p&gt;Visualization done well &lt;strong&gt;CAN’T&lt;/strong&gt; make all the difference, but it can make a little difference. Moreover, there are some relationships, linear layers of abstraction, that are particularly well suited for display by Sankey diagram.&lt;/p&gt;
-&lt;p&gt;So, let’s play with them in the googleVis package for R. There are other packages that should be able to produce Sankey charts, but none appeared to be as aesthetically pleasing out of the box (or with lower effort applied at least).&lt;/p&gt;
-&lt;p&gt;First make sure you have googleVis installed. &lt;code&gt;install.packages(&amp;quot;googleVis&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The first thing of note is that we need to have the data frame such that there is a column of start nodes and a column of end nodes. gvisSankey() will create all of the layers necessary to accommodate the links. For example, if A -&amp;gt; B and B -&amp;gt; C, gvisSankey() will create the flow from A-&amp;gt;B-&amp;gt;C.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(googleVis)
 options(gvis.plot.tag=&amp;#39;chart&amp;#39;)
+# https://twitter.com/jwgoerlich/status/865262781100167169
+
 
 # Create some edges
 flowing.threat.model &amp;lt;- data.frame(From = c(&amp;quot;Web App Vuln (XSS)&amp;quot;, &amp;quot;Web App Vuln (XSS)&amp;quot;, &amp;quot;Phishing Email&amp;quot;, &amp;quot;Default Creds&amp;quot;, &amp;quot;Control 1&amp;quot;, &amp;quot;Control 2&amp;quot;,&amp;quot;Control 3&amp;quot;, &amp;quot;Control 4&amp;quot;,&amp;quot;Default Creds&amp;quot;,&amp;quot;Control 5&amp;quot;),
@@ -52,12 +44,12 @@ Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;,
 
 plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Sat May 20 00:04:56 2017 --&gt;
+&lt;!-- Fri May 19 14:33:43 2017 --&gt;
 &lt;!-- jsHeader --&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;
  
 // jsData 
-function gvisDataSankeyID1a25223da64d () {
+function gvisDataSankeyID174731b48b34 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -120,8 +112,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID1a25223da64d() {
-var data = gvisDataSankeyID1a25223da64d();
+function drawChartSankeyID174731b48b34() {
+var data = gvisDataSankeyID174731b48b34();
 var options = {};
 options[&#34;width&#34;] = 800;
 options[&#34;height&#34;] = 400;
@@ -130,7 +122,7 @@ options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacit
                        label: { color: &#39;#000000&#39;, bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID1a25223da64d&#39;)
+    document.getElementById(&#39;SankeyID174731b48b34&#39;)
     );
     chart.draw(data,options);
     
@@ -154,9 +146,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID1a25223da64d);
+callbacks.push(drawChartSankeyID174731b48b34);
 })();
-function displayChartSankeyID1a25223da64d() {
+function displayChartSankeyID174731b48b34() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -179,67 +171,11 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 &lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID1a25223da64d&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID174731b48b34&#34;&gt;&lt;/script&gt;
 &lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID1a25223da64d&#34; style=&#34;width: 800; height: 400;&#34;&gt;
+&lt;div id=&#34;SankeyID174731b48b34&#34; style=&#34;width: 800; height: 400;&#34;&gt;
 
 &lt;/div&gt;
-&lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>
-
-&lt;h1 id=&#34;i-m-tony&#34;&gt;I&amp;rsquo;m Tony.&lt;/h1&gt;
-
-&lt;p&gt;I work to connect business leaders to information security using quantitative risk analysis and assessment methods.&lt;/p&gt;
-
-&lt;p&gt;Also, a fan of the National Park Service.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Just a Test Post From Blogdown</title>
-      <link>/blog/just-a-test-post-from-blogdown/</link>
-      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/just-a-test-post-from-blogdown/</guid>
-      <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
-
-&lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RMarkdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Sat, 15 May 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;Holding&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RMarkdown</title>
-      <link>/post/placeholder_template/</link>
-      <pubDate>Sat, 15 May 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/post/placeholder_template/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
 &lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R Markdown&lt;/h1&gt;
 &lt;p&gt;Holding&lt;/p&gt;
