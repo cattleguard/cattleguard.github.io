@@ -58,3 +58,5 @@ plot(Sankey)
 
 That's it!  The creation of the diagram isn't particularly hard.  The genius part is coming up with the ideas you'd like to represent.
 
+For more awesome network and Sankey action check out [Kyle Walker, Phd's post on Interactive flow visualization in R](http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html)
+
