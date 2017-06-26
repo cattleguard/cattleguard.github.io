@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Get Sankey!
+Sankey diagrams for infosec &middot; Tony Towry</title>
+        <meta name="description" content="Yesterday, a tweet caught my eye.
+It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.
+It was the Sankey Chart.
+tweet from @wendynather
+ You can view the original tweet here.
+As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.19" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Get Sankey!
+Sankey diagrams for infosec">
+<meta property="og:description" content="Yesterday, a tweet caught my eye.
+It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.
+It was the Sankey Chart.
+tweet from @wendynather
+ You can view the original tweet here.
+As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/2017/05/19/sankey/">
+        <link rel="stylesheet" href="/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Tony On Risk" href="/">Tony On Risk</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/anthonytowry">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/cattleguard/">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/tony-towry-99581515/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:anthonytowry@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Training" href="/training/">Training</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Tony&#39;s Coffee Guide" href="/2017/06/25/coffee-guide/">Tony&#39;s Coffee Guide</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Get Sankey!
+Sankey diagrams for infosec</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2017-05-19" itemprop="datePublished">Fri, May 19, 2017</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;" itemprop="url" rel="author">Tony Towry</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>Yesterday, a tweet caught my eye.</p>
+<p>It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.</p>
+<p>It was the <a href="https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options">Sankey Chart</a>.</p>
+<div class="figure">
+<img src="/post/sankey_files/figure-html/twittersankey2.png" alt="tweet from @wendynather" />
+<p class="caption">tweet from <span class="citation">@wendynather</span></p>
+</div>
+<p>You can view the original tweet <a href="https://twitter.com/jwgoerlich/status/865262781100167169">here</a>.</p>
+<p>As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.</p>
+<p>Visualization done well <strong>CAN’T</strong> make all the difference, but it can make a little difference. Moreover, there are some relationships, linear layers of abstraction, that are particularly well suited for display by Sankey diagram.</p>
+<p>So, let’s play with them in the googleVis package for R. There are other packages that should be able to produce Sankey charts, but none appeared to be as aesthetically pleasing out of the box (or with lower effort applied at least).</p>
+<p>First make sure you have googleVis installed. <code>install.packages(&quot;googleVis&quot;)</code></p>
+<p>The first thing of note is that we need to have the data frame such that there is a column of start nodes and a column of end nodes. gvisSankey() will create all of the layers necessary to accommodate the links. For example, if A -&gt; B and B -&gt; C, gvisSankey() will create the flow from A-&gt;B-&gt;C.</p>
+<pre class="r"><code>library(googleVis)
+options(gvis.plot.tag=&#39;chart&#39;)
+
+# Create some edges
+flowing.threat.model &lt;- data.frame(From = c(&quot;Web App Vuln (XSS)&quot;, &quot;Web App Vuln (XSS)&quot;, &quot;Phishing Email&quot;, &quot;Default Creds&quot;, &quot;Control 1&quot;, &quot;Control 2&quot;,&quot;Control 3&quot;, &quot;Control 4&quot;,&quot;Default Creds&quot;,&quot;Control 5&quot;),
+                                   To = c(&quot;Control 1&quot;, &quot;Control 2&quot;, &quot;Control 3&quot;, &quot;Control 4&quot;, &quot;Application security&quot;, &quot;Security monitoring&quot;,&quot;Security monitoring&quot;, &quot;Configuration management&quot;,&quot;Control 5&quot;,&quot;Security monitoring&quot;),
+                                Weight = c(rep(1,10))) # This last one is just setting uniform weight across each link
+
+# Plot your Sankey!
+
+Sankey &lt;- gvisSankey(flowing.threat.model, from=&quot;From&quot;, to=&quot;To&quot;, weight=&quot;Weight&quot;,
+                     options=list(
+                       sankey=&quot;{link: {color: { fill: &#39;#cccccc&#39;, fillOpacity: 80 } },
+                       node: { color: { fill: &#39;#a61d4c&#39; }, nodePadding:40,
+                       label: { color: &#39;#000000&#39;, bold:true } }}&quot;, width = 800))
+
+plot(Sankey)</code></pre>
+<!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package -->
+<!-- Sun Jun 25 20:15:02 2017 -->
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataSankeyID5cea7ebe1555 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"Web App Vuln (XSS)",
+"Control 1",
+1
+],
+[
+"Web App Vuln (XSS)",
+"Control 2",
+1
+],
+[
+"Phishing Email",
+"Control 3",
+1
+],
+[
+"Default Creds",
+"Control 4",
+1
+],
+[
+"Control 1",
+"Application security",
+1
+],
+[
+"Control 2",
+"Security monitoring",
+1
+],
+[
+"Control 3",
+"Security monitoring",
+1
+],
+[
+"Control 4",
+"Configuration management",
+1
+],
+[
+"Default Creds",
+"Control 5",
+1
+],
+[
+"Control 5",
+"Security monitoring",
+1
+] 
+];
+data.addColumn('string','From');
+data.addColumn('string','To');
+data.addColumn('number','Weight');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartSankeyID5cea7ebe1555() {
+var data = gvisDataSankeyID5cea7ebe1555();
+var options = {};
+options["width"] = 800;
+options["height"] = 400;
+options["sankey"] = {link: {color: { fill: '#cccccc', fillOpacity: 80 } },
+                       node: { color: { fill: '#a61d4c' }, nodePadding:40,
+                       label: { color: '#000000', bold:true } }};
+
+    var chart = new google.visualization.Sankey(
+    document.getElementById('SankeyID5cea7ebe1555')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "sankey";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartSankeyID5cea7ebe1555);
+})();
+function displayChartSankeyID5cea7ebe1555() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID5cea7ebe1555"></script>
+<!-- divChart -->
+<div id="SankeyID5cea7ebe1555" style="width: 800; height: 400;">
+
+</div>
+<p>That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.</p>
+<p>For more awesome network and Sankey action check out <a href="http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html">Kyle Walker, Phd’s post on Interactive flow visualization in R</a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/dataviz/">dataviz</a>, 
+            
+                <a href="/tags/infosec/">infosec</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Get%20Sankey%21%0aSankey%20diagrams%20for%20infosec&url=%2f2017%2f05%2f19%2fsankey%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2017%2f05%2f19%2fsankey%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Tony On Risk" href="/">Tony On Risk</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2017 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
+

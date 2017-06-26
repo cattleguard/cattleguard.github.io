@@ -2,58 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/blog/coffee%20guide/</loc>
+    <loc>/2017/06/25/coffee-guide/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/Fail-to-scale-part1/</loc>
+    <loc>/2017/05/30/fail-to-scale-part1/</loc>
     <lastmod>2017-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/sankey/</loc>
+    <loc>/2017/05/19/sankey/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>/2017/05/15/just-a-test-post-from-blogdown/</loc>
     <lastmod>2017-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/just-a-test-post-from-blogdown/</loc>
-    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
+    <loc>/2015/07/23/2015-07-23-r-rmarkdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2010-05-15T00:00:00+00:00</lastmod>
+    <loc>/page/about/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/placeholder_template/</loc>
-    <lastmod>2010-05-15T00:00:00+00:00</lastmod>
+    <loc>/page/contact/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/training/</loc>
-    <lastmod>2009-06-15T00:00:00+00:00</lastmod>
+    <loc>/training/my-awesome-project/</loc>
+    <lastmod>2014-11-18T02:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/coffee/</loc>
+    <loc>/tags/coffee/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -65,26 +54,43 @@
   </url>
   
   <url>
-    <loc>/categories/dataviz/</loc>
-    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2017-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/infosec/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/management/</loc>
-    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    <loc>/page/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/regression/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
@@ -95,37 +101,8 @@
   </url>
   
   <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2010-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2010-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2010-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
+    <loc>/training/</loc>
+    <lastmod>2014-11-18T02:13:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   

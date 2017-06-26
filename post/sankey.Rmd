@@ -16,7 +16,7 @@ It was something that I know I'd seen before, but it somehow had escaped my memo
 
 It was the [Sankey Chart](https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options).
 
-![tweet from @wendynather](/img/main/twittersankey2.png)
+![tweet from @wendynather](/post/sankey_files/figure-html/twittersankey2.png)
 
 You can view the original tweet [here](https://twitter.com/jwgoerlich/status/865262781100167169).
 

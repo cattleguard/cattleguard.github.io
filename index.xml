@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>One Scenario</title>
+    <title>Tony On Risk</title>
     <link>/index.xml</link>
-    <description>Recent content on One Scenario</description>
+    <description>Recent content on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>My Name</copyright>
     <lastBuildDate>Sun, 25 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tony&#39;s Coffee Guide</title>
-      <link>/blog/coffee%20guide/</link>
+      <link>/2017/06/25/coffee-guide/</link>
       <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/coffee%20guide/</guid>
+      <guid>/2017/06/25/coffee-guide/</guid>
       <description>
 
 &lt;p&gt;I drink quite a bit of coffee.  It&amp;rsquo;s true.&lt;/p&gt;
@@ -39,10 +40,10 @@
     
     <item>
       <title>If You’re Going to Fail To Scale, Don’t - Part I</title>
-      <link>/blog/Fail-to-scale-part1/</link>
+      <link>/2017/05/30/fail-to-scale-part1/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/Fail-to-scale-part1/</guid>
+      <guid>/2017/05/30/fail-to-scale-part1/</guid>
       <description>&lt;p&gt;Businesses that don’t deliver, don’t survive.  Why should your information security program?&lt;/p&gt;
 
 &lt;p&gt;The organization has decided to spin up an information security program and you’re in charge.&lt;/p&gt;
@@ -74,20 +75,15 @@
     <item>
       <title>Get Sankey!
 Sankey diagrams for infosec</title>
-      <link>/post/sankey/</link>
+      <link>/2017/05/19/sankey/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/sankey/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
+      <guid>/2017/05/19/sankey/</guid>
+      <description>&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
 &lt;p&gt;It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.&lt;/p&gt;
 &lt;p&gt;It was the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options&#34;&gt;Sankey Chart&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/main/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
+&lt;img src=&#34;/post/sankey_files/figure-html/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;tweet from &lt;span class=&#34;citation&#34;&gt;@wendynather&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;You can view the original tweet &lt;a href=&#34;https://twitter.com/jwgoerlich/status/865262781100167169&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -114,12 +110,12 @@ Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;,
 
 plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Sun Jun 25 18:59:42 2017 --&gt;
+&lt;!-- Sun Jun 25 20:15:02 2017 --&gt;
 &lt;!-- jsHeader --&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;
  
 // jsData 
-function gvisDataSankeyID587d2810de34 () {
+function gvisDataSankeyID5cea7ebe1555 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -182,8 +178,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID587d2810de34() {
-var data = gvisDataSankeyID587d2810de34();
+function drawChartSankeyID5cea7ebe1555() {
+var data = gvisDataSankeyID5cea7ebe1555();
 var options = {};
 options[&#34;width&#34;] = 800;
 options[&#34;height&#34;] = 400;
@@ -192,7 +188,7 @@ options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacit
                        label: { color: &#39;#000000&#39;, bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID587d2810de34&#39;)
+    document.getElementById(&#39;SankeyID5cea7ebe1555&#39;)
     );
     chart.draw(data,options);
     
@@ -216,9 +212,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID587d2810de34);
+callbacks.push(drawChartSankeyID5cea7ebe1555);
 })();
-function displayChartSankeyID587d2810de34() {
+function displayChartSankeyID5cea7ebe1555() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -241,9 +237,9 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 &lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID587d2810de34&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID5cea7ebe1555&#34;&gt;&lt;/script&gt;
 &lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID587d2810de34&#34; style=&#34;width: 800; height: 400;&#34;&gt;
+&lt;div id=&#34;SankeyID5cea7ebe1555&#34; style=&#34;width: 800; height: 400;&#34;&gt;
 
 &lt;/div&gt;
 &lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
@@ -252,14 +248,74 @@ callbacks.shift()();
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
+      <title>Just a Test Post From Blogdown</title>
+      <link>/2017/05/15/just-a-test-post-from-blogdown/</link>
       <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>/2017/05/15/just-a-test-post-from-blogdown/</guid>
+      <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
+
+&lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/2015/07/23/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/2015/07/23/2015-07-23-r-rmarkdown/</guid>
+      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/page/about/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
       <description>
 
-&lt;h1 id=&#34;i-m-tony&#34;&gt;I&amp;rsquo;m Tony.&lt;/h1&gt;
+&lt;h2 id=&#34;i-m-tony&#34;&gt;I’M TONY.&lt;/h2&gt;
 
 &lt;p&gt;I work to connect business leaders to information security using quantitative risk analysis and assessment methods.&lt;/p&gt;
 
@@ -268,96 +324,39 @@ callbacks.shift()();
     </item>
     
     <item>
-      <title>Just a Test Post From Blogdown</title>
-      <link>/blog/just-a-test-post-from-blogdown/</link>
-      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      <title>Contact</title>
+      <link>/page/contact/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
       
-      <guid>/blog/just-a-test-post-from-blogdown/</guid>
-      <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
-
-&lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RMarkdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Sat, 15 May 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;Holding&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RMarkdown</title>
-      <link>/post/placeholder_template/</link>
-      <pubDate>Sat, 15 May 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/post/placeholder_template/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;Holding&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Training</title>
-      <link>/training/</link>
-      <pubDate>Mon, 15 Jun 2009 00:00:00 +0000</pubDate>
-      
-      <guid>/training/</guid>
+      <guid>/page/contact/</guid>
       <description>
 
-&lt;h1 id=&#34;quantitative-information-risk-training-using-r-1-day&#34;&gt;Quantitative Information Risk Training Using R | 1-Day&lt;/h1&gt;
+&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;
 
-&lt;p&gt;Training dates TBA.&lt;/p&gt;
+&lt;p&gt;Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My awesome project</title>
+      <link>/training/my-awesome-project/</link>
+      <pubDate>Tue, 18 Nov 2014 02:13:50 +0000</pubDate>
+      
+      <guid>/training/my-awesome-project/</guid>
+      <description>
 
-&lt;h2 id=&#34;foundations-of-risk&#34;&gt;Foundations of Risk&lt;/h2&gt;
+&lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;What is Risk?&lt;/li&gt;
-&lt;li&gt;Breaking The Matrix&lt;/li&gt;
-&lt;li&gt;Becoming a Quantitative Risk Apologist&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.&lt;/p&gt;
 
-&lt;h2 id=&#34;estimation-and-calibration&#34;&gt;Estimation and Calibration&lt;/h2&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;How to Estimate ANYTHING&lt;/li&gt;
-&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u -v github.com/spf13/hugo
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;hands-on-r-basics&#34;&gt;Hands-on R Basics&lt;/h2&gt;
+&lt;h2 id=&#34;docs&#34;&gt;Docs&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Quick Introduction to RStudio&lt;/li&gt;
-&lt;li&gt;Navigating Vectors and Data Frames&lt;/li&gt;
-&lt;li&gt;Probability Distributions&lt;/li&gt;
-&lt;li&gt;Mode Estimation&lt;/li&gt;
-&lt;li&gt;Monte Carlo&lt;/li&gt;
-&lt;li&gt;How to Rock ggplot2 Like an Expert (Without Being One)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;advanced-concepts&#34;&gt;Advanced Concepts&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Risk Aggregation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;risk-management&#34;&gt;Risk Management&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cognitive Bias&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/spf13/hugo&#34;&gt;https://godoc.org/github.com/spf13/hugo&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

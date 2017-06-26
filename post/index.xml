@@ -1,31 +1,89 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on One Scenario</title>
+    <title>Posts on Tony On Risk</title>
     <link>/post/index.xml</link>
-    <description>Recent content in Posts on One Scenario</description>
+    <description>Recent content in Posts on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Sun, 25 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tony&#39;s Coffee Guide</title>
+      <link>/2017/06/25/coffee-guide/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/25/coffee-guide/</guid>
+      <description>
+
+&lt;p&gt;I drink quite a bit of coffee.  It&amp;rsquo;s true.&lt;/p&gt;
+
+&lt;p&gt;Occasionally it comes up in conversation.  It occurs that someone is bored with their beans and wants to class up their caffeine delivery.  Maybe this is you.&lt;/p&gt;
+
+&lt;p&gt;Well, here are some of my favorites as of late.  Check them out.&lt;/p&gt;
+
+&lt;h2 id=&#34;top-picks&#34;&gt;Top Picks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The best espresso that may ever enter your face comes out of San Jose, CA.  Gamut from Chromatic won&amp;rsquo;t let you down with this consistently delicious espresso.  &lt;a href=&#34;http://www.chromaticcoffee.com/gamut-espresso/&#34;&gt;http://www.chromaticcoffee.com/gamut-espresso/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Novel is doing wonderful things.  They keep a tight rotation, so there&amp;rsquo;s always something new and nothing specific to name, but I haven&amp;rsquo;t been let down.  &lt;a href=&#34;https://www.novelcoffeeroasters.com/&#34;&gt;https://www.novelcoffeeroasters.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Onyx Coffee Lab out of Bentonville, AR is absolutely killing it.  They&amp;rsquo;ve got an amazing space and do pretty much everything really well.  Worth a stop if you&amp;rsquo;re in the area.  Worth a try if you just want to order online.  Plus, they offer a new level of transparency in  &lt;a href=&#34;purchasing&#34;&gt;http://sprudge.com/point-sale-tranparency-reporting-onyx-coffees-new-website-118712.html&lt;/a&gt;. &lt;a href=&#34;https://onyxcoffeelab.com/&#34;&gt;https://onyxcoffeelab.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1000 Faces is a little hit and miss.  They&amp;rsquo;ve brought forth a formidable Guji and if you can catch them when they&amp;rsquo;re running Suke Quto it&amp;rsquo;s worth an order.  The espressos, William &amp;amp; Maria, and Misty Valley I think of as an unremarkable, ok. &lt;a href=&#34;http://www.1000facescoffee.com/&#34;&gt;http://www.1000facescoffee.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Populace puts out some really nice Ethiopians.  I&amp;rsquo;ve had their Guji and a Peruvian, I may end up checking out their cold brew blend at some point.  They&amp;rsquo;re reasonably priced and don&amp;rsquo;t have much to worry about on the shipping end.   &lt;a href=&#34;https://populace.coffee/&#34;&gt;https://populace.coffee/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;rsquo;ll continue to keep my notes here, but I don&amp;rsquo;t plan on spamming the RSS with updates.  Check back as needed.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>If You’re Going to Fail To Scale, Don’t - Part I</title>
+      <link>/2017/05/30/fail-to-scale-part1/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/30/fail-to-scale-part1/</guid>
+      <description>&lt;p&gt;Businesses that don’t deliver, don’t survive.  Why should your information security program?&lt;/p&gt;
+
+&lt;p&gt;The organization has decided to spin up an information security program and you’re in charge.&lt;/p&gt;
+
+&lt;p&gt;You’ve heard of &lt;em&gt;$framework&lt;/em&gt; and you declare adoption with less thought or ceremony than adopting a puppy.  You decide that to support &lt;em&gt;$framework&lt;/em&gt; you can write almost any nonsense and establish policy and process.  You’ve got a champion with a corner office and things are going swell.  You’re about to pull the big lever and let slip the dogs of war.&lt;/p&gt;
+
+&lt;p&gt;How sure are you that you can handle what you’ve built?&lt;/p&gt;
+
+&lt;p&gt;If your customers are placing orders and you don’t have inventory you’ve got two options.  Put them on a wait list or reject the order.   Neither instills great confidence.&lt;/p&gt;
+
+&lt;p&gt;Now, imagine that the customer was forced at gunpoint to place the first order and in a week they’ll be forced to place another one.&lt;/p&gt;
+
+&lt;p&gt;Now think for a minute about any process control gate that you’ve put in place by policy or governance.  What is the velocity and volume of items that need to come through that gate and what is the program’s capacity to handle them?&lt;/p&gt;
+
+&lt;p&gt;How many items can you handle per week?  You’ve got 52 weeks a year minus paid time off and sick days per FTE.  Now how many items do you have queuing?  What does that come to?  What degradation plan is in place for the loss of an FTE?&lt;/p&gt;
+
+&lt;p&gt;There are clear problems with running your service offering at 100% when replacement can take months and some organizations are sponging up multiples of that.  Most often this is the result of seeking coverage without considering cost.&lt;/p&gt;
+
+&lt;p&gt;The overused Euler diagram applies if you picked “fast and cheap” it’s probably not going to be very good.  If it&amp;rsquo;s a gate that everything has to pass through, it needs to be at least nearly-automated.&lt;/p&gt;
+
+&lt;p&gt;For time intensive, high quality efforts think boutique not big box.  You may have a valuable service offering, but its a tool to improve only those assets that are mission critical.  When you invest the time of these scarce resources you want to be sure that you’re gaining a net positive and the asset targeted is significantly more expensive than the assessment.&lt;/p&gt;
+
+&lt;p&gt;Thats all for now.  We’ll dig into congestion in part II.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“When you want to hurry something, that means that you no longer care about it and want to get on to other things.” - Robert M. Pirsig in Zen and The Art of Motorcycle Maintenance&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Get Sankey!
 Sankey diagrams for infosec</title>
-      <link>/post/sankey/</link>
+      <link>/2017/05/19/sankey/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/sankey/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
+      <guid>/2017/05/19/sankey/</guid>
+      <description>&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
 &lt;p&gt;It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.&lt;/p&gt;
 &lt;p&gt;It was the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options&#34;&gt;Sankey Chart&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/main/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
+&lt;img src=&#34;/post/sankey_files/figure-html/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;tweet from &lt;span class=&#34;citation&#34;&gt;@wendynather&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;You can view the original tweet &lt;a href=&#34;https://twitter.com/jwgoerlich/status/865262781100167169&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -52,12 +110,12 @@ Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;,
 
 plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Sun Jun 25 18:59:42 2017 --&gt;
+&lt;!-- Sun Jun 25 20:15:02 2017 --&gt;
 &lt;!-- jsHeader --&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;
  
 // jsData 
-function gvisDataSankeyID587d2810de34 () {
+function gvisDataSankeyID5cea7ebe1555 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -120,8 +178,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID587d2810de34() {
-var data = gvisDataSankeyID587d2810de34();
+function drawChartSankeyID5cea7ebe1555() {
+var data = gvisDataSankeyID5cea7ebe1555();
 var options = {};
 options[&#34;width&#34;] = 800;
 options[&#34;height&#34;] = 400;
@@ -130,7 +188,7 @@ options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacit
                        label: { color: &#39;#000000&#39;, bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID587d2810de34&#39;)
+    document.getElementById(&#39;SankeyID5cea7ebe1555&#39;)
     );
     chart.draw(data,options);
     
@@ -154,9 +212,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID587d2810de34);
+callbacks.push(drawChartSankeyID5cea7ebe1555);
 })();
-function displayChartSankeyID587d2810de34() {
+function displayChartSankeyID5cea7ebe1555() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -179,9 +237,9 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 &lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID587d2810de34&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID5cea7ebe1555&#34;&gt;&lt;/script&gt;
 &lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID587d2810de34&#34; style=&#34;width: 800; height: 400;&#34;&gt;
+&lt;div id=&#34;SankeyID5cea7ebe1555&#34; style=&#34;width: 800; height: 400;&#34;&gt;
 
 &lt;/div&gt;
 &lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
@@ -190,32 +248,61 @@ callbacks.shift()();
     </item>
     
     <item>
-      <title>RMarkdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Sat, 15 May 2010 00:00:00 +0000</pubDate>
+      <title>Just a Test Post From Blogdown</title>
+      <link>/2017/05/15/just-a-test-post-from-blogdown/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;Holding&lt;/p&gt;
-&lt;/div&gt;
+      <guid>/2017/05/15/just-a-test-post-from-blogdown/</guid>
+      <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
+
+&lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>RMarkdown</title>
-      <link>/post/placeholder_template/</link>
-      <pubDate>Sat, 15 May 2010 00:00:00 +0000</pubDate>
+      <title>Hello R Markdown</title>
+      <link>/2015/07/23/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/placeholder_template/</guid>
-      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;!-- /BLOGDOWN-HEAD --&gt;
-
-&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
-&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+      <guid>/2015/07/23/2015-07-23-r-rmarkdown/</guid>
+      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;Holding&lt;/p&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
