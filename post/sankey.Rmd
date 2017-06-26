@@ -3,11 +3,11 @@ title: "Get Sankey!\nSankey diagrams for infosec"
 author: "Tony Towry"
 date: '2017-05-19'
 tags:
-- Dataviz
+- dataviz
 - infosec
 categories: 
 - R
-- Dataviz
+- dataviz
 ---
 
 Yesterday, a tweet caught my eye.  
