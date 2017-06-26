@@ -338,25 +338,53 @@ Figure 1: A fancy pie chart.
     </item>
     
     <item>
-      <title>My awesome project</title>
-      <link>/training/my-awesome-project/</link>
-      <pubDate>Tue, 18 Nov 2014 02:13:50 +0000</pubDate>
+      <title>Training</title>
+      <link>/training/training/</link>
+      <pubDate>Mon, 15 Jun 2009 00:00:00 +0000</pubDate>
       
-      <guid>/training/my-awesome-project/</guid>
+      <guid>/training/training/</guid>
       <description>
 
-&lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
+&lt;h1 id=&#34;quantitative-information-risk-training-using-r-1-day&#34;&gt;Quantitative Information Risk Training Using R | 1-Day&lt;/h1&gt;
 
-&lt;p&gt;Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.&lt;/p&gt;
+&lt;p&gt;Training dates TBA.&lt;/p&gt;
 
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;h2 id=&#34;foundations-of-risk&#34;&gt;Foundations of Risk&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get -u -v github.com/spf13/hugo
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;What is Risk?&lt;/li&gt;
+&lt;li&gt;Breaking The Matrix&lt;/li&gt;
+&lt;li&gt;Becoming a Quantitative Risk Apologist&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&#34;docs&#34;&gt;Docs&lt;/h2&gt;
+&lt;h2 id=&#34;estimation-and-calibration&#34;&gt;Estimation and Calibration&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://godoc.org/github.com/spf13/hugo&#34;&gt;https://godoc.org/github.com/spf13/hugo&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to Estimate ANYTHING&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hands-on-r-basics&#34;&gt;Hands-on R Basics&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quick Introduction to RStudio&lt;/li&gt;
+&lt;li&gt;Navigating Vectors and Data Frames&lt;/li&gt;
+&lt;li&gt;Probability Distributions&lt;/li&gt;
+&lt;li&gt;Mode Estimation&lt;/li&gt;
+&lt;li&gt;Monte Carlo&lt;/li&gt;
+&lt;li&gt;How to Rock ggplot2 Like an Expert (Without Being One)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;advanced-concepts&#34;&gt;Advanced Concepts&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Risk Aggregation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;risk-management&#34;&gt;Risk Management&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cognitive Bias&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
