@@ -7,8 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Tue, 27 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jul 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>If You’re Going to Fail To Scale, Don’t - Part II</title>
+      <link>/2017/07/15/fail-to-scale-part2/</link>
+      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/15/fail-to-scale-part2/</guid>
+      <description>
+
+&lt;h5 id=&#34;first-if-you-haven-t-read-part-i-https-cattleguard-github-io-2017-05-30-fail-to-scale-part1-here-s-the-link-now-on-to-part-ii&#34;&gt;First, if you haven&amp;rsquo;t read &lt;a href=&#34;https://cattleguard.github.io/2017/05/30/fail-to-scale-part1/&#34;&gt;Part I&lt;/a&gt; here&amp;rsquo;s the link.  Now, on to Part II.&lt;/h5&gt;
+
+&lt;h1 id=&#34;if-you-re-going-to-fail-to-scale-don-t-part-ii&#34;&gt;If You’re Going to Fail To Scale, Don’t - Part II&lt;/h1&gt;
+
+&lt;p&gt;People hate to wait.&lt;/p&gt;
+
+&lt;p&gt;In Kaiser Fung’s book &lt;em&gt;Numbers Rule Your World&lt;/em&gt; he discusses two congestion problem case studies.  One relates to the grueling wait times at Disney attractions.  The other is a study on ramp metering in Minneapolis.&lt;/p&gt;
+
+&lt;p&gt;Now, if you’re not familiar with ramp metering here’s the gist.  A stoplight is placed at the end of an on ramp which regulates how many cars are allowed onto a highway at a given time.  The idea being that the number of required slowdowns and wrecks decreases as cars have appropriate distance.&lt;/p&gt;
+
+&lt;p&gt;I experienced this in LA and found it consistent with the study, in that the result was a &lt;em&gt;perceived&lt;/em&gt; more pleasant drive.  Far more pleasant I’d say than the morning commute here in Oklahoma City.&lt;/p&gt;
+
+&lt;p&gt;Waiting sucks.  Unreliable waits suck more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/Fail_to_scale_part2_files/figure_html/congested.png&#34; alt=&#34;congested&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you only have capacity to deliver for the little green dots, maybe it’s time to consider letting the orange and red guys continue about their business.&lt;/p&gt;
+
+&lt;p&gt;What you &lt;strong&gt;DO NOT&lt;/strong&gt; want to do is deadline all of the dots to rush the gate at the same time and watch them pile up in a fiery mess.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/Fail_to_scale_part2_files/figure_html/not_congested.png&#34; alt=&#34;not congested&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a cost to queuing and it’s not necessarily a soft cost.  Meter the assets you want to address in a way that avoids collisions and allows those that would be endlessly waiting to continue on with business.&lt;/p&gt;
+
+&lt;p&gt;This may require treating an asset group as an internal statement of work that is approved on the interval.&lt;/p&gt;
+
+&lt;p&gt;Don’t be afraid to model reality, alter perception, under promise and over deliver.  Oh, and go get Kaiser’s book, it’s a pretty fun read.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Is Zero-Sum Thinking Affecting Your Risk Decision?</title>
