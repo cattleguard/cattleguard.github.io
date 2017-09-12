@@ -60,3 +60,6 @@ That's it!  The creation of the diagram isn't particularly hard.  The genius par
 
 For more awesome network and Sankey action check out [Kyle Walker, Phd's post on Interactive flow visualization in R](http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html)
 
+#### Update 8/8/17 ####
+
+I've been using the networkD3 package demonstrated in Kyle Walker's post.  It's slightly more involved when it comes to link creation, but I think the final product is much more publication ready.

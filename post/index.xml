@@ -7,8 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sat, 15 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Kickstarting Conversation With Sarcastic Programming</title>
+      <link>/2017/08/27/sarcastic-programming/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/27/sarcastic-programming/</guid>
+      <description>&lt;p&gt;While killing time on Twitter the other day a Techlahoma tweet featuring WebVR and A-Frame grabbed my attention.  If you know me, I’ve been excited about VR and AR for sometime  (despite not having any VR or AR capable equipment).  So, a color changing sphere that bounces is still fairly fun for me.&lt;/p&gt;
+
+&lt;p&gt;A-Frame makes creating WebVR experiences extremely accessible.  This could be great for artists and those who might otherwise miss out on the medium.&lt;/p&gt;
+
+&lt;p&gt;For me, I’m always looking for the use case. If I can’t readily find one, I like to reflect on the absurdity of the field.  Is there some cheeky application for the technology?&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s in that spirit, that I present to you an immersive risk experience like no other…&lt;a href=&#34;http://a-frame-risk-thing.glitch.me/&#34;&gt;A-Frame Risk Thing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/sarcastic/riskVR.gif&#34; alt=&#34;riskVR.gif&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyway, using ordinal matrices to communicate risk is generally bad even if experienced at 3m X 3m&amp;hellip;larger than life.  I’d refer you to Cox’s Risk Matrix Theorem for basic reasons why.  &lt;a href=&#34;https://eight2late.wordpress.com/2009/07/01/cox%E2%80%99s-risk-matrix-theorem-and-its-implications-for-project-risk-management/&#34;&gt;Cox’s risk matrix theorem and its implications for project risk management | Eight to Late&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So, now we have another way to present non-information. ;)&lt;/p&gt;
+
+&lt;p&gt;Making toys is one of the great joys of tech.  Have fun.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>If You’re Going to Fail To Scale, Don’t - Part II</title>
@@ -92,6 +116,14 @@
 &lt;li&gt;Populace puts out some really nice Ethiopians.  I&amp;rsquo;ve had their Guji and a Peruvian, I may end up checking out their cold brew blend at some point.  They&amp;rsquo;re reasonably priced and don&amp;rsquo;t have much to worry about on the shipping end.   &lt;a href=&#34;https://populace.coffee/&#34;&gt;https://populace.coffee/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&#34;location-specific&#34;&gt;Location Specific&lt;/h2&gt;
+
+&lt;h4 id=&#34;updated-8-5-2017&#34;&gt;updated 8/5/2017&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Las Vegas, NV - The Strip&lt;/strong&gt; So, this one might be useful for conference goers and summer campers.  There&amp;rsquo;s only one near-3rd-wave style coffee joint on the strip.  It&amp;rsquo;s Sambalatte &lt;a href=&#34;http://sambalatte.com/&#34;&gt;http://sambalatte.com/&lt;/a&gt; and it&amp;rsquo;s inside the Monte Carlo.  They&amp;rsquo;ve got chemex, V60, Kalita and steampunk.  They have a reasonably good Guji.  Plus, the fact that it&amp;rsquo;s in the Monte Carlo means that you can ride the tram from Aria/Crystals or Bellagio with little issue, making it fairly accessible.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;I&amp;rsquo;ll continue to keep my notes here, but I don&amp;rsquo;t plan on spamming the RSS with updates.  Check back as needed.&lt;/p&gt;
 </description>
     </item>
@@ -168,12 +200,12 @@ Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;,
 
 plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Sun Jun 25 20:15:02 2017 --&gt;
+&lt;!-- Mon Sep 11 22:19:59 2017 --&gt;
 &lt;!-- jsHeader --&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;
  
 // jsData 
-function gvisDataSankeyID5cea7ebe1555 () {
+function gvisDataSankeyID597b6dbfee18 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -236,8 +268,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID5cea7ebe1555() {
-var data = gvisDataSankeyID5cea7ebe1555();
+function drawChartSankeyID597b6dbfee18() {
+var data = gvisDataSankeyID597b6dbfee18();
 var options = {};
 options[&#34;width&#34;] = 800;
 options[&#34;height&#34;] = 400;
@@ -246,7 +278,7 @@ options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacit
                        label: { color: &#39;#000000&#39;, bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID5cea7ebe1555&#39;)
+    document.getElementById(&#39;SankeyID597b6dbfee18&#39;)
     );
     chart.draw(data,options);
     
@@ -270,9 +302,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID5cea7ebe1555);
+callbacks.push(drawChartSankeyID597b6dbfee18);
 })();
-function displayChartSankeyID5cea7ebe1555() {
+function displayChartSankeyID597b6dbfee18() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -295,13 +327,17 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 &lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID5cea7ebe1555&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID597b6dbfee18&#34;&gt;&lt;/script&gt;
 &lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID5cea7ebe1555&#34; style=&#34;width: 800; height: 400;&#34;&gt;
+&lt;div id=&#34;SankeyID597b6dbfee18&#34; style=&#34;width: 800; height: 400;&#34;&gt;
 
 &lt;/div&gt;
 &lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
 &lt;p&gt;For more awesome network and Sankey action check out &lt;a href=&#34;http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html&#34;&gt;Kyle Walker, Phd’s post on Interactive flow visualization in R&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;update-8817&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Update 8/8/17&lt;/h4&gt;
+&lt;p&gt;I’ve been using the networkD3 package demonstrated in Kyle Walker’s post. It’s slightly more involved when it comes to link creation, but I think the final product is much more publication ready.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -314,54 +350,6 @@ callbacks.shift()();
       <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
 
 &lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/2015/07/23/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/2015/07/23/2015-07-23-r-rmarkdown/</guid>
-      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     

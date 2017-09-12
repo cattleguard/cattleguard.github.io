@@ -86,10 +86,6 @@ ga('send', 'pageview');
     </li>
 
     <li class="site-nav-item">
-        <a title="Training" href="/training/">Training</a>
-    </li>
-
-    <li class="site-nav-item">
         <a title="About" href="/page/about/">About</a>
     </li>
 
@@ -155,12 +151,12 @@ Sankey &lt;- gvisSankey(flowing.threat.model, from=&quot;From&quot;, to=&quot;To
 
 plot(Sankey)</code></pre>
 <!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package -->
-<!-- Sun Jun 25 20:15:02 2017 -->
+<!-- Mon Sep 11 22:19:59 2017 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyID5cea7ebe1555 () {
+function gvisDataSankeyID597b6dbfee18 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -223,8 +219,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID5cea7ebe1555() {
-var data = gvisDataSankeyID5cea7ebe1555();
+function drawChartSankeyID597b6dbfee18() {
+var data = gvisDataSankeyID597b6dbfee18();
 var options = {};
 options["width"] = 800;
 options["height"] = 400;
@@ -233,7 +229,7 @@ options["sankey"] = {link: {color: { fill: '#cccccc', fillOpacity: 80 } },
                        label: { color: '#000000', bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyID5cea7ebe1555')
+    document.getElementById('SankeyID597b6dbfee18')
     );
     chart.draw(data,options);
     
@@ -257,9 +253,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID5cea7ebe1555);
+callbacks.push(drawChartSankeyID597b6dbfee18);
 })();
-function displayChartSankeyID5cea7ebe1555() {
+function displayChartSankeyID597b6dbfee18() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -282,13 +278,17 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID5cea7ebe1555"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID597b6dbfee18"></script>
 <!-- divChart -->
-<div id="SankeyID5cea7ebe1555" style="width: 800; height: 400;">
+<div id="SankeyID597b6dbfee18" style="width: 800; height: 400;">
 
 </div>
 <p>That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.</p>
 <p>For more awesome network and Sankey action check out <a href="http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html">Kyle Walker, Phd’s post on Interactive flow visualization in R</a></p>
+<div id="update-8817" class="section level4">
+<h4>Update 8/8/17</h4>
+<p>I’ve been using the networkD3 package demonstrated in Kyle Walker’s post. It’s slightly more involved when it comes to link creation, but I think the final product is much more publication ready.</p>
+</div>
 
 </div>
 
