@@ -47,12 +47,12 @@ Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;,
 
 plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Mon Sep 11 22:19:59 2017 --&gt;
+&lt;!-- Fri Nov 17 22:35:26 2017 --&gt;
 &lt;!-- jsHeader --&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;
  
 // jsData 
-function gvisDataSankeyID597b6dbfee18 () {
+function gvisDataSankeyID16f52f3ce38a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -115,8 +115,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID597b6dbfee18() {
-var data = gvisDataSankeyID597b6dbfee18();
+function drawChartSankeyID16f52f3ce38a() {
+var data = gvisDataSankeyID16f52f3ce38a();
 var options = {};
 options[&#34;width&#34;] = 800;
 options[&#34;height&#34;] = 400;
@@ -125,7 +125,7 @@ options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacit
                        label: { color: &#39;#000000&#39;, bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID597b6dbfee18&#39;)
+    document.getElementById(&#39;SankeyID16f52f3ce38a&#39;)
     );
     chart.draw(data,options);
     
@@ -149,9 +149,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID597b6dbfee18);
+callbacks.push(drawChartSankeyID16f52f3ce38a);
 })();
-function displayChartSankeyID597b6dbfee18() {
+function displayChartSankeyID16f52f3ce38a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -174,9 +174,9 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 &lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID597b6dbfee18&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID16f52f3ce38a&#34;&gt;&lt;/script&gt;
 &lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID597b6dbfee18&#34; style=&#34;width: 800; height: 400;&#34;&gt;
+&lt;div id=&#34;SankeyID16f52f3ce38a&#34; style=&#34;width: 800; height: 400;&#34;&gt;
 
 &lt;/div&gt;
 &lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;

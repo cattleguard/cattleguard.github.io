@@ -7,8 +7,99 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Data Cleaning Practice Pt1 - Steak Stats</title>
+      <link>/2017/11/17/data-cleaning-practice-pt1/</link>
+      <pubDate>Fri, 17 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/17/data-cleaning-practice-pt1/</guid>
+      <description>&lt;p&gt;Our family is in the habit of heading west.  As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two.  I&amp;rsquo;ve even stopped into the &lt;a href=&#34;https://www.bigtexan.com/&#34;&gt;Big Texan&lt;/a&gt; once for breakfast.&lt;/p&gt;
+
+&lt;p&gt;For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.&lt;/p&gt;
+
+&lt;p&gt;An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.&lt;/p&gt;
+
+&lt;p&gt;They argued.  I fired up rvest.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/cattleguard/9a6536222af4bd9a8964cdf0602141a4&#34;&gt;Here&amp;rsquo;s a gist leveraging rvest to create a dataset from the Hall of Fame.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we have a great starting point for answering some questions, but you may notice a few issues.  It&amp;rsquo;s almost like this contest is for fun or something.  It&amp;rsquo;s as if settling an office debate, R style was not a primary goal.&lt;/p&gt;
+
+&lt;p&gt;Pretty much every column needs to be cleaned up.  My current workflow is to use grep() with invert = TRUE to show everything that doesn&amp;rsquo;t match my expected pattern.  Here&amp;rsquo;s an example: &lt;code&gt;grep(&amp;quot;^[0-9]{1,3}$&amp;quot;, big.texan.recordbook$age, value = TRUE, invert = TRUE)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So, here&amp;rsquo;s my attempt at &lt;a href=&#34;https://gist.githubusercontent.com/cattleguard/2274938cd22f05c364f7eaddfec83f7c/raw/c0f049d5e6e29e8238b867d465c497d5e69e0a28/big_texan_clean.R&#34;&gt;cleanup&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This appeared to be close enough for our purposes.  I always enjoy this type of freestyle practice.  I did pick up a TIL function along the way: &lt;code&gt;gsubfn()&lt;/code&gt; which allows you to take your regex capture group and then apply a function to it.  I used this to address the kg conversion in the weight column.  I feel like there&amp;rsquo;s probably a &lt;code&gt;%&amp;gt;%&lt;/code&gt; equivalent and I&amp;rsquo;d love to see an example if you&amp;rsquo;ve got the time.&lt;/p&gt;
+
+&lt;p&gt;Now, I just post beefy stats from the dataset.
+&lt;img src=&#34;/post/bigtexan/avg_age.png&#34; alt=&#34;average age&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>3 Keys for Successful Products and Programs Before You Even Start</title>
+      <link>/2017/11/15/product-and-program-success-before-you-start/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/15/product-and-program-success-before-you-start/</guid>
+      <description>
+
+&lt;p&gt;If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.&lt;/p&gt;
+
+&lt;p&gt;If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.&lt;/p&gt;
+
+&lt;p&gt;So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment?  Don’t like that one?  The budget incinerator?&lt;/p&gt;
+
+&lt;p&gt;Let’s take a look at applying &lt;a href=&#34;http://blog.gardeviance.org/2015/02/an-introduction-to-wardley-value-chain.html&#34;&gt;value chain concepts&lt;/a&gt; while examining some of the external pressures.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-3-key-characteristics&#34;&gt;The 3 Key Characteristics&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Visibility&lt;/li&gt;
+&lt;li&gt;State of Commoditization&lt;/li&gt;
+&lt;li&gt;Time Horizon for Payback&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
+
+&lt;p&gt;There’s a spectrum of visibility when it comes to projects.  It may be that we have a security tool that has visibility internal to only the infosec team.  These are tools that serve a purpose for infosec, but aren’t leveraged by general IT Operations and generally stay out of the way of the user.&lt;/p&gt;
+
+&lt;p&gt;From there we have tools that are either leveraged by IT Ops or affect their workflows and further along still, tools that affect the workflows of non-IT users.&lt;/p&gt;
+
+&lt;p&gt;As you pass through each boundary you’ll typically pick up additional requirements, consequences and increase the need for a clear, organized communication plan.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t mean that you have less chance of failure in low visibility deployments.  In fact, it might be quite the opposite if there is no consequence or expected outcomes.  Infosec might be purchasing toys for which they are accountable only to themselves when extracting value and then fail to do so.&lt;/p&gt;
+
+&lt;p&gt;This may also inform the potential blast radius if failure were to occur.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-of-commoditization&#34;&gt;State of Commoditization&lt;/h2&gt;
+
+&lt;p&gt;The continuum of commoditization is an important one to consider when attempting to nail down what human capital you have to spend on which projects.  Individuals and the skills they bring matter.&lt;/p&gt;
+
+&lt;p&gt;Projects that are highly commoditized like firewalls or anti-malware are typically easier to resource than say building out an IAM program or GRC.&lt;/p&gt;
+
+&lt;p&gt;More customization and integration increases the need for having the right people involved throughout initial implementation and sustainment.&lt;/p&gt;
+
+&lt;h2 id=&#34;time-horizon-for-payback&#34;&gt;Time Horizon for Payback&lt;/h2&gt;
+
+&lt;p&gt;So, sometimes a team gets a resource that has a very specific skill.  This may be in a field that is hard to continuously staff (e.g. appsec, red team, IR).&lt;/p&gt;
+
+&lt;p&gt;When you have someone like this, considering how much you’re willing to spend on tooling which may lay fallow following their exit is important.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t mean you can’t resource in these areas, it just means that the window for making it valuable is short, or put another way, dependent on specific personnel retention.&lt;/p&gt;
+
+&lt;p&gt;The good news is, many of these highly skilled resources don’t need a ton of commercial tooling.&lt;/p&gt;
+
+&lt;h2 id=&#34;closing&#34;&gt;Closing&lt;/h2&gt;
+
+&lt;p&gt;This of course isn’t applicable to everyone.  If your organization’s business is infosec, the needs of that situation and personnel pool are likely different.&lt;/p&gt;
+
+&lt;p&gt;These are just some thoughts for orgs that are trying to track and resource capability across multiple domains.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Kickstarting Conversation With Sarcastic Programming</title>
@@ -200,12 +291,12 @@ Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;,
 
 plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Mon Sep 11 22:19:59 2017 --&gt;
+&lt;!-- Fri Nov 17 22:35:26 2017 --&gt;
 &lt;!-- jsHeader --&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;
  
 // jsData 
-function gvisDataSankeyID597b6dbfee18 () {
+function gvisDataSankeyID16f52f3ce38a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -268,8 +359,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyID597b6dbfee18() {
-var data = gvisDataSankeyID597b6dbfee18();
+function drawChartSankeyID16f52f3ce38a() {
+var data = gvisDataSankeyID16f52f3ce38a();
 var options = {};
 options[&#34;width&#34;] = 800;
 options[&#34;height&#34;] = 400;
@@ -278,7 +369,7 @@ options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacit
                        label: { color: &#39;#000000&#39;, bold:true } }};
 
     var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID597b6dbfee18&#39;)
+    document.getElementById(&#39;SankeyID16f52f3ce38a&#39;)
     );
     chart.draw(data,options);
     
@@ -302,9 +393,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID597b6dbfee18);
+callbacks.push(drawChartSankeyID16f52f3ce38a);
 })();
-function displayChartSankeyID597b6dbfee18() {
+function displayChartSankeyID16f52f3ce38a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -327,9 +418,9 @@ callbacks.shift()();
 // jsFooter
 &lt;/script&gt;
 &lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID597b6dbfee18&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID16f52f3ce38a&#34;&gt;&lt;/script&gt;
 &lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID597b6dbfee18&#34; style=&#34;width: 800; height: 400;&#34;&gt;
+&lt;div id=&#34;SankeyID16f52f3ce38a&#34; style=&#34;width: 800; height: 400;&#34;&gt;
 
 &lt;/div&gt;
 &lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
