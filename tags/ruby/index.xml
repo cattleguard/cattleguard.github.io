@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Tony On Risk</title>
+    <link>/tags/ruby/index.xml</link>
+    <description>Recent content in Ruby on Tony On Risk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <atom:link href="/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I&#39;m a iPod Classic Man</title>
+      <link>/2017/12/31/speed-it-up/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/31/speed-it-up/</guid>
+      <description>&lt;p&gt;Lately I&amp;rsquo;ve been doing some learning on &lt;a href=&#34;http://www.pluralsight.com&#34;&gt;PluralSight&lt;/a&gt; thanks to a subscription through my employer.  I&amp;rsquo;ve enjoyed it, but one of the features I use all the time is 1.5X playback speed.  I find that I can still get the content and it cuts down on the dead air and slow typing.&lt;/p&gt;
+
+&lt;p&gt;Now, I look for faster playback on everything and am kind of suprised when I can&amp;rsquo;t find it.  However, I use one of these for my music and podcasts.&lt;/p&gt;
+
+&lt;p&gt;iPod Classic&lt;/p&gt;
+
+&lt;p&gt;The first thing we&amp;rsquo;ll want to do is use homebrew to install lame and sox with lame format support, &lt;code&gt;brew install lame&lt;/code&gt; and then &lt;code&gt;brew install sox --with-lame&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Multiple parameters would work for this.  You could use &lt;code&gt;speed&lt;/code&gt; and &lt;code&gt;pitch&lt;/code&gt;, but I think &lt;code&gt;tempo&lt;/code&gt; works better for me (thanks SO).  Maybe slightly slower than 1.5X.  Here&amp;rsquo;s the &lt;a href=&#34;https://gist.githubusercontent.com/cattleguard/714661ad0516f22d4f6dcfac522d3262/raw/c492dc708759e19ca53ca49e564cf6ffe429af60/pod_speeder.rb&#34;&gt;gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;
+  #!/usr/local/bin/ruby
+  
+  # Must have ruby later ruby to use Dir.children()
+  require &#39;date&#39;
+  require &#39;shellwords&#39;
+  origin_folder = &#39;~/Music/iTunes/iTunes Media/Podcasts/&#39;
+  
+  Dir.chdir(File.expand_path(origin_folder))
+  contents = Dir.glob(&#39;*&#39;)
+  contents.each {|folder|
+    podcasts = Dir.children(folder)
+    podcasts.each {|podcast|
+      if File.expand_path(origin_folder + folder) == File.dirname(File.expand_path(origin_folder+folder+&#34;/&#34;+podcast))
+        if folder.downcase =~ /.*spanish.*/
+        else
+          made_on = File.mtime(File.expand_path(origin_folder+folder+&#34;/&#34;+podcast))
+          if made_on.to_date == Time.now.to_date
+            puts(podcast + &#34; was made today and is getting converted&#34;)
+            system(&#34;sox &#34; + File.expand_path(origin_folder+folder+&#34;/&#34;+podcast).shellescape + &#34; &#34; + File.expand_path(origin_folder+folder+&#34;/&#34;+ &#34;xfaster &#34; + podcast).shellescape + &#34; &#34; + &#34;tempo 1.25&#34;)
+            system(&#34;mv &#34; + File.expand_path(origin_folder + folder + &#34;/&#34; + &#34;xfaster &#34; + podcast).shellescape + &#34; &#34; + File.expand_path(origin_folder+folder+&#34;/&#34;+podcast).shellescape )
+          end
+        end
+      else
+        puts(&#34;compared &#34; + origin_folder + &#34;/&#34; + folder + &#34; to &#34; + File.dirname(File.expand_path(origin_folder+folder+&#34;/&#34;+podcast)))
+      end
+    }
+  }
+&lt;/pre&gt;
+
+&lt;p&gt;If you&amp;rsquo;re on OSX there are several free plist generators so that you can get it loaded by launchctl.&lt;/p&gt;
+
+&lt;p&gt;Anyway, just a quick thing to help burn down the podcast back issues.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

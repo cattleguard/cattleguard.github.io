@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2018/01/03/lets-learn-apache-drill-together/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/12/31/speed-it-up/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/11/17/data-cleaning-practice-pt1/</loc>
     <lastmod>2017-11-17T00:00:00+00:00</lastmod>
   </url>
@@ -86,8 +96,20 @@
   </url>
   
   <url>
+    <loc>/tags/data-science/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/dataviz/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/drill/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,8 +138,14 @@
   </url>
   
   <url>
+    <loc>/tags/podcast/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2017-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -134,13 +162,19 @@
   </url>
   
   <url>
+    <loc>/tags/ruby/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
