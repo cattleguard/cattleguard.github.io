@@ -7,8 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Competitive Steak Eating and Gender</title>
+      <link>/2018/02/20/gender-package-and-the-big-texan/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/20/gender-package-and-the-big-texan/</guid>
+      <description>&lt;p&gt;Before we get too far down the trail on this, I’ll warn readers that this is a pink and blue post. It’s simple prediction using an interesting R package.&lt;/p&gt;
+&lt;p&gt;It’s important to consider the stakes (pun intended), when “enriching” a dataset with information that might introduce bias. Here, inaccuracies can occur by simple misspelling or just a slightly higher probability for the years selected…or other things.&lt;/p&gt;
+&lt;p&gt;That said, I wanted to get an idea of gender diversity in competitive steak eating competition. So, here we go.&lt;/p&gt;
+&lt;p&gt;We’re leveraging the &lt;a href=&#34;https://github.com/ropensci/gender&#34;&gt;rOpenSci Gender Package&lt;/a&gt; which attempts to predict gender off of an individuals name based on historical data from sources such as the U.S. Social Security Administration, Census Bureau, etc.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(gender)
+library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load(&amp;quot;bigtexan.rda&amp;quot;)
+name.parts &amp;lt;- strsplit(big.texan.recordbook$name, &amp;quot; &amp;quot;)
+big.texan.recordbook$first.name &amp;lt;- sapply(name.parts, &amp;quot;[&amp;quot;, 1)
+
+# Open to suggestions here.  Just a hack to handle a fail by gender() for names like bradx.
+get_gender_if_you_can &amp;lt;- function(x) {
+  gender.guess &amp;lt;- unlist(gender(x, years = c(1950, 2000), method = &amp;quot;ssa&amp;quot;)[,4])
+  if(length(gender.guess)==0){return(NA)}
+  if (gender.guess == &amp;quot;male&amp;quot; || gender.guess == &amp;quot;female&amp;quot;)
+    return(gender.guess)
+}
+
+big.texan.recordbook$gender &amp;lt;- sapply(big.texan.recordbook$first.name, get_gender_if_you_can)
+
+g &amp;lt;- ggplot(big.texan.recordbook, aes(big.texan.recordbook$gender)) + labs(title = &amp;quot;Gender Breakdown&amp;quot;, subtitle = &amp;quot;Big Texan Wins&amp;quot;)
+g &amp;lt;- g + geom_bar(fill = c(&amp;quot;#FF99FF&amp;quot;, &amp;quot;#33CCFF&amp;quot;, &amp;quot;#FFFF99&amp;quot;))+ xlab(&amp;quot;Gender&amp;quot;) + ylab(&amp;quot;Count&amp;quot;) + theme_minimal()
+g &amp;lt;- g + theme(plot.title = element_text(hjust = -.11), plot.subtitle = element_text(hjust = -.1))
+plot(g)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/gender-package-and-the-big-texan_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;table(big.texan.recordbook$gender)
+## 
+## female   male 
+##    101   2807&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Of course, these are by wins, so if we wanted to get closer to unique winners, running the names through &lt;code&gt;unique()&lt;/code&gt; we get 83 females and 2655 males.&lt;/p&gt;
+&lt;p&gt;Some females of note include &lt;a href=&#34;https://en.wikipedia.org/wiki/Molly_Schuyler&#34;&gt;Molly Schuyler&lt;/a&gt; who conquered the 72oz challenge 5 times!&lt;/p&gt;
+&lt;p&gt;So, that’s it. If you want a head-start on getting the data, check out my previous steak stats post.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Let&#39;s Learn Apache Drill Together</title>

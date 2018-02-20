@@ -1,0 +1,64 @@
+---
+title: "Competitive Steak Eating and Gender"
+author: "Tony Towry"
+date: '2018-02-20'
+tags:
+- steak
+- R Packages
+categories: 
+- R
+- R Packages
+---
+
+Before we get too far down the trail on this, I'll warn readers that this is a pink and blue post.  It's simple prediction using an interesting R package.
+
+It's important to consider the stakes (pun intended), when "enriching" a dataset with information that might introduce bias.  Here, inaccuracies can occur by simple misspelling or just a slightly higher probability for the years selected...or other things.
+
+That said, I wanted to get an idea of gender diversity in competitive steak eating competition. So, here we go.
+
+We're leveraging the [rOpenSci Gender Package](https://github.com/ropensci/gender) which attempts to predict gender off of an individuals name based on historical data from sources such as the U.S. Social Security Administration, Census Bureau, etc.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
+```
+
+```{r}
+library(gender)
+library(ggplot2)
+```
+
+```{r include=FALSE}
+load("/Users/saintpatrick/Documents/bigtexan_clean.rda")
+```
+
+```{r}
+# load("bigtexan.rda")
+name.parts <- strsplit(big.texan.recordbook$name, " ")
+big.texan.recordbook$first.name <- sapply(name.parts, "[", 1)
+
+# Open to suggestions here.  Just a hack to handle a fail by gender() for names like bradx.
+get_gender_if_you_can <- function(x) {
+  gender.guess <- unlist(gender(x, years = c(1950, 2000), method = "ssa")[,4])
+  if(length(gender.guess)==0){return(NA)}
+  if (gender.guess == "male" || gender.guess == "female")
+    return(gender.guess)
+}
+
+big.texan.recordbook$gender <- sapply(big.texan.recordbook$first.name, get_gender_if_you_can)
+
+g <- ggplot(big.texan.recordbook, aes(big.texan.recordbook$gender)) + labs(title = "Gender Breakdown", subtitle = "Big Texan Wins")
+g <- g + geom_bar(fill = c("#FF99FF", "#33CCFF", "#FFFF99"))+ xlab("Gender") + ylab("Count") + theme_minimal()
+g <- g + theme(plot.title = element_text(hjust = -.11), plot.subtitle = element_text(hjust = -.1))
+plot(g)
+```
+
+```{r}
+table(big.texan.recordbook$gender)
+```
+Of course, these are by wins, so if we wanted to get closer to unique winners, running the names through `unique()` we get 83 females and 2655 males.
+
+Some females of note include [Molly Schuyler](https://en.wikipedia.org/wiki/Molly_Schuyler) who conquered the 72oz challenge 5 times!
+
+So, that's it.  If you want a head-start on getting the data, check out my previous steak stats post.
+
