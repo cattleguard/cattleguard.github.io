@@ -115,6 +115,13 @@ ga('send', 'pageview');
 <p>It’s important to consider the stakes (pun intended), when “enriching” a dataset with information that might introduce bias. Here, inaccuracies can occur by simple misspelling or just a slightly higher probability for the years selected…or other things.</p>
 <p>That said, I wanted to get an idea of gender diversity in competitive steak eating competition. So, here we go.</p>
 <p>We’re leveraging the <a href="https://github.com/ropensci/gender">rOpenSci Gender Package</a> which attempts to predict gender off of an individuals name based on historical data from sources such as the U.S. Social Security Administration, Census Bureau, etc.</p>
+<p>If you take a look at the github page, you’ll see that you get back a 1x6 tibble that includes proportion_male vs. proportion_female and the most prevalent gender. You could set a high threshold for proportions that might make this more accurate, but I just took the gender value.</p>
+<pre class="r"><code>library(gender)
+gender(&quot;pat&quot;)</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##    name proportion_male proportion_female gender year_min year_max
+##   &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;  &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+## 1   pat          0.3592            0.6408 female     1932     2012</code></pre>
 <pre class="r"><code>library(gender)
 library(ggplot2)</code></pre>
 <pre class="r"><code># load(&quot;bigtexan.rda&quot;)
@@ -135,7 +142,7 @@ g &lt;- ggplot(big.texan.recordbook, aes(big.texan.recordbook$gender)) + labs(ti
 g &lt;- g + geom_bar(fill = c(&quot;#FF99FF&quot;, &quot;#33CCFF&quot;, &quot;#FFFF99&quot;))+ xlab(&quot;Gender&quot;) + ylab(&quot;Count&quot;) + theme_minimal()
 g &lt;- g + theme(plot.title = element_text(hjust = -.11), plot.subtitle = element_text(hjust = -.1))
 plot(g)</code></pre>
-<p><img src="/post/gender-package-and-the-big-texan_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/gender-package-and-the-big-texan_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <pre class="r"><code>table(big.texan.recordbook$gender)
 ## 
 ## female   male 

@@ -18,6 +18,12 @@ That said, I wanted to get an idea of gender diversity in competitive steak eati
 
 We're leveraging the [rOpenSci Gender Package](https://github.com/ropensci/gender) which attempts to predict gender off of an individuals name based on historical data from sources such as the U.S. Social Security Administration, Census Bureau, etc.
 
+If you take a look at the github page, you'll see that you get back a 1x6 tibble that includes proportion_male vs. proportion_female and the most prevalent gender.  You could set a high threshold for proportions that might make this more accurate, but I just took the gender value.
+```{r}
+library(gender)
+gender("pat")
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
