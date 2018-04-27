@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Tony&#39;s Coffee Guide &middot; Tony Towry</title>
-        <meta name="description" content="My Personal Odyssey Through Dark Water">
+        <title>How to Proxy Go net/http &middot; Tony Towry</title>
+        <meta name="description" content="Getting it over to ZAP">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.19" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Tony&#39;s Coffee Guide">
-<meta property="og:description" content="My Personal Odyssey Through Dark Water">
+        <meta property="og:title" content="How to Proxy Go net/http">
+<meta property="og:description" content="Getting it over to ZAP">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/2017/06/25/coffee-guide/">
+<meta property="og:url" content="/2018/04/11/how-to-proxy-go-http/">
         <link rel="stylesheet" href="/dist/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -91,12 +91,12 @@ ga('send', 'pageview');
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Tony&#39;s Coffee Guide</h1>
+    <h1 class="post-title" itemprop="name headline">How to Proxy Go net/http</h1>
     
-        <p class="post-description" itemprop="description">My Personal Odyssey Through Dark Water</p>
+        <p class="post-description" itemprop="description">Getting it over to ZAP</p>
     
     <p class="post-date">
-        <span>Published <time datetime="2017-06-25" itemprop="datePublished">Sun, Jun 25, 2017</time></span>
+        <span>Published <time datetime="2018-04-11" itemprop="datePublished">Wed, Apr 11, 2018</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
@@ -109,36 +109,29 @@ ga('send', 'pageview');
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    
+    <p>I started playing around a bit (again) in Go recently and had a need to take a look at some requests I was generating.  I wanted to take a look in ZAP to see how things were working and use that to make adjustments, etc.</p>
 
-<p>I drink quite a bit of coffee.  It&rsquo;s true.</p>
+<p>Post is no big deal, but I didn&rsquo;t want to forget how to do this.  Also, there are several posts that don&rsquo;t seem to actually work.</p>
 
-<p>Occasionally it comes up in conversation.  It occurs that someone is bored with their beans and wants to class up their caffeine delivery.  Maybe this is you.</p>
+<p>First set the environment:</p>
 
-<p>Well, here are some of my favorites as of late.  Check them out.</p>
+<pre><code>export HTTP_PROXY = localhost:8080
+</code></pre>
 
-<h2 id="top-picks">Top Picks</h2>
+<p>Then, use that as http.Transport.  I&rsquo;ve also skipped TLS verify for this as you can see.</p>
 
-<ul>
-<li>The best espresso that may ever enter your face comes out of San Jose, CA.  Gamut from Chromatic won&rsquo;t let you down with this consistently delicious espresso.  <a href="http://www.chromaticcoffee.com/gamut-espresso/">http://www.chromaticcoffee.com/gamut-espresso/</a></li>
-<li>Novel is doing wonderful things.  They keep a tight rotation, so there&rsquo;s always something new and nothing specific to name, but I haven&rsquo;t been let down.  Also, their 2lb bags are a steal. <a href="https://www.novelcoffeeroasters.com/">https://www.novelcoffeeroasters.com/</a></li>
-<li>Onyx Coffee Lab out of Bentonville, AR is absolutely killing it.  They&rsquo;ve got an amazing space and do pretty much everything really well.  Worth a stop if you&rsquo;re in the area.  Worth a try if you just want to order online.  Plus, they offer a new level of transparency in  <a href="purchasing">http://sprudge.com/point-sale-tranparency-reporting-onyx-coffees-new-website-118712.html</a>. <a href="https://onyxcoffeelab.com/">https://onyxcoffeelab.com/</a></li>
-<li>1000 Faces is a little hit and miss.  They&rsquo;ve brought forth a formidable Guji and if you can catch them when they&rsquo;re running Suke Quto it&rsquo;s worth an order.  The espressos, William &amp; Maria, and Misty Valley I think of as an unremarkable, ok. <a href="http://www.1000facescoffee.com/">http://www.1000facescoffee.com/</a></li>
-<li>KLLR keeps getting better and better.  They have a single origin sun-dried Ethiopia right now that is mouth wateringly good. <a href="https://kllrcoffee.com/">https://kllrcoffee.com/</a></li>
-<li>Populace puts out some really nice Ethiopians.  I&rsquo;ve had their Guji and a Peruvian, I may end up checking out their cold brew blend at some point.  They&rsquo;re reasonably priced and don&rsquo;t have much to worry about on the shipping end.   <a href="https://populace.coffee/">https://populace.coffee/</a></li>
-</ul>
+<pre><code class="language-golang"> tr := &amp;http.Transport{
+  TLSClientConfig: &amp;tlsConfig{InsecureSkipVerify: true},
+  Proxy:  http.ProxyFromEnvironment,
+ }
+</code></pre>
 
-<h2 id="location-specific">Location Specific</h2>
+<p>Finally, use that as the Transport for http.Client:</p>
 
-<h4 id="updated-01-14-2018">updated 01/14/2018</h4>
+<pre><code class="language-golang"> client := &amp;http.Client{Transport: tr}
+</code></pre>
 
-<ul>
-<li><strong>Estes Park, CO</strong> Inkwell is the place to be for a cup of coffee in the Rockies.  I recommend getting juice or water at breakfast and then swinging by for a cup before hitting the trails. <a href="http://inkwellbrew.com/">http://inkwellbrew.com/</a></li>
-<li><strong>Las Vegas, NV - The Strip</strong> So, this one might be useful for conference goers and summer campers.  There&rsquo;s only one near-3rd-wave style coffee joint on the strip.  It&rsquo;s Sambalatte <a href="http://sambalatte.com/">http://sambalatte.com/</a> and it&rsquo;s inside the Monte Carlo.  They&rsquo;ve got chemex, V60, Kalita and steampunk.  They have a reasonably good Guji.  Plus, the fact that it&rsquo;s in the Monte Carlo means that you can ride the tram from Aria/Crystals or Bellagio with little issue, making it fairly accessible.</li>
-<li><strong>Springfield, MO</strong> On our trip out to Springfield we tried both <a href="http://www.kingdom-coffee.com/">Kingdom Coffee</a> and <a href="http://thecoffeeethic.com/">The Coffee Ethic</a>.  Both have a nice space to enjoy a cup, but in my opinion Kingdom is the place to go if you have to choose one.</li>
-</ul>
-
-<p>I&rsquo;ll continue to keep my notes here, but I don&rsquo;t plan on spamming the RSS with updates.  Check back as needed.</p>
+<p>Update:  In my case I still preferred going through ZAP, but TIL if you just need to see the request it seems that you can also import <em>net/http/httputil</em> and just httputil.DumpRequest to take a look.</p>
 
 </div>
 
@@ -148,14 +141,16 @@ ga('send', 'pageview');
             <span>Tagged:</span>
             
             
-                <a href="/tags/coffee/">coffee</a>
+                <a href="/tags/golang/">golang</a>, 
+            
+                <a href="/tags/go/">go</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Tony%27s%20Coffee%20Guide&url=%2f2017%2f06%2f25%2fcoffee-guide%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=How%20to%20Proxy%20Go%20net%2fhttp&url=%2f2018%2f04%2f11%2fhow-to-proxy-go-http%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -163,7 +158,7 @@ ga('send', 'pageview');
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2017%2f06%2f25%2fcoffee-guide%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f04%2f11%2fhow-to-proxy-go-http%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
