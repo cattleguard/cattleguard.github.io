@@ -10,6 +10,20 @@
     <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Dorking Around with CORS</title>
+      <link>/2018/04/28/dorking-around-with-cors-and-golang/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/04/28/dorking-around-with-cors-and-golang/</guid>
+      <description>&lt;p&gt;After tuning in to Absolute Appsec ep 2 the other day I got pretty interested in CORS security issues related to misconfiguration and dynamic origin handling.  I don&amp;rsquo;t know about you, but every once in a while I hear about a bug class, or maybe just a set of unintended consequences that I find particularly amusing.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve found that building a tool (no matter how poor), goes a long way toward a deeper understanding.  For a tool that issues a potentially large number of requests, matching and could perform functions concurrently Go seemed like an appropriate language.  Also, I&amp;rsquo;ve been looking for a reason to give it a try =).&lt;/p&gt;
+
+&lt;p&gt;So, I decided to take golang for a spin.  You can find the result here:   &lt;a href=&#34;https://github.com/cattleguard/cors-gopher&#34;&gt;https://github.com/cattleguard/cors-gopher&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to Proxy Go net/http</title>
       <link>/2018/04/11/how-to-proxy-go-http/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>

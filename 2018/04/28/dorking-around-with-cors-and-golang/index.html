@@ -3,22 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Golang &middot; Tony Towry</title>
-        <meta name="description" content="MUSINGS ON INFORMATION RISK, LIFE, AND THE ROAD.">
+        <title>Dorking Around with CORS &middot; Tony Towry</title>
+        <meta name="description" content="Your Friday Night Just Got Exciting">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.19" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Golang">
-<meta property="og:description" content="MUSINGS ON INFORMATION RISK, LIFE, AND THE ROAD.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/tags/golang/">
+        <meta property="og:title" content="Dorking Around with CORS">
+<meta property="og:description" content="Your Friday Night Just Got Exciting">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/2018/04/28/dorking-around-with-cors-and-golang/">
         <link rel="stylesheet" href="/dist/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-            <link href="/tags/golang/index.xml" rel="alternate" type="application/rss+xml">
         
     </head>
     <body>
@@ -90,43 +88,76 @@ ga('send', 'pageview');
             <div id="container">
 
 
-<div id="post-index" class="container">
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Dorking Around with CORS</h1>
     
-    <header class="post-header">
-        <h1 class="post-title">ONE SCENARIO AT A TIME, PLEASE</h1>
-        <p>MUSINGS ON INFORMATION RISK, LIFE, AND THE ROAD.</p>
-    </header>
+        <p class="post-description" itemprop="description">Your Friday Night Just Got Exciting</p>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2018-04-28" itemprop="datePublished">Sat, Apr 28, 2018</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;AnthonyTowry" itemprop="url" rel="author">Tony Towry</a>
+            </span>
+        </span>
+    </p>
+</header>
 
+        <div class="post-content clearfix" itemprop="articleBody">
+    
 
-    <ol class="post-list">
-        
-        
-            <li class="post-stub">
-    <a href="/2018/04/28/dorking-around-with-cors-and-golang/">
-        <h4 class="post-stub-title">Dorking Around with CORS</h4>
-        
-            <p class="post-stub-description">Your Friday Night Just Got Exciting</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2018/04/11/how-to-proxy-go-http/">
-        <h4 class="post-stub-title">How to Proxy Go net/http</h4>
-        
-            <p class="post-stub-description">Getting it over to ZAP</p>
-        
-        
-    </a>
-</li>
-        
-    </ol>
+    <p>After tuning in to Absolute Appsec ep 2 the other day I got pretty interested in CORS security issues related to misconfiguration and dynamic origin handling.  I don&rsquo;t know about you, but every once in a while I hear about a bug class, or maybe just a set of unintended consequences that I find particularly amusing.</p>
 
-    <div class="post-navigation">
+<p>I&rsquo;ve found that building a tool (no matter how poor), goes a long way toward a deeper understanding.  For a tool that issues a potentially large number of requests, matching and could perform functions concurrently Go seemed like an appropriate language.  Also, I&rsquo;ve been looking for a reason to give it a try =).</p>
+
+<p>So, I decided to take golang for a spin.  You can find the result here:   <a href="https://github.com/cattleguard/cors-gopher">https://github.com/cattleguard/cors-gopher</a>.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/golang/">golang</a>, 
+            
+                <a href="/tags/go/">go</a>, 
+            
+                <a href="/tags/appsec/">appsec</a>, 
+            
+                <a href="/tags/cors/">CORS</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Dorking%20Around%20with%20CORS&url=%2f2018%2f04%2f28%2fdorking-around-with-cors-and-golang%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
         
 
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f04%2f28%2fdorking-around-with-cors-and-golang%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
     </div>
+</footer>
+
+        
+    </article>
 </div>
 
             </div>
@@ -159,3 +190,4 @@ ga('send', 'pageview');
         <script src="/js/scripts.js"></script>
     </body>
 </html>
+
