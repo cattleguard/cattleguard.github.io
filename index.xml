@@ -7,8 +7,62 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sat, 28 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How To Apply Google&#39;s CausalImpact Package to Analyze Infosec Intervention</title>
+      <link>/2018/07/12/counter-factual-infosec/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/12/counter-factual-infosec/</guid>
+      <description>&lt;p&gt;Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.&lt;/p&gt;
+&lt;p&gt;Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. Now you go on to determine a number of covariates. You’re a risk management mad scientist with a knack for catchy blog titles.&lt;/p&gt;
+&lt;p&gt;Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (policy in place) and post-intervention. You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.&lt;/p&gt;
+&lt;p&gt;I know all this talk of counterfactual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at &lt;code&gt;summary(impact, &amp;quot;report&amp;quot;)&lt;/code&gt;). Generating alternate realities is now one of my most endorsed LinkedIN skills.&lt;/p&gt;
+&lt;p&gt;Before going any further I recommend checking out &lt;a href=&#34;https://youtu.be/GTgZfCltMm8&#34;&gt;this video.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach using a couple of unaffected retailers as predictors. &lt;em&gt;This isn’t a great example, there are likely a bucket of confounders that make this less than convincing, but it will at least illustrate usage.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;First make sure you have the CausalImpact installed. &lt;code&gt;install.packages(&amp;quot;CausalImpact&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CausalImpact)
+library(quantmod)
+library(ggplot2)
+library(zoo)
+
+# Symbols for Target, Walmart, and Costco
+symbols.of.interest &amp;lt;- c(&amp;quot;TGT&amp;quot;, &amp;quot;WMT&amp;quot;, &amp;quot;COST&amp;quot;)
+
+prices &amp;lt;- new.env()
+
+# Ticker prices are for weekdays only, so in order to use dates in pre/post we have to fix the index.
+allDates &amp;lt;- seq.Date(
+       min(as.Date(&amp;quot;2013-01-01&amp;quot;)),
+       max(as.Date(&amp;quot;2014-12-31&amp;quot;)),
+       &amp;quot;day&amp;quot;)
+
+getSymbols(symbols.of.interest, from = as.Date(&amp;quot;2013-01-01&amp;quot;), to = as.Date(&amp;quot;2014-12-31&amp;quot;), env = prices, auto.assign = T)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[1] “TGT” “WMT” “COST”&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+# December 18, 2013 the news of Target&amp;#39;s mega-breach was made public
+
+pre.period &amp;lt;- as.Date(c(&amp;quot;2013-01-02&amp;quot;, &amp;quot;2013-12-19&amp;quot;))
+post.period &amp;lt;- as.Date(c(&amp;quot;2013-12-20&amp;quot;, &amp;quot;2014-12-30&amp;quot;))
+
+retail.stocks &amp;lt;- merge(prices$TGT$TGT.Close, prices$WMT$WMT.Close, prices$COST$COST.Close)
+
+# make a zoo out of the complete dates
+complete.days &amp;lt;- zoo(allDates, order.by = allDates)
+big.join &amp;lt;- merge.zoo(complete.days, retail.stocks, all = TRUE, fill = NA)
+big.join &amp;lt;- big.join[,colnames(big.join) != &amp;quot;complete.days&amp;quot;]
+# we can&amp;#39;t have NA in our response variable column, so we take the Google advice of approximating the value
+big.join &amp;lt;- na.approx(big.join)
+
+impact &amp;lt;- CausalImpact(big.join, pre.period, post.period)
+plot(impact)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.&lt;/p&gt;
+&lt;p&gt;Thanks to Google and as always everyone keeping it going on StackOverflow.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Dorking Around with CORS</title>
@@ -616,24 +670,6 @@ callbacks.shift()();
       <description>&lt;p&gt;So, Yihui Xie gifted the RStats world with another presentation surface.  Now you can easily produce Hugo generated blogs right from RStudio!  Oh, and it&amp;rsquo;s pretty great.&lt;/p&gt;
 
 &lt;p&gt;There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/page/about/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
-      
-      <guid>/page/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;i-m-tony&#34;&gt;I’M TONY.&lt;/h2&gt;
-
-&lt;p&gt;I connect business leaders to information security programs through quantitative risk analysis and assessment.&lt;/p&gt;
-
-&lt;p&gt;Also, a fan of the National Park Service.&lt;/p&gt;
-
-&lt;h4 id=&#34;cissp-cisa-oscp&#34;&gt;CISSP, CISA, OSCP&lt;/h4&gt;
 </description>
     </item>
     

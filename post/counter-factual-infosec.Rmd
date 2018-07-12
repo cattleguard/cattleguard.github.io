@@ -1,0 +1,77 @@
+---
+title: "How To Apply Google's CausalImpact Package to Analyze Infosec Intervention"
+description: "Be The Change You Want to See, And Know If You Are"
+author: "Tony Towry"
+date: '2018-07-12'
+tags:
+- management
+- infosec
+- R
+categories: 
+- R
+- infosec
+- risk
+---
+
+Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.
+
+Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes.  Not bad.   Now you go on to determine a number of covariates.  You're a risk management mad scientist with a knack for catchy blog titles.
+
+Here's one example.  You implement a policy to reduce a type of ticket coming into the service desk.  You have a pre-period before the intervention (policy in place) and post-intervention.  You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.
+
+I know all this talk of counterfactual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at `summary(impact, "report")`).  Generating alternate realities is now one of my most endorsed LinkedIN skills.  
+
+Before going any further I recommend checking out [this video.](https://youtu.be/GTgZfCltMm8)
+
+So, let's go beat a dead horse and take a look at the pre and post-period for the Target breach using a couple of unaffected retailers as predictors. *This isn't a great example, there are likely a bucket of confounders that make this less than convincing, but it will at least illustrate usage.*
+
+First make sure you have the CausalImpact installed.
+`install.packages("CausalImpact"")`
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
+```
+
+
+```{r results='asis'}
+library(CausalImpact)
+library(quantmod)
+library(ggplot2)
+library(zoo)
+
+# Symbols for Target, Walmart, and Costco
+symbols.of.interest <- c("TGT", "WMT", "COST")
+
+prices <- new.env()
+
+# Ticker prices are for weekdays only, so in order to use dates in pre/post we have to fix the index.
+allDates <- seq.Date(
+       min(as.Date("2013-01-01")),
+       max(as.Date("2014-12-31")),
+       "day")
+
+getSymbols(symbols.of.interest, from = as.Date("2013-01-01"), to = as.Date("2014-12-31"), env = prices, auto.assign = T)
+
+# December 18, 2013 the news of Target's mega-breach was made public
+
+pre.period <- as.Date(c("2013-01-02", "2013-12-19"))
+post.period <- as.Date(c("2013-12-20", "2014-12-30"))
+
+retail.stocks <- merge(prices$TGT$TGT.Close, prices$WMT$WMT.Close, prices$COST$COST.Close)
+
+# make a zoo out of the complete dates
+complete.days <- zoo(allDates, order.by = allDates)
+big.join <- merge.zoo(complete.days, retail.stocks, all = TRUE, fill = NA)
+big.join <- big.join[,colnames(big.join) != "complete.days"]
+# we can't have NA in our response variable column, so we take the Google advice of approximating the value
+big.join <- na.approx(big.join)
+
+impact <- CausalImpact(big.join, pre.period, post.period)
+plot(impact)
+
+```
+
+I know quite well that my naïveté is likely on full display for serious data scientists and statisticians.  Please feel free to drop me a note with clarifications and corrections.  I very much enjoy learning on these topics.
+
+Thanks to Google and as always everyone keeping it going on StackOverflow.

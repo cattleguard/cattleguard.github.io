@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How To Apply Google&#39;s CausalImpact Package to Analyze Infosec Intervention &middot; Tony Towry</title>
+        <meta name="description" content="Be The Change You Want to See, And Know If You Are">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.19" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="How To Apply Google&#39;s CausalImpact Package to Analyze Infosec Intervention">
+<meta property="og:description" content="Be The Change You Want to See, And Know If You Are">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/2018/07/12/counter-factual-infosec/">
+        <link rel="stylesheet" href="/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46268936-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Tony On Risk" href="/">Tony On Risk</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/anthonytowry">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/cattleguard/">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/tony-towry-99581515/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:anthonytowry@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Tony&#39;s Coffee Guide" href="/2017/06/25/coffee-guide/">Tony&#39;s Coffee Guide</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How To Apply Google&#39;s CausalImpact Package to Analyze Infosec Intervention</h1>
+    
+        <p class="post-description" itemprop="description">Be The Change You Want to See, And Know If You Are</p>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2018-07-12" itemprop="datePublished">Thu, Jul 12, 2018</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;AnthonyTowry" itemprop="url" rel="author">Tony Towry</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.</p>
+<p>Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. Now you go on to determine a number of covariates. You’re a risk management mad scientist with a knack for catchy blog titles.</p>
+<p>Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (policy in place) and post-intervention. You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.</p>
+<p>I know all this talk of counterfactual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at <code>summary(impact, &quot;report&quot;)</code>). Generating alternate realities is now one of my most endorsed LinkedIN skills.</p>
+<p>Before going any further I recommend checking out <a href="https://youtu.be/GTgZfCltMm8">this video.</a></p>
+<p>So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach using a couple of unaffected retailers as predictors. <em>This isn’t a great example, there are likely a bucket of confounders that make this less than convincing, but it will at least illustrate usage.</em></p>
+<p>First make sure you have the CausalImpact installed. <code>install.packages(&quot;CausalImpact&quot;&quot;)</code></p>
+<pre class="r"><code>library(CausalImpact)
+library(quantmod)
+library(ggplot2)
+library(zoo)
+
+# Symbols for Target, Walmart, and Costco
+symbols.of.interest &lt;- c(&quot;TGT&quot;, &quot;WMT&quot;, &quot;COST&quot;)
+
+prices &lt;- new.env()
+
+# Ticker prices are for weekdays only, so in order to use dates in pre/post we have to fix the index.
+allDates &lt;- seq.Date(
+       min(as.Date(&quot;2013-01-01&quot;)),
+       max(as.Date(&quot;2014-12-31&quot;)),
+       &quot;day&quot;)
+
+getSymbols(symbols.of.interest, from = as.Date(&quot;2013-01-01&quot;), to = as.Date(&quot;2014-12-31&quot;), env = prices, auto.assign = T)</code></pre>
+<p>[1] “TGT” “WMT” “COST”</p>
+<pre class="r"><code>
+# December 18, 2013 the news of Target&#39;s mega-breach was made public
+
+pre.period &lt;- as.Date(c(&quot;2013-01-02&quot;, &quot;2013-12-19&quot;))
+post.period &lt;- as.Date(c(&quot;2013-12-20&quot;, &quot;2014-12-30&quot;))
+
+retail.stocks &lt;- merge(prices$TGT$TGT.Close, prices$WMT$WMT.Close, prices$COST$COST.Close)
+
+# make a zoo out of the complete dates
+complete.days &lt;- zoo(allDates, order.by = allDates)
+big.join &lt;- merge.zoo(complete.days, retail.stocks, all = TRUE, fill = NA)
+big.join &lt;- big.join[,colnames(big.join) != &quot;complete.days&quot;]
+# we can&#39;t have NA in our response variable column, so we take the Google advice of approximating the value
+big.join &lt;- na.approx(big.join)
+
+impact &lt;- CausalImpact(big.join, pre.period, post.period)
+plot(impact)</code></pre>
+<p><img src="/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.</p>
+<p>Thanks to Google and as always everyone keeping it going on StackOverflow.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/management/">management</a>, 
+            
+                <a href="/tags/infosec/">infosec</a>, 
+            
+                <a href="/tags/r/">R</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=How%20To%20Apply%20Google%27s%20CausalImpact%20Package%20to%20Analyze%20Infosec%20Intervention&url=%2f2018%2f07%2f12%2fcounter-factual-infosec%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f07%2f12%2fcounter-factual-infosec%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Tony On Risk" href="/">Tony On Risk</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2018 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
+
