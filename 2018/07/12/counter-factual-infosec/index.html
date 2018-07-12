@@ -110,11 +110,11 @@ ga('send', 'pageview');
     
 
     <p>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.</p>
-<p>Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. Now you go on to determine a number of covariates. You’re a risk management mad scientist with a knack for catchy blog titles.</p>
-<p>Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (policy in place) and post-intervention. You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.</p>
+<p>Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. Now you go on to determine a number of covariates. Now you’re a risk management mad scientist with a knack for catchy blog titles!</p>
+<p>Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.</p>
 <p>I know all this talk of counterfactual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at <code>summary(impact, &quot;report&quot;)</code>). Generating alternate realities is now one of my most endorsed LinkedIN skills.</p>
 <p>Before going any further I recommend checking out <a href="https://youtu.be/GTgZfCltMm8">this video.</a></p>
-<p>So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach using a couple of unaffected retailers as predictors. <em>This isn’t a great example, there are likely a bucket of confounders that make this less than convincing, but it will at least illustrate usage.</em></p>
+<p>So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach and it’s <strong><em>“effect”</em></strong> using a couple of unaffected retailers as predictors. <em>This isn’t a great example, there are likely a bucket of confounding factors that make this less than convincing, but it will at least illustrate usage.</em></p>
 <p>First make sure you have the CausalImpact installed. <code>install.packages(&quot;CausalImpact&quot;&quot;)</code></p>
 <pre class="r"><code>library(CausalImpact)
 library(quantmod)
@@ -152,6 +152,7 @@ big.join &lt;- na.approx(big.join)
 impact &lt;- CausalImpact(big.join, pre.period, post.period)
 plot(impact)</code></pre>
 <p><img src="/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Thinking on what telemetry needs to be instrumented and collected to help convince us of our effectiveness and populate our timeseries is a powerful way to approach action.</p>
 <p>I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.</p>
 <p>Thanks to Google and as always everyone keeping it going on StackOverflow.</p>
 
