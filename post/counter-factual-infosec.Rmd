@@ -15,7 +15,7 @@ categories:
 
 Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.
 
-Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes.  Not bad.   Now you go on to determine a number of covariates.  Now you're a risk management mad scientist with a knack for catchy blog titles!
+Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes.  Not bad.   You go on to determine a number of covariates.  Now you're a risk management mad scientist with a knack for catchy blog titles!
 
 Here's one example.  You implement a policy to reduce a type of ticket coming into the service desk.  You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating).  You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.
 
