@@ -18,9 +18,11 @@
       <guid>/2018/07/12/counter-factual-infosec/</guid>
       <description>&lt;p&gt;Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.&lt;/p&gt;
 &lt;p&gt;Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates. Now you’re a risk management mad scientist with a knack for catchy blog titles!&lt;/p&gt;
-&lt;p&gt;Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.&lt;/p&gt;
-&lt;p&gt;I know all this talk of counterfactual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at &lt;code&gt;summary(impact, &amp;quot;report&amp;quot;)&lt;/code&gt;). Generating alternate realities is now one of my most endorsed LinkedIN skills.&lt;/p&gt;
 &lt;p&gt;Before going any further I recommend checking out &lt;a href=&#34;https://youtu.be/GTgZfCltMm8&#34;&gt;this video.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let’s think of taking action (control, policy, etc.) as an intervening moment. We split reality into what would have happened without our action and what happens now that we’ve taken action. The theoretically less secure state and the theoretically more secure state.&lt;/p&gt;
+&lt;p&gt;Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.&lt;/p&gt;
+&lt;p&gt;A sudden drop in the response variable alone may not owe it’s explanation to our intervention.&lt;/p&gt;
+&lt;p&gt;I know all this talk of counter factual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at &lt;code&gt;summary(impact, &amp;quot;report&amp;quot;)&lt;/code&gt;). Generating alternate realities is now one of my most endorsed LinkedIN skills.&lt;/p&gt;
 &lt;p&gt;So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach and it’s &lt;strong&gt;&lt;em&gt;“effect”&lt;/em&gt;&lt;/strong&gt; using a couple of unaffected retailers as predictors. &lt;em&gt;This isn’t a great example, there are likely a bucket of confounding factors that make this less than convincing, but it will at least illustrate usage.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First make sure you have the CausalImpact installed. &lt;code&gt;install.packages(&amp;quot;CausalImpact&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CausalImpact)
@@ -59,7 +61,7 @@ big.join &amp;lt;- na.approx(big.join)
 impact &amp;lt;- CausalImpact(big.join, pre.period, post.period)
 plot(impact)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Thinking on what telemetry needs to be instrumented and collected to help convince us of our effectiveness and populate our timeseries is a powerful way to approach action.&lt;/p&gt;
+&lt;p&gt;Thinking on what telemetry needs to be instrumented and collected to help convince us of our effectiveness and populate our time series is a powerful way to approach action.&lt;/p&gt;
 &lt;p&gt;I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.&lt;/p&gt;
 &lt;p&gt;Thanks to Google and as always everyone keeping it going on StackOverflow.&lt;/p&gt;
 </description>
