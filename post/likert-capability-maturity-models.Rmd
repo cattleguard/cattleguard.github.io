@@ -23,9 +23,11 @@ Once you've gathered responses, you have to decide what to do with them.  It's n
 
 I was using the `fmsb` package to do this.
 
-I never really felt great about it.  Any time we start to do math on ordinal values we should really take a moment to reflect on our mistakes.
+I never really felt great about it.  Any time we start to do math on ordinal values we drift into absurdity.
 
-Then I started to think, we really just need to *show* the responses!  Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.  What a novel idea.
+Then I started to think, we really just need to *show* the responses!  Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.  
+
+What a novel idea.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)

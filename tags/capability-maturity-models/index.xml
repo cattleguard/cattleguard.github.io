@@ -22,8 +22,9 @@
 &lt;/blockquote&gt;
 &lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;I was using the &lt;code&gt;fmsb&lt;/code&gt; package to do this.&lt;/p&gt;
-&lt;p&gt;I never really felt great about it. Any time we start to do math on ordinal values we should really take a moment to reflect on our mistakes.&lt;/p&gt;
-&lt;p&gt;Then I started to think, we really just need to &lt;em&gt;show&lt;/em&gt; the responses! Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet. What a novel idea.&lt;/p&gt;
+&lt;p&gt;I never really felt great about it. Any time we start to do math on ordinal values we drift into absurdity.&lt;/p&gt;
+&lt;p&gt;Then I started to think, we really just need to &lt;em&gt;show&lt;/em&gt; the responses! Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.&lt;/p&gt;
+&lt;p&gt;What a novel idea.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
 library(dplyr)
 library(ggplot2)
