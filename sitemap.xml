@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2019/01/16/likert-capability-maturity-models/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/07/12/counter-factual-infosec/</loc>
     <lastmod>2018-07-12T00:00:00+00:00</lastmod>
   </url>
@@ -110,6 +115,12 @@
   </url>
   
   <url>
+    <loc>/tags/capability-maturity-models/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/coffee/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -165,13 +176,13 @@
   
   <url>
     <loc>/tags/infosec/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/management/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,13 +200,13 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -230,7 +241,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

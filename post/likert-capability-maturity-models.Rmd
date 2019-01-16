@@ -1,0 +1,68 @@
+---
+title: "Feel Slightly Better About Your Capability Maturity Model Work"
+description: "Ditch The Radar and Grab Your Lollipops"
+author: "Tony Towry"
+date: '2019-01-16'
+tags:
+- management
+- infosec
+- R
+- Capability Maturity Models
+categories: 
+- R
+- infosec
+- risk
+- Capability Maturity Models
+---
+
+During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities.  It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.
+
+Once you've gathered responses, you have to decide what to do with them.  It's not uncommon to average out the responses and use that as an indication of level state.  Sometimes, to delight our audience we might put these averages into a radar plot.  It's not a good thing to do, but we might.  I have.
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/b0nLPfR"><a href="//imgur.com/b0nLPfR">Radar O’Reilly on Drums</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+I was using the `fmsb` package to do this.
+
+I never really felt great about it.  Any time we start to do math on ordinal values we should really take a moment to reflect on our mistakes.
+
+Then I started to think, we really just need to *show* the responses!  Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.  What a novel idea.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
+knitr::opts_chunk$set(fig.width=12, fig.height=3) 
+```
+
+```{r results='asis'}
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+
+Section <- c("Execution Visibility", "Execution Visibility", "Execution Visibility", "Personnel", "Personnel", "Personnel", "Governance", "Governance", "Governance")
+Level <- c(3, 3, 2, 4, 2, 1, 1, 1, 2)
+cmm <- data.frame(Section, Level)
+
+cmm_level_grouped <- cmm %>%
+  mutate(max = max(Level)) %>%
+  mutate(min = min(Level)) %>% group_by(Section, Level) %>% mutate(n = n())
+
+cmm_level_grouped$Section <- factor(cmm_level_grouped$Section, levels = rev(unique(cmm_level_grouped$Section)))
+
+# https://github.com/tidyverse/ggplot2/issues/1666
+
+theplot <- ggplot(cmm_level_grouped, aes(Level, Section)) + geom_line(aes(group = Section))
+theplot <- theplot + geom_point(aes(color = Section, alpha = .75, size = cmm_level_grouped$n * 15)) + scale_size_area()
+theplot <- theplot + theme_minimal() + 
+  theme(
+   panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "none"
+  ) + labs(x = "Responses FY18", y = "") + xlim(0, 5) + theme(axis.title = element_text(size = 12), axis.text.y = element_text(size = 12))
+
+print(theplot)
+
+```
+
+So, this is really not a big deal and maybe people are doing this, but I haven't seen it.  In the wild I'm seeing averages, where we really want to see modes and ranges.
+
+This applies equally well to Likert surveys.
