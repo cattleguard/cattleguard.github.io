@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trainings on Tony On Risk</title>
-    <link>/training/index.xml</link>
+    <link>/training/</link>
     <description>Recent content in Trainings on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
     <lastBuildDate>Mon, 15 Jun 2009 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/training/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/training/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Quantitative Information Risk Training Using R | 1-Day</title>
@@ -16,49 +18,8 @@
       <pubDate>Mon, 15 Jun 2009 00:00:00 +0000</pubDate>
       
       <guid>/training/training/</guid>
-      <description>
-
-&lt;h1 id=&#34;quantitative-information-risk-training-using-r-1-day&#34;&gt;Quantitative Information Risk Training Using R | 1-Day&lt;/h1&gt;
-
-&lt;p&gt;Training dates TBA.&lt;/p&gt;
-
-&lt;h2 id=&#34;foundations-of-risk&#34;&gt;Foundations of Risk&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;What is Risk?&lt;/li&gt;
-&lt;li&gt;Breaking The Matrix&lt;/li&gt;
-&lt;li&gt;Becoming a Quantitative Risk Apologist&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;estimation-and-calibration&#34;&gt;Estimation and Calibration&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How to Estimate ANYTHING&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;hands-on-r-basics&#34;&gt;Hands-on R Basics&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Quick Introduction to RStudio&lt;/li&gt;
-&lt;li&gt;Navigating Vectors and Data Frames&lt;/li&gt;
-&lt;li&gt;Probability Distributions&lt;/li&gt;
-&lt;li&gt;Mode Estimation&lt;/li&gt;
-&lt;li&gt;Monte Carlo&lt;/li&gt;
-&lt;li&gt;How to Rock ggplot2 Like an Expert (Without Being One)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;advanced-concepts&#34;&gt;Advanced Concepts&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Risk Aggregation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;risk-management&#34;&gt;Risk Management&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cognitive Bias&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> Quantitative Information Risk Training Using R | 1-Day Training dates TBA.
+Foundations of Risk  What is Risk? Breaking The Matrix Becoming a Quantitative Risk Apologist  Estimation and Calibration  How to Estimate ANYTHING  Hands-on R Basics  Quick Introduction to RStudio Navigating Vectors and Data Frames Probability Distributions Mode Estimation Monte Carlo How to Rock ggplot2 Like an Expert (Without Being One)  Advanced Concepts  Risk Aggregation  Risk Management  Cognitive Bias  </description>
     </item>
     
   </channel>

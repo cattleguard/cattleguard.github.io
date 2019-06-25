@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Capability Maturity Models on Tony On Risk</title>
-    <link>/tags/capability-maturity-models/index.xml</link>
+    <link>/tags/capability-maturity-models/</link>
     <description>Recent content in Capability Maturity Models on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/capability-maturity-models/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/capability-maturity-models/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Feel Slightly Better About Your Capability Maturity Model Work</title>
@@ -15,46 +18,8 @@
       <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/01/16/likert-capability-maturity-models/</guid>
-      <description>&lt;p&gt;During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.&lt;/p&gt;
-&lt;p&gt;Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state. Sometimes, to delight our audience we might put these averages into a radar plot. It’s not a good thing to do, but we might. I have.&lt;/p&gt;
-&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;a/b0nLPfR&#34;&gt;
-&lt;a href=&#34;//imgur.com/b0nLPfR&#34;&gt;Radar O’Reilly on Drums&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;I was using the &lt;code&gt;fmsb&lt;/code&gt; package to do this.&lt;/p&gt;
-&lt;p&gt;I never really felt great about it. Any time we start to do math on ordinal values we drift into absurdity.&lt;/p&gt;
-&lt;p&gt;Then I started to think, we really just need to &lt;em&gt;show&lt;/em&gt; the responses! Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.&lt;/p&gt;
-&lt;p&gt;What a novel idea.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
-library(dplyr)
-library(ggplot2)
-
-Section &amp;lt;- c(&amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;)
-Level &amp;lt;- c(3, 3, 2, 4, 2, 1, 1, 1, 2)
-cmm &amp;lt;- data.frame(Section, Level)
-
-cmm_level_grouped &amp;lt;- cmm %&amp;gt;%
-  mutate(max = max(Level)) %&amp;gt;%
-  mutate(min = min(Level)) %&amp;gt;% group_by(Section, Level) %&amp;gt;% mutate(n = n())
-
-cmm_level_grouped$Section &amp;lt;- factor(cmm_level_grouped$Section, levels = rev(unique(cmm_level_grouped$Section)))
-
-# https://github.com/tidyverse/ggplot2/issues/1666
-
-theplot &amp;lt;- ggplot(cmm_level_grouped, aes(Level, Section)) + geom_line(aes(group = Section))
-theplot &amp;lt;- theplot + geom_point(aes(color = Section, alpha = .75, size = cmm_level_grouped$n * 15)) + scale_size_area()
-theplot &amp;lt;- theplot + theme_minimal() + 
-  theme(
-   panel.grid.major.x = element_blank(),
-    panel.grid.minor = element_blank(),
-    legend.position = &amp;quot;none&amp;quot;
-  ) + labs(x = &amp;quot;Responses FY18&amp;quot;, y = &amp;quot;&amp;quot;) + xlim(0, 5) + theme(axis.title = element_text(size = 12), axis.text.y = element_text(size = 12))
-
-print(theplot)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/likert-capability-maturity-models_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;So, this is really not a big deal and maybe people are doing this, but I haven’t seen it. In the wild I’m seeing averages, where we really want to see modes and ranges.&lt;/p&gt;
-&lt;p&gt;This applies equally well to Likert surveys.&lt;/p&gt;
-</description>
+      <description>During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.
+Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state.</description>
     </item>
     
   </channel>

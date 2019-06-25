@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>statistics on Tony On Risk</title>
+    <link>/tags/statistics/</link>
+    <description>Recent content in statistics on Tony On Risk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Let&#39;s Talk About Extreme Value Theory</title>
+      <link>/2019/06/02/extreme-value-theory/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/02/extreme-value-theory/</guid>
+      <description>Let’s talk about Extreme value theory - Wikipedia and information risk. I won’t throw down a bunch of R, because it’d basically just be a re-hash of the first reference listed below.
+Instead, I’ll share my current thinking on where EVT might fit.
+It fits when you&amp;rsquo;re interested in examining the end of the tail. When you might have a handful of extreme, low probability observations and you want to fit a distribution to those observations to help estimate a true maximum or for some reason think about just how extreme something might get.</description>
+    </item>
+    
+  </channel>
+</rss>

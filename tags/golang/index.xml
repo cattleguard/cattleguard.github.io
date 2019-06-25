@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Tony On Risk</title>
-    <link>/tags/golang/index.xml</link>
-    <description>Recent content in Golang on Tony On Risk</description>
+    <title>golang on Tony On Risk</title>
+    <link>/tags/golang/</link>
+    <description>Recent content in golang on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Dorking Around with CORS</title>
@@ -15,12 +18,8 @@
       <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/04/28/dorking-around-with-cors-and-golang/</guid>
-      <description>&lt;p&gt;After tuning in to Absolute Appsec ep 2 the other day I got pretty interested in CORS security issues related to misconfiguration and dynamic origin handling.  I don&amp;rsquo;t know about you, but every once in a while I hear about a bug class, or maybe just a set of unintended consequences that I find particularly amusing.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve found that building a tool (no matter how poor), goes a long way toward a deeper understanding.  For a tool that issues a potentially large number of requests, matching and could perform functions concurrently Go seemed like an appropriate language.  Also, I&amp;rsquo;ve been looking for a reason to give it a try =).&lt;/p&gt;
-
-&lt;p&gt;So, I decided to take golang for a spin.  You can find the result here:   &lt;a href=&#34;https://github.com/cattleguard/cors-gopher&#34;&gt;https://github.com/cattleguard/cors-gopher&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>After tuning in to Absolute Appsec ep 2 the other day I got pretty interested in CORS security issues related to misconfiguration and dynamic origin handling. I don&amp;rsquo;t know about you, but every once in a while I hear about a bug class, or maybe just a set of unintended consequences that I find particularly amusing.
+I&amp;rsquo;ve found that building a tool (no matter how poor), goes a long way toward a deeper understanding.</description>
     </item>
     
     <item>
@@ -29,30 +28,8 @@
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/04/11/how-to-proxy-go-http/</guid>
-      <description>&lt;p&gt;I started playing around a bit (again) in Go recently and had a need to take a look at some requests I was generating.  I wanted to take a look in ZAP to see how things were working and use that to make adjustments, etc.&lt;/p&gt;
-
-&lt;p&gt;Post is no big deal, but I didn&amp;rsquo;t want to forget how to do this.  Also, there are several posts that don&amp;rsquo;t seem to actually work.&lt;/p&gt;
-
-&lt;p&gt;First set the environment:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export HTTP_PROXY = localhost:8080
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then, use that as http.Transport.  I&amp;rsquo;ve also skipped TLS verify for this as you can see.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt; tr := &amp;amp;http.Transport{
-  TLSClientConfig: &amp;amp;tlsConfig{InsecureSkipVerify: true},
-  Proxy:  http.ProxyFromEnvironment,
- }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, use that as the Transport for http.Client:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt; client := &amp;amp;http.Client{Transport: tr}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Update:  In my case I still preferred going through ZAP, but TIL if you just need to see the request it seems that you can also import &lt;em&gt;net/http/httputil&lt;/em&gt; and just httputil.DumpRequest to take a look.&lt;/p&gt;
-</description>
+      <description>I started playing around a bit (again) in Go recently and had a need to take a look at some requests I was generating. I wanted to take a look in ZAP to see how things were working and use that to make adjustments, etc.
+Post is no big deal, but I didn&amp;rsquo;t want to forget how to do this. Also, there are several posts that don&amp;rsquo;t seem to actually work.</description>
     </item>
     
   </channel>

@@ -2,13 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tony On Risk</title>
-    <link>/index.xml</link>
+    <link>/</link>
     <description>Recent content on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Let&#39;s Talk About Extreme Value Theory</title>
+      <link>/2019/06/02/extreme-value-theory/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/02/extreme-value-theory/</guid>
+      <description>Let’s talk about Extreme value theory - Wikipedia and information risk. I won’t throw down a bunch of R, because it’d basically just be a re-hash of the first reference listed below.
+Instead, I’ll share my current thinking on where EVT might fit.
+It fits when you&amp;rsquo;re interested in examining the end of the tail. When you might have a handful of extreme, low probability observations and you want to fit a distribution to those observations to help estimate a true maximum or for some reason think about just how extreme something might get.</description>
+    </item>
     
     <item>
       <title>Feel Slightly Better About Your Capability Maturity Model Work</title>
@@ -16,46 +29,8 @@
       <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/01/16/likert-capability-maturity-models/</guid>
-      <description>&lt;p&gt;During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.&lt;/p&gt;
-&lt;p&gt;Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state. Sometimes, to delight our audience we might put these averages into a radar plot. It’s not a good thing to do, but we might. I have.&lt;/p&gt;
-&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;a/b0nLPfR&#34;&gt;
-&lt;a href=&#34;//imgur.com/b0nLPfR&#34;&gt;Radar O’Reilly on Drums&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;I was using the &lt;code&gt;fmsb&lt;/code&gt; package to do this.&lt;/p&gt;
-&lt;p&gt;I never really felt great about it. Any time we start to do math on ordinal values we drift into absurdity.&lt;/p&gt;
-&lt;p&gt;Then I started to think, we really just need to &lt;em&gt;show&lt;/em&gt; the responses! Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.&lt;/p&gt;
-&lt;p&gt;What a novel idea.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
-library(dplyr)
-library(ggplot2)
-
-Section &amp;lt;- c(&amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;)
-Level &amp;lt;- c(3, 3, 2, 4, 2, 1, 1, 1, 2)
-cmm &amp;lt;- data.frame(Section, Level)
-
-cmm_level_grouped &amp;lt;- cmm %&amp;gt;%
-  mutate(max = max(Level)) %&amp;gt;%
-  mutate(min = min(Level)) %&amp;gt;% group_by(Section, Level) %&amp;gt;% mutate(n = n())
-
-cmm_level_grouped$Section &amp;lt;- factor(cmm_level_grouped$Section, levels = rev(unique(cmm_level_grouped$Section)))
-
-# https://github.com/tidyverse/ggplot2/issues/1666
-
-theplot &amp;lt;- ggplot(cmm_level_grouped, aes(Level, Section)) + geom_line(aes(group = Section))
-theplot &amp;lt;- theplot + geom_point(aes(color = Section, alpha = .75, size = cmm_level_grouped$n * 15)) + scale_size_area()
-theplot &amp;lt;- theplot + theme_minimal() + 
-  theme(
-   panel.grid.major.x = element_blank(),
-    panel.grid.minor = element_blank(),
-    legend.position = &amp;quot;none&amp;quot;
-  ) + labs(x = &amp;quot;Responses FY18&amp;quot;, y = &amp;quot;&amp;quot;) + xlim(0, 5) + theme(axis.title = element_text(size = 12), axis.text.y = element_text(size = 12))
-
-print(theplot)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/likert-capability-maturity-models_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;So, this is really not a big deal and maybe people are doing this, but I haven’t seen it. In the wild I’m seeing averages, where we really want to see modes and ranges.&lt;/p&gt;
-&lt;p&gt;This applies equally well to Likert surveys.&lt;/p&gt;
-</description>
+      <description>During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.
+Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state.</description>
     </item>
     
     <item>
@@ -64,55 +39,8 @@ print(theplot)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/07/12/counter-factual-infosec/</guid>
-      <description>&lt;p&gt;Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.&lt;/p&gt;
-&lt;p&gt;Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates. Now you’re a risk management mad scientist with a knack for catchy blog titles!&lt;/p&gt;
-&lt;p&gt;Before going any further I recommend checking out &lt;a href=&#34;https://youtu.be/GTgZfCltMm8&#34;&gt;this video.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Let’s think of taking action (control, policy, etc.) as an intervening moment. We split reality into what would have happened without our action and what happens now that we’ve taken action. The theoretically less secure state and the theoretically more secure state.&lt;/p&gt;
-&lt;p&gt;Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.&lt;/p&gt;
-&lt;p&gt;A sudden drop in the response variable alone may not owe it’s explanation to our intervention.&lt;/p&gt;
-&lt;p&gt;I know all this talk of counter factual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at &lt;code&gt;summary(impact, &amp;quot;report&amp;quot;)&lt;/code&gt;). Generating alternate realities is now one of my most endorsed LinkedIN skills.&lt;/p&gt;
-&lt;p&gt;So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach and it’s &lt;strong&gt;&lt;em&gt;“effect”&lt;/em&gt;&lt;/strong&gt; using a couple of unaffected retailers as predictors. &lt;em&gt;This isn’t a great example, there are likely a bucket of confounding factors that make this less than convincing, but it will at least illustrate usage.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;First make sure you have the CausalImpact installed. &lt;code&gt;install.packages(&amp;quot;CausalImpact&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CausalImpact)
-library(quantmod)
-library(ggplot2)
-library(zoo)
-
-# Symbols for Target, Walmart, and Costco
-symbols.of.interest &amp;lt;- c(&amp;quot;TGT&amp;quot;, &amp;quot;WMT&amp;quot;, &amp;quot;COST&amp;quot;)
-
-prices &amp;lt;- new.env()
-
-# Ticker prices are for weekdays only, so in order to use dates in pre/post we have to fix the index.
-allDates &amp;lt;- seq.Date(
-       min(as.Date(&amp;quot;2013-01-01&amp;quot;)),
-       max(as.Date(&amp;quot;2014-12-31&amp;quot;)),
-       &amp;quot;day&amp;quot;)
-
-getSymbols(symbols.of.interest, from = as.Date(&amp;quot;2013-01-01&amp;quot;), to = as.Date(&amp;quot;2014-12-31&amp;quot;), env = prices, auto.assign = T)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;[1] “TGT” “WMT” “COST”&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
-# December 18, 2013 the news of Target&amp;#39;s mega-breach was made public
-
-pre.period &amp;lt;- as.Date(c(&amp;quot;2013-01-02&amp;quot;, &amp;quot;2013-12-19&amp;quot;))
-post.period &amp;lt;- as.Date(c(&amp;quot;2013-12-20&amp;quot;, &amp;quot;2014-12-30&amp;quot;))
-
-retail.stocks &amp;lt;- merge(prices$TGT$TGT.Close, prices$WMT$WMT.Close, prices$COST$COST.Close)
-
-# make a zoo out of the complete dates
-complete.days &amp;lt;- zoo(allDates, order.by = allDates)
-big.join &amp;lt;- merge.zoo(complete.days, retail.stocks, all = TRUE, fill = NA)
-big.join &amp;lt;- big.join[,colnames(big.join) != &amp;quot;complete.days&amp;quot;]
-# we can&amp;#39;t have NA in our response variable column, so we take the Google advice of approximating the value
-big.join &amp;lt;- na.approx(big.join)
-
-impact &amp;lt;- CausalImpact(big.join, pre.period, post.period)
-plot(impact)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Thinking on what telemetry needs to be instrumented and collected to help convince us of our effectiveness and populate our time series is a powerful way to approach action.&lt;/p&gt;
-&lt;p&gt;I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.&lt;/p&gt;
-&lt;p&gt;Thanks to Google and as always everyone keeping it going on StackOverflow.&lt;/p&gt;
-</description>
+      <description>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.
+Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates.</description>
     </item>
     
     <item>
@@ -121,12 +49,8 @@ plot(impact)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/04/28/dorking-around-with-cors-and-golang/</guid>
-      <description>&lt;p&gt;After tuning in to Absolute Appsec ep 2 the other day I got pretty interested in CORS security issues related to misconfiguration and dynamic origin handling.  I don&amp;rsquo;t know about you, but every once in a while I hear about a bug class, or maybe just a set of unintended consequences that I find particularly amusing.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve found that building a tool (no matter how poor), goes a long way toward a deeper understanding.  For a tool that issues a potentially large number of requests, matching and could perform functions concurrently Go seemed like an appropriate language.  Also, I&amp;rsquo;ve been looking for a reason to give it a try =).&lt;/p&gt;
-
-&lt;p&gt;So, I decided to take golang for a spin.  You can find the result here:   &lt;a href=&#34;https://github.com/cattleguard/cors-gopher&#34;&gt;https://github.com/cattleguard/cors-gopher&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>After tuning in to Absolute Appsec ep 2 the other day I got pretty interested in CORS security issues related to misconfiguration and dynamic origin handling. I don&amp;rsquo;t know about you, but every once in a while I hear about a bug class, or maybe just a set of unintended consequences that I find particularly amusing.
+I&amp;rsquo;ve found that building a tool (no matter how poor), goes a long way toward a deeper understanding.</description>
     </item>
     
     <item>
@@ -135,30 +59,8 @@ plot(impact)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/04/11/how-to-proxy-go-http/</guid>
-      <description>&lt;p&gt;I started playing around a bit (again) in Go recently and had a need to take a look at some requests I was generating.  I wanted to take a look in ZAP to see how things were working and use that to make adjustments, etc.&lt;/p&gt;
-
-&lt;p&gt;Post is no big deal, but I didn&amp;rsquo;t want to forget how to do this.  Also, there are several posts that don&amp;rsquo;t seem to actually work.&lt;/p&gt;
-
-&lt;p&gt;First set the environment:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export HTTP_PROXY = localhost:8080
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then, use that as http.Transport.  I&amp;rsquo;ve also skipped TLS verify for this as you can see.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt; tr := &amp;amp;http.Transport{
-  TLSClientConfig: &amp;amp;tlsConfig{InsecureSkipVerify: true},
-  Proxy:  http.ProxyFromEnvironment,
- }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, use that as the Transport for http.Client:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt; client := &amp;amp;http.Client{Transport: tr}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Update:  In my case I still preferred going through ZAP, but TIL if you just need to see the request it seems that you can also import &lt;em&gt;net/http/httputil&lt;/em&gt; and just httputil.DumpRequest to take a look.&lt;/p&gt;
-</description>
+      <description>I started playing around a bit (again) in Go recently and had a need to take a look at some requests I was generating. I wanted to take a look in ZAP to see how things were working and use that to make adjustments, etc.
+Post is no big deal, but I didn&amp;rsquo;t want to forget how to do this. Also, there are several posts that don&amp;rsquo;t seem to actually work.</description>
     </item>
     
     <item>
@@ -167,46 +69,9 @@ plot(impact)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/02/20/gender-package-and-the-big-texan/</guid>
-      <description>&lt;p&gt;Before we get too far down the trail on this, I’ll warn readers that this is a pink and blue post. It’s simple prediction using an interesting R package.&lt;/p&gt;
-&lt;p&gt;It’s important to consider the stakes (pun intended), when “enriching” a dataset with information that might introduce bias. Here, inaccuracies can occur by simple misspelling or just a slightly higher probability for the years selected…or other things.&lt;/p&gt;
-&lt;p&gt;That said, I wanted to get an idea of gender diversity in competitive steak eating competition. So, here we go.&lt;/p&gt;
-&lt;p&gt;We’re leveraging the &lt;a href=&#34;https://github.com/ropensci/gender&#34;&gt;rOpenSci Gender Package&lt;/a&gt; which attempts to predict gender off of an individuals name based on historical data from sources such as the U.S. Social Security Administration, Census Bureau, etc.&lt;/p&gt;
-&lt;p&gt;If you take a look at the github page, you’ll see that you get back a 1x6 tibble that includes proportion_male vs. proportion_female and the most prevalent gender. You could set a high threshold for proportions that might make this more accurate, but I just took the gender value.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(gender)
-gender(&amp;quot;pat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 6
-##    name proportion_male proportion_female gender year_min year_max
-##   &amp;lt;chr&amp;gt;           &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt;  &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1   pat          0.3592            0.6408 female     1932     2012&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(gender)
-library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load(&amp;quot;bigtexan.rda&amp;quot;)
-name.parts &amp;lt;- strsplit(big.texan.recordbook$name, &amp;quot; &amp;quot;)
-big.texan.recordbook$first.name &amp;lt;- sapply(name.parts, &amp;quot;[&amp;quot;, 1)
-
-# Open to suggestions here.  Just a hack to handle a fail by gender() for names like bradx.
-get_gender_if_you_can &amp;lt;- function(x) {
-  gender.guess &amp;lt;- unlist(gender(x, years = c(1950, 2000), method = &amp;quot;ssa&amp;quot;)[,4])
-  if(length(gender.guess)==0){return(NA)}
-  if (gender.guess == &amp;quot;male&amp;quot; || gender.guess == &amp;quot;female&amp;quot;)
-    return(gender.guess)
-}
-
-big.texan.recordbook$gender &amp;lt;- sapply(big.texan.recordbook$first.name, get_gender_if_you_can)
-
-g &amp;lt;- ggplot(big.texan.recordbook, aes(big.texan.recordbook$gender)) + labs(title = &amp;quot;Gender Breakdown&amp;quot;, subtitle = &amp;quot;Big Texan Wins&amp;quot;)
-g &amp;lt;- g + geom_bar(fill = c(&amp;quot;#FF99FF&amp;quot;, &amp;quot;#33CCFF&amp;quot;, &amp;quot;#FFFF99&amp;quot;))+ xlab(&amp;quot;Gender&amp;quot;) + ylab(&amp;quot;Count&amp;quot;) + theme_minimal()
-g &amp;lt;- g + theme(plot.title = element_text(hjust = -.11), plot.subtitle = element_text(hjust = -.1))
-plot(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/gender-package-and-the-big-texan_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;table(big.texan.recordbook$gender)
-## 
-## female   male 
-##    101   2807&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Of course, these are by wins, so if we wanted to get closer to unique winners, running the names through &lt;code&gt;unique()&lt;/code&gt; we get 83 females and 2655 males.&lt;/p&gt;
-&lt;p&gt;Some females of note include &lt;a href=&#34;https://en.wikipedia.org/wiki/Molly_Schuyler&#34;&gt;Molly Schuyler&lt;/a&gt; who conquered the 72oz challenge 5 times!&lt;/p&gt;
-&lt;p&gt;So, that’s it. If you want a head-start on getting the data, check out my previous steak stats post.&lt;/p&gt;
-</description>
+      <description>Before we get too far down the trail on this, I’ll warn readers that this is a pink and blue post. It’s simple prediction using an interesting R package.
+It’s important to consider the stakes (pun intended), when “enriching” a dataset with information that might introduce bias. Here, inaccuracies can occur by simple misspelling or just a slightly higher probability for the years selected…or other things.
+That said, I wanted to get an idea of gender diversity in competitive steak eating competition.</description>
     </item>
     
     <item>
@@ -215,24 +80,9 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/01/03/lets-learn-apache-drill-together/</guid>
-      <description>
-
-&lt;h1 id=&#34;lets-learn-apache-drill-together&#34;&gt;Lets Learn Apache Drill Together!&lt;/h1&gt;
-
-&lt;h2 id=&#34;querying-cvs-files-with-headers&#34;&gt;Querying cvs Files with Headers&lt;/h2&gt;
-
-&lt;p&gt;Default behavior is to ignore the first line and not use headers.  You can change this by going to the &lt;strong&gt;storage&lt;/strong&gt; tab in the web interface&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://drill.apache.org/docs/text-files-csv-tsv-psv/&#34;&gt;Text Files: CSV, TSV, PSV - Apache Drill&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;using-columns-x-instead-of-columns-x&#34;&gt;Using COLUMNS[x] instead of columns[x]&lt;/h2&gt;
-
-&lt;h3 id=&#34;query-failed-an-error-occurred&#34;&gt;Query Failed: An Error Occurred&lt;/h3&gt;
-
-&lt;p&gt;org.apache.drill.common.exceptions.UserRemoteException: DATA_READ ERROR: Selected column &amp;lsquo;COLUMNS&amp;rsquo; must have name &amp;lsquo;columns&amp;rsquo; or must be plain &amp;lsquo;*&amp;rsquo; File Path file:_sample-data_some.csv Fragment 0:0 [Error Id: 6e979344-63e0-4a9f-86ab-9bc0417637d3 on dev2:31010]&lt;/p&gt;
-
-&lt;p&gt;So, I got this one while working with a .csv after following what I thought the documentation had suggested with column indexing in the form of &lt;strong&gt;COLUMNS[x]&lt;/strong&gt;, but in actuality Drill wants &lt;strong&gt;columns[x]&lt;/strong&gt;.&lt;/p&gt;
-</description>
+      <description>Lets Learn Apache Drill Together! Querying cvs Files with Headers Default behavior is to ignore the first line and not use headers. You can change this by going to the storage tab in the web interface
+Text Files: CSV, TSV, PSV - Apache Drill
+Using COLUMNS[x] instead of columns[x] Query Failed: An Error Occurred org.apache.drill.common.exceptions.UserRemoteException: DATA_READ ERROR: Selected column &amp;lsquo;COLUMNS&amp;rsquo; must have name &amp;lsquo;columns&amp;rsquo; or must be plain &amp;lsquo;*&amp;rsquo; File Path file:_sample-data_some.</description>
     </item>
     
     <item>
@@ -241,50 +91,8 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/12/31/speed-it-up/</guid>
-      <description>&lt;p&gt;Lately I&amp;rsquo;ve been doing some learning on &lt;a href=&#34;http://www.pluralsight.com&#34;&gt;PluralSight&lt;/a&gt; thanks to a subscription through my employer.  I&amp;rsquo;ve enjoyed it, but one of the features I use all the time is 1.5X playback speed.  I find that I can still get the content and it cuts down on the dead air and slow typing.&lt;/p&gt;
-
-&lt;p&gt;Now, I look for faster playback on everything and am kind of suprised when I can&amp;rsquo;t find it.  However, I use one of these for my music and podcasts.&lt;/p&gt;
-
-&lt;p&gt;iPod Classic&lt;/p&gt;
-
-&lt;p&gt;The first thing we&amp;rsquo;ll want to do is use homebrew to install lame and sox with lame format support, &lt;code&gt;brew install lame&lt;/code&gt; and then &lt;code&gt;brew install sox --with-lame&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Multiple parameters would work for this.  You could use &lt;code&gt;speed&lt;/code&gt; and &lt;code&gt;pitch&lt;/code&gt;, but I think &lt;code&gt;tempo&lt;/code&gt; works better for me (thanks SO).  Maybe slightly slower than 1.5X.  Here&amp;rsquo;s the &lt;a href=&#34;https://gist.githubusercontent.com/cattleguard/714661ad0516f22d4f6dcfac522d3262/raw/c492dc708759e19ca53ca49e564cf6ffe429af60/pod_speeder.rb&#34;&gt;gist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;
-  #!/usr/local/bin/ruby
-  
-  # Must have ruby later ruby to use Dir.children()
-  require &#39;date&#39;
-  require &#39;shellwords&#39;
-  origin_folder = &#39;~/Music/iTunes/iTunes Media/Podcasts/&#39;
-  
-  Dir.chdir(File.expand_path(origin_folder))
-  contents = Dir.glob(&#39;*&#39;)
-  contents.each {|folder|
-    podcasts = Dir.children(folder)
-    podcasts.each {|podcast|
-      if File.expand_path(origin_folder + folder) == File.dirname(File.expand_path(origin_folder+folder+&#34;/&#34;+podcast))
-        if folder.downcase =~ /.*spanish.*/
-        else
-          made_on = File.mtime(File.expand_path(origin_folder+folder+&#34;/&#34;+podcast))
-          if made_on.to_date == Time.now.to_date
-            puts(podcast + &#34; was made today and is getting converted&#34;)
-            system(&#34;sox &#34; + File.expand_path(origin_folder+folder+&#34;/&#34;+podcast).shellescape + &#34; &#34; + File.expand_path(origin_folder+folder+&#34;/&#34;+ &#34;xfaster &#34; + podcast).shellescape + &#34; &#34; + &#34;tempo 1.25&#34;)
-            system(&#34;mv &#34; + File.expand_path(origin_folder + folder + &#34;/&#34; + &#34;xfaster &#34; + podcast).shellescape + &#34; &#34; + File.expand_path(origin_folder+folder+&#34;/&#34;+podcast).shellescape )
-          end
-        end
-      else
-        puts(&#34;compared &#34; + origin_folder + &#34;/&#34; + folder + &#34; to &#34; + File.dirname(File.expand_path(origin_folder+folder+&#34;/&#34;+podcast)))
-      end
-    }
-  }
-&lt;/pre&gt;
-
-&lt;p&gt;If you&amp;rsquo;re on OSX there are several free plist generators so that you can get it loaded by launchctl.&lt;/p&gt;
-
-&lt;p&gt;Anyway, just a quick thing to help burn down the podcast back issues.&lt;/p&gt;
-</description>
+      <description>Lately I&amp;rsquo;ve been doing some learning on PluralSight thanks to a subscription through my employer. I&amp;rsquo;ve enjoyed it, but one of the features I use all the time is 1.5X playback speed. I find that I can still get the content and it cuts down on the dead air and slow typing.
+Now, I look for faster playback on everything and am kind of suprised when I can&amp;rsquo;t find it. However, I use one of these for my music and podcasts.</description>
     </item>
     
     <item>
@@ -293,27 +101,9 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Fri, 17 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/17/data-cleaning-practice-pt1/</guid>
-      <description>&lt;p&gt;Our family is in the habit of heading west.  As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two.  I&amp;rsquo;ve even stopped into the &lt;a href=&#34;https://www.bigtexan.com/&#34;&gt;Big Texan&lt;/a&gt; once for breakfast.&lt;/p&gt;
-
-&lt;p&gt;For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.&lt;/p&gt;
-
-&lt;p&gt;An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.&lt;/p&gt;
-
-&lt;p&gt;They argued.  I fired up rvest.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/cattleguard/9a6536222af4bd9a8964cdf0602141a4&#34;&gt;Here&amp;rsquo;s a gist leveraging rvest to create a dataset from the Hall of Fame.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we have a great starting point for answering some questions, but you may notice a few issues.  It&amp;rsquo;s almost like this contest is for fun or something.  It&amp;rsquo;s as if settling an office debate, R style was not a primary goal.&lt;/p&gt;
-
-&lt;p&gt;Pretty much every column needs to be cleaned up.  My current workflow is to use grep() with invert = TRUE to show everything that doesn&amp;rsquo;t match my expected pattern.  Here&amp;rsquo;s an example: &lt;code&gt;grep(&amp;quot;^[0-9]{1,3}$&amp;quot;, big.texan.recordbook$age, value = TRUE, invert = TRUE)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;So, here&amp;rsquo;s my attempt at &lt;a href=&#34;https://gist.githubusercontent.com/cattleguard/2274938cd22f05c364f7eaddfec83f7c/raw/c0f049d5e6e29e8238b867d465c497d5e69e0a28/big_texan_clean.R&#34;&gt;cleanup&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This appeared to be close enough for our purposes.  I always enjoy this type of freestyle practice.  I did pick up a TIL function along the way: &lt;code&gt;gsubfn()&lt;/code&gt; which allows you to take your regex capture group and then apply a function to it.  I used this to address the kg conversion in the weight column.  I feel like there&amp;rsquo;s probably a &lt;code&gt;%&amp;gt;%&lt;/code&gt; equivalent and I&amp;rsquo;d love to see an example if you&amp;rsquo;ve got the time.&lt;/p&gt;
-
-&lt;p&gt;Now, I just post beefy stats from the dataset.
-&lt;img src=&#34;/post/bigtexan/avg_age.png&#34; alt=&#34;average age&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Our family is in the habit of heading west. As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two. I&amp;rsquo;ve even stopped into the Big Texan once for breakfast.
+For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.
+An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.</description>
     </item>
     
     <item>
@@ -322,60 +112,10 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/15/product-and-program-success-before-you-start/</guid>
-      <description>
-
-&lt;p&gt;If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.&lt;/p&gt;
-
-&lt;p&gt;If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.&lt;/p&gt;
-
-&lt;p&gt;So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment?  Don’t like that one?  The budget incinerator?&lt;/p&gt;
-
-&lt;p&gt;Let’s take a look at applying &lt;a href=&#34;http://blog.gardeviance.org/2015/02/an-introduction-to-wardley-value-chain.html&#34;&gt;value chain concepts&lt;/a&gt; while examining some of the external pressures.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-3-key-characteristics&#34;&gt;The 3 Key Characteristics&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Visibility&lt;/li&gt;
-&lt;li&gt;State of Commoditization&lt;/li&gt;
-&lt;li&gt;Time Horizon for Payback&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
-
-&lt;p&gt;There’s a spectrum of visibility when it comes to projects.  It may be that we have a security tool that has visibility internal to only the infosec team.  These are tools that serve a purpose for infosec, but aren’t leveraged by general IT Operations and generally stay out of the way of the user.&lt;/p&gt;
-
-&lt;p&gt;From there we have tools that are either leveraged by IT Ops or affect their workflows and further along still, tools that affect the workflows of non-IT users.&lt;/p&gt;
-
-&lt;p&gt;As you pass through each boundary you’ll typically pick up additional requirements, consequences and increase the need for a clear, organized communication plan.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean that you have less chance of failure in low visibility deployments.  In fact, it might be quite the opposite if there is no consequence or expected outcomes.  Infosec might be purchasing toys for which they are accountable only to themselves when extracting value and then fail to do so.&lt;/p&gt;
-
-&lt;p&gt;This may also inform the potential blast radius if failure were to occur.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-of-commoditization&#34;&gt;State of Commoditization&lt;/h2&gt;
-
-&lt;p&gt;The continuum of commoditization is an important one to consider when attempting to nail down what human capital you have to spend on which projects.  Individuals and the skills they bring matter.&lt;/p&gt;
-
-&lt;p&gt;Projects that are highly commoditized like firewalls or anti-malware are typically easier to resource than say building out an IAM program or GRC.&lt;/p&gt;
-
-&lt;p&gt;More customization and integration increases the need for having the right people involved throughout initial implementation and sustainment.&lt;/p&gt;
-
-&lt;h2 id=&#34;time-horizon-for-payback&#34;&gt;Time Horizon for Payback&lt;/h2&gt;
-
-&lt;p&gt;So, sometimes a team gets a resource that has a very specific skill.  This may be in a field that is hard to continuously staff (e.g. appsec, red team, IR).&lt;/p&gt;
-
-&lt;p&gt;When you have someone like this, considering how much you’re willing to spend on tooling which may lay fallow following their exit is important.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean you can’t resource in these areas, it just means that the window for making it valuable is short, or put another way, dependent on specific personnel retention.&lt;/p&gt;
-
-&lt;p&gt;The good news is, many of these highly skilled resources don’t need a ton of commercial tooling.&lt;/p&gt;
-
-&lt;h2 id=&#34;closing&#34;&gt;Closing&lt;/h2&gt;
-
-&lt;p&gt;This of course isn’t applicable to everyone.  If your organization’s business is infosec, the needs of that situation and personnel pool are likely different.&lt;/p&gt;
-
-&lt;p&gt;These are just some thoughts for orgs that are trying to track and resource capability across multiple domains.&lt;/p&gt;
-</description>
+      <description>If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.
+If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.
+So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment? Don’t like that one? The budget incinerator?
+Let’s take a look at applying value chain concepts while examining some of the external pressures.</description>
     </item>
     
     <item>
@@ -384,22 +124,8 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/08/27/sarcastic-programming/</guid>
-      <description>&lt;p&gt;While killing time on Twitter the other day a Techlahoma tweet featuring WebVR and A-Frame grabbed my attention.  If you know me, I’ve been excited about VR and AR for sometime  (despite not having any VR or AR capable equipment).  So, a color changing sphere that bounces is still fairly fun for me.&lt;/p&gt;
-
-&lt;p&gt;A-Frame makes creating WebVR experiences extremely accessible.  This could be great for artists and those who might otherwise miss out on the medium.&lt;/p&gt;
-
-&lt;p&gt;For me, I’m always looking for the use case. If I can’t readily find one, I like to reflect on the absurdity of the field.  Is there some cheeky application for the technology?&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s in that spirit, that I present to you an immersive risk experience like no other…&lt;a href=&#34;http://a-frame-risk-thing.glitch.me/&#34;&gt;A-Frame Risk Thing&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/sarcastic/riskVR.gif&#34; alt=&#34;riskVR.gif&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyway, using ordinal matrices to communicate risk is generally bad even if experienced at 3m X 3m&amp;hellip;larger than life.  I’d refer you to Cox’s Risk Matrix Theorem for basic reasons why.  &lt;a href=&#34;https://eight2late.wordpress.com/2009/07/01/cox%E2%80%99s-risk-matrix-theorem-and-its-implications-for-project-risk-management/&#34;&gt;Cox’s risk matrix theorem and its implications for project risk management | Eight to Late&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So, now we have another way to present non-information. ;)&lt;/p&gt;
-
-&lt;p&gt;Making toys is one of the great joys of tech.  Have fun.&lt;/p&gt;
-</description>
+      <description>While killing time on Twitter the other day a Techlahoma tweet featuring WebVR and A-Frame grabbed my attention. If you know me, I’ve been excited about VR and AR for sometime (despite not having any VR or AR capable equipment). So, a color changing sphere that bounces is still fairly fun for me.
+A-Frame makes creating WebVR experiences extremely accessible. This could be great for artists and those who might otherwise miss out on the medium.</description>
     </item>
     
     <item>
@@ -408,36 +134,9 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/15/fail-to-scale-part2/</guid>
-      <description>
-
-&lt;h5 id=&#34;first-if-you-haven-t-read-part-i-https-cattleguard-github-io-2017-05-30-fail-to-scale-part1-here-s-the-link-now-on-to-part-ii&#34;&gt;First, if you haven&amp;rsquo;t read &lt;a href=&#34;https://cattleguard.github.io/2017/05/30/fail-to-scale-part1/&#34;&gt;Part I&lt;/a&gt; here&amp;rsquo;s the link.  Now, on to Part II.&lt;/h5&gt;
-
-&lt;h1 id=&#34;if-you-re-going-to-fail-to-scale-don-t-part-ii&#34;&gt;If You’re Going to Fail To Scale, Don’t - Part II&lt;/h1&gt;
-
-&lt;p&gt;People hate to wait.&lt;/p&gt;
-
-&lt;p&gt;In Kaiser Fung’s book &lt;em&gt;Numbers Rule Your World&lt;/em&gt; he discusses two congestion problem case studies.  One relates to the grueling wait times at Disney attractions.  The other is a study on ramp metering in Minneapolis.&lt;/p&gt;
-
-&lt;p&gt;Now, if you’re not familiar with ramp metering here’s the gist.  A stoplight is placed at the end of an on ramp which regulates how many cars are allowed onto a highway at a given time.  The idea being that the number of required slowdowns and wrecks decreases as cars have appropriate distance.&lt;/p&gt;
-
-&lt;p&gt;I experienced this in LA and found it consistent with the study, in that the result was a &lt;em&gt;perceived&lt;/em&gt; more pleasant drive.  Far more pleasant I’d say than the morning commute here in Oklahoma City.&lt;/p&gt;
-
-&lt;p&gt;Waiting sucks.  Unreliable waits suck more.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/Fail_to_scale_part2_files/figure_html/congested.png&#34; alt=&#34;congested&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you only have capacity to deliver for the little green dots, maybe it’s time to consider letting the orange and red guys continue about their business.&lt;/p&gt;
-
-&lt;p&gt;What you &lt;strong&gt;DO NOT&lt;/strong&gt; want to do is deadline all of the dots to rush the gate at the same time and watch them pile up in a fiery mess.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/Fail_to_scale_part2_files/figure_html/not_congested.png&#34; alt=&#34;not congested&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There is a cost to queuing and it’s not necessarily a soft cost.  Meter the assets you want to address in a way that avoids collisions and allows those that would be endlessly waiting to continue on with business.&lt;/p&gt;
-
-&lt;p&gt;This may require treating an asset group as an internal statement of work that is approved on the interval.&lt;/p&gt;
-
-&lt;p&gt;Don’t be afraid to model reality, alter perception, under promise and over deliver.  Oh, and go get Kaiser’s book, it’s a pretty fun read.&lt;/p&gt;
-</description>
+      <description>First, if you haven&amp;rsquo;t read Part I here&amp;rsquo;s the link. Now, on to Part II. If You’re Going to Fail To Scale, Don’t - Part II People hate to wait.
+In Kaiser Fung’s book Numbers Rule Your World he discusses two congestion problem case studies. One relates to the grueling wait times at Disney attractions. The other is a study on ramp metering in Minneapolis.
+Now, if you’re not familiar with ramp metering here’s the gist.</description>
     </item>
     
     <item>
@@ -446,18 +145,7 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/27/zero-sum-bias/</guid>
-      <description>&lt;p&gt;One of the challenges we embrace in my line of work is the attempt to identify risk convergence and opportunities for risk reduction across multiple scenarios.  It’s not uncommon for these opportunities to cut across business functions or risk assets.  When I find these points of convergence I start looking for adjustments that reduce risk exposure and simultaneously improve the customer experience.  If you can squeeze some cost savings out while you’re at it, that’s a banner day!&lt;/p&gt;
-
-&lt;p&gt;Let me give you an example.  You have multiple applications that aren’t managed by active directory, &lt;em&gt;but could be&lt;/em&gt;.  Every one of them maintains their own credential service provider.  Users are frustrated by memorizing multiple secrets or are choosing easier secrets to memorize.  Costs of resets are high for systems that aren’t frequently used.  What security improvement is gained by doing this?  Pushing these applications into integrated management could provide a &lt;em&gt;triple-win&lt;/em&gt; situation, cost reduction, customer satisfier and increased security.&lt;/p&gt;
-
-&lt;p&gt;Anyway, risk and infosec shouldn’t be about our winning causing the organization losing.   Sometimes adding friction, is just adding friction.&lt;/p&gt;
-
-&lt;p&gt;One way that we perpetuate zero-sum thinking is in continuing to say “it’s always a trade-off” without being specific about what it is we’re trading.  If we implement control x, it will result in reduced happiness for y.  While this may be true in a given situation (I’ve been around long enough to know some things are going to be painful), it certainly is not true “always”.  There isn’t a finite supply of customer happiness or a resource limitation on what creative controls can be implemented (effectively anyway).&lt;/p&gt;
-
-&lt;p&gt;Naturally, when situations are thought of as zero-sum, the ingrained competitiveness encourages both sides to be less cooperative.  If you’re trying to manage up the probability of failing at the initiative increases.&lt;/p&gt;
-
-&lt;p&gt;If you’re a risk communicator it’s your job to not fall into a zero-sum bias trap and to diffuse the other side if they already have.  &lt;em&gt;&lt;strong&gt;Good luck!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>One of the challenges we embrace in my line of work is the attempt to identify risk convergence and opportunities for risk reduction across multiple scenarios. It’s not uncommon for these opportunities to cut across business functions or risk assets. When I find these points of convergence I start looking for adjustments that reduce risk exposure and simultaneously improve the customer experience. If you can squeeze some cost savings out while you’re at it, that’s a banner day!</description>
     </item>
     
     <item>
@@ -466,38 +154,10 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/25/coffee-guide/</guid>
-      <description>
-
-&lt;p&gt;I drink quite a bit of coffee.  It&amp;rsquo;s true.&lt;/p&gt;
-
-&lt;p&gt;Occasionally it comes up in conversation.  It occurs that someone is bored with their beans and wants to class up their caffeine delivery.  Maybe this is you.&lt;/p&gt;
-
-&lt;p&gt;Well, here are some of my favorites as of late.  Check them out.&lt;/p&gt;
-
-&lt;h2 id=&#34;top-picks&#34;&gt;Top Picks&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The best espresso that may ever enter your face comes out of San Jose, CA.  Gamut from Chromatic won&amp;rsquo;t let you down with this consistently delicious espresso.  &lt;a href=&#34;http://www.chromaticcoffee.com/gamut-espresso/&#34;&gt;http://www.chromaticcoffee.com/gamut-espresso/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Novel is doing wonderful things.  They keep a tight rotation, so there&amp;rsquo;s always something new and nothing specific to name, but I haven&amp;rsquo;t been let down.  Also, their 2lb bags are a steal. &lt;a href=&#34;https://www.novelcoffeeroasters.com/&#34;&gt;https://www.novelcoffeeroasters.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Onyx Coffee Lab out of Bentonville, AR is absolutely killing it.  They&amp;rsquo;ve got an amazing space and do pretty much everything really well.  Worth a stop if you&amp;rsquo;re in the area.  Worth a try if you just want to order online.  Plus, they offer a new level of transparency in  &lt;a href=&#34;purchasing&#34;&gt;http://sprudge.com/point-sale-tranparency-reporting-onyx-coffees-new-website-118712.html&lt;/a&gt;. &lt;a href=&#34;https://onyxcoffeelab.com/&#34;&gt;https://onyxcoffeelab.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;1000 Faces is a little hit and miss.  They&amp;rsquo;ve brought forth a formidable Guji and if you can catch them when they&amp;rsquo;re running Suke Quto it&amp;rsquo;s worth an order.  The espressos, William &amp;amp; Maria, and Misty Valley I think of as an unremarkable, ok. &lt;a href=&#34;http://www.1000facescoffee.com/&#34;&gt;http://www.1000facescoffee.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;KLLR keeps getting better and better.  They have a single origin sun-dried Ethiopia right now that is mouth wateringly good. &lt;a href=&#34;https://kllrcoffee.com/&#34;&gt;https://kllrcoffee.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Populace puts out some really nice Ethiopians.  I&amp;rsquo;ve had their Guji and a Peruvian, I may end up checking out their cold brew blend at some point.  They&amp;rsquo;re reasonably priced and don&amp;rsquo;t have much to worry about on the shipping end.   &lt;a href=&#34;https://populace.coffee/&#34;&gt;https://populace.coffee/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;location-specific&#34;&gt;Location Specific&lt;/h2&gt;
-
-&lt;h4 id=&#34;updated-09-09-2018&#34;&gt;updated 09/09/2018&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Estes Park, CO&lt;/strong&gt; Inkwell is the place to be for a cup of coffee in the Rockies.  I recommend getting juice or water at breakfast and then swinging by for a cup before hitting the trails. &lt;a href=&#34;http://inkwellbrew.com/&#34;&gt;http://inkwellbrew.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Las Vegas, NV - The Strip&lt;/strong&gt; So, this one might be useful for conference goers and summer campers.  There&amp;rsquo;s only one near-3rd-wave style coffee joint on the strip.  It&amp;rsquo;s Sambalatte &lt;a href=&#34;http://sambalatte.com/&#34;&gt;http://sambalatte.com/&lt;/a&gt; and it&amp;rsquo;s inside the Monte Carlo.  They&amp;rsquo;ve got chemex, V60, Kalita and steampunk.  They have a reasonably good Guji.  Plus, the fact that it&amp;rsquo;s in the Monte Carlo means that you can ride the tram from Aria/Crystals or Bellagio with little issue, making it fairly accessible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Springfield, MO&lt;/strong&gt; On our trip out to Springfield we tried both &lt;a href=&#34;http://www.kingdom-coffee.com/&#34;&gt;Kingdom Coffee&lt;/a&gt; and &lt;a href=&#34;http://thecoffeeethic.com/&#34;&gt;The Coffee Ethic&lt;/a&gt;.  Both have a nice space to enjoy a cup, but in my opinion Kingdom is the place to go if you have to choose one.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tulsa, OK&lt;/strong&gt; Get over to Cirque.  You won&amp;rsquo;t regret it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I&amp;rsquo;ll continue to keep my notes here, but I don&amp;rsquo;t plan on spamming the RSS with updates.  Check back as needed.&lt;/p&gt;
-</description>
+      <description>I drink quite a bit of coffee. It&amp;rsquo;s true.
+Occasionally it comes up in conversation. It occurs that someone is bored with their beans and wants to class up their caffeine delivery. Maybe this is you.
+Well, here are some of my favorites as of late. Check them out.
+Top Picks  The best espresso that may ever enter your face comes out of San Jose, CA. Gamut from Chromatic won&amp;rsquo;t let you down with this consistently delicious espresso.</description>
     </item>
     
     <item>
@@ -506,32 +166,9 @@ plot(g)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/30/fail-to-scale-part1/</guid>
-      <description>&lt;p&gt;Businesses that don’t deliver, don’t survive.  Why should your information security program?&lt;/p&gt;
-
-&lt;p&gt;The organization has decided to spin up an information security program and you’re in charge.&lt;/p&gt;
-
-&lt;p&gt;You’ve heard of &lt;em&gt;$framework&lt;/em&gt; and you declare adoption with less thought or ceremony than adopting a puppy.  You decide that to support &lt;em&gt;$framework&lt;/em&gt; you can write almost any nonsense and establish policy and process.  You’ve got a champion with a corner office and things are going swell.  You’re about to pull the big lever and let slip the dogs of war.&lt;/p&gt;
-
-&lt;p&gt;How sure are you that you can handle what you’ve built?&lt;/p&gt;
-
-&lt;p&gt;If your customers are placing orders and you don’t have inventory you’ve got two options.  Put them on a wait list or reject the order.   Neither instills great confidence.&lt;/p&gt;
-
-&lt;p&gt;Now, imagine that the customer was forced at gunpoint to place the first order and in a week they’ll be forced to place another one.&lt;/p&gt;
-
-&lt;p&gt;Now think for a minute about any process control gate that you’ve put in place by policy or governance.  What is the velocity and volume of items that need to come through that gate and what is the program’s capacity to handle them?&lt;/p&gt;
-
-&lt;p&gt;How many items can you handle per week?  You’ve got 52 weeks a year minus paid time off and sick days per FTE.  Now how many items do you have queuing?  What does that come to?  What degradation plan is in place for the loss of an FTE?&lt;/p&gt;
-
-&lt;p&gt;There are clear problems with running your service offering at 100% when replacement can take months and some organizations are sponging up multiples of that.  Most often this is the result of seeking coverage without considering cost.&lt;/p&gt;
-
-&lt;p&gt;The overused Euler diagram applies if you picked “fast and cheap” it’s probably not going to be very good.  If it&amp;rsquo;s a gate that everything has to pass through, it needs to be at least nearly-automated.&lt;/p&gt;
-
-&lt;p&gt;For time intensive, high quality efforts think boutique not big box.  You may have a valuable service offering, but its a tool to improve only those assets that are mission critical.  When you invest the time of these scarce resources you want to be sure that you’re gaining a net positive and the asset targeted is significantly more expensive than the assessment.&lt;/p&gt;
-
-&lt;p&gt;Thats all for now.  We’ll dig into congestion in part II.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;“When you want to hurry something, that means that you no longer care about it and want to get on to other things.” - Robert M. Pirsig in Zen and The Art of Motorcycle Maintenance&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>Businesses that don’t deliver, don’t survive. Why should your information security program?
+The organization has decided to spin up an information security program and you’re in charge.
+You’ve heard of $framework and you declare adoption with less thought or ceremony than adopting a puppy. You decide that to support $framework you can write almost any nonsense and establish policy and process. You’ve got a champion with a corner office and things are going swell.</description>
     </item>
     
     <item>
@@ -541,176 +178,52 @@ Sankey diagrams for infosec</title>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/19/sankey/</guid>
-      <description>&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
-&lt;p&gt;It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.&lt;/p&gt;
-&lt;p&gt;It was the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options&#34;&gt;Sankey Chart&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/sankey_files/figure-html/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;tweet from &lt;span class=&#34;citation&#34;&gt;@wendynather&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;You can view the original tweet &lt;a href=&#34;https://twitter.com/jwgoerlich/status/865262781100167169&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.&lt;/p&gt;
-&lt;p&gt;Visualization done well &lt;strong&gt;CAN’T&lt;/strong&gt; make all the difference, but it can make a little difference. Moreover, there are some relationships, linear layers of abstraction, that are particularly well suited for display by Sankey diagram.&lt;/p&gt;
-&lt;p&gt;So, let’s play with them in the googleVis package for R. There are other packages that should be able to produce Sankey charts, but none appeared to be as aesthetically pleasing out of the box (or with lower effort applied at least).&lt;/p&gt;
-&lt;p&gt;First make sure you have googleVis installed. &lt;code&gt;install.packages(&amp;quot;googleVis&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The first thing of note is that we need to have the data frame such that there is a column of start nodes and a column of end nodes. gvisSankey() will create all of the layers necessary to accommodate the links. For example, if A -&amp;gt; B and B -&amp;gt; C, gvisSankey() will create the flow from A-&amp;gt;B-&amp;gt;C.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(googleVis)
-options(gvis.plot.tag=&amp;#39;chart&amp;#39;)
-
-# Create some edges
-flowing.threat.model &amp;lt;- data.frame(From = c(&amp;quot;Web App Vuln (XSS)&amp;quot;, &amp;quot;Web App Vuln (XSS)&amp;quot;, &amp;quot;Phishing Email&amp;quot;, &amp;quot;Default Creds&amp;quot;, &amp;quot;Control 1&amp;quot;, &amp;quot;Control 2&amp;quot;,&amp;quot;Control 3&amp;quot;, &amp;quot;Control 4&amp;quot;,&amp;quot;Default Creds&amp;quot;,&amp;quot;Control 5&amp;quot;),
-                                   To = c(&amp;quot;Control 1&amp;quot;, &amp;quot;Control 2&amp;quot;, &amp;quot;Control 3&amp;quot;, &amp;quot;Control 4&amp;quot;, &amp;quot;Application security&amp;quot;, &amp;quot;Security monitoring&amp;quot;,&amp;quot;Security monitoring&amp;quot;, &amp;quot;Configuration management&amp;quot;,&amp;quot;Control 5&amp;quot;,&amp;quot;Security monitoring&amp;quot;),
-                                Weight = c(rep(1,10))) # This last one is just setting uniform weight across each link
-
-# Plot your Sankey!
-
-Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;, to=&amp;quot;To&amp;quot;, weight=&amp;quot;Weight&amp;quot;,
-                     options=list(
-                       sankey=&amp;quot;{link: {color: { fill: &amp;#39;#cccccc&amp;#39;, fillOpacity: 80 } },
-                       node: { color: { fill: &amp;#39;#a61d4c&amp;#39; }, nodePadding:40,
-                       label: { color: &amp;#39;#000000&amp;#39;, bold:true } }}&amp;quot;, width = 800))
-
-plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Fri Nov 17 22:35:26 2017 --&gt;
-&lt;!-- jsHeader --&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
- 
-// jsData 
-function gvisDataSankeyID16f52f3ce38a () {
-var data = new google.visualization.DataTable();
-var datajson =
-[
- [
-&#34;Web App Vuln (XSS)&#34;,
-&#34;Control 1&#34;,
-1
-],
-[
-&#34;Web App Vuln (XSS)&#34;,
-&#34;Control 2&#34;,
-1
-],
-[
-&#34;Phishing Email&#34;,
-&#34;Control 3&#34;,
-1
-],
-[
-&#34;Default Creds&#34;,
-&#34;Control 4&#34;,
-1
-],
-[
-&#34;Control 1&#34;,
-&#34;Application security&#34;,
-1
-],
-[
-&#34;Control 2&#34;,
-&#34;Security monitoring&#34;,
-1
-],
-[
-&#34;Control 3&#34;,
-&#34;Security monitoring&#34;,
-1
-],
-[
-&#34;Control 4&#34;,
-&#34;Configuration management&#34;,
-1
-],
-[
-&#34;Default Creds&#34;,
-&#34;Control 5&#34;,
-1
-],
-[
-&#34;Control 5&#34;,
-&#34;Security monitoring&#34;,
-1
-] 
-];
-data.addColumn(&#39;string&#39;,&#39;From&#39;);
-data.addColumn(&#39;string&#39;,&#39;To&#39;);
-data.addColumn(&#39;number&#39;,&#39;Weight&#39;);
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartSankeyID16f52f3ce38a() {
-var data = gvisDataSankeyID16f52f3ce38a();
-var options = {};
-options[&#34;width&#34;] = 800;
-options[&#34;height&#34;] = 400;
-options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacity: 80 } },
-                       node: { color: { fill: &#39;#a61d4c&#39; }, nodePadding:40,
-                       label: { color: &#39;#000000&#39;, bold:true } }};
-
-    var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID16f52f3ce38a&#39;)
-    );
-    chart.draw(data,options);
+      <description>Yesterday, a tweet caught my eye.
+It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.
+It was the Sankey Chart.
+tweet from @wendynather
+ You can view the original tweet here.
+As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.</description>
+    </item>
     
-
-}
-  
- 
-// jsDisplayChart
-(function() {
-var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = &#34;sankey&#34;;
-  
-// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-var i, newPackage = true;
-for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
-if (pkgs[i] === chartid)
-newPackage = false;
-}
-if (newPackage)
-  pkgs.push(chartid);
-  
-// Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID16f52f3ce38a);
-})();
-function displayChartSankeyID16f52f3ce38a() {
-  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-  window.clearTimeout(window.__gvisLoad);
-  // The timeout is set to 100 because otherwise the container div we are
-  // targeting might not be part of the document yet
-  window.__gvisLoad = setTimeout(function() {
-  var pkgCount = pkgs.length;
-  google.load(&#34;visualization&#34;, &#34;1&#34;, { packages:pkgs, callback: function() {
-  if (pkgCount != pkgs.length) {
-  // Race condition where another setTimeout call snuck in after us; if
-  // that call added a package, we must not shift its callback
-  return;
-}
-while (callbacks.length &gt; 0)
-callbacks.shift()();
-} });
-}, 100);
-}
- 
-// jsFooter
-&lt;/script&gt;
-&lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID16f52f3ce38a&#34;&gt;&lt;/script&gt;
-&lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID16f52f3ce38a&#34; style=&#34;width: 800; height: 400;&#34;&gt;
-
-&lt;/div&gt;
-&lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
-&lt;p&gt;For more awesome network and Sankey action check out &lt;a href=&#34;http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html&#34;&gt;Kyle Walker, Phd’s post on Interactive flow visualization in R&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;update-8817&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Update 8/8/17&lt;/h4&gt;
-&lt;p&gt;I’ve been using the networkD3 package demonstrated in Kyle Walker’s post. It’s slightly more involved when it comes to link creation, but I think the final product is much more publication ready.&lt;/p&gt;
-&lt;/div&gt;
-</description>
+    <item>
+      <title>Just a Test Post From Blogdown</title>
+      <link>/2017/05/15/just-a-test-post-from-blogdown/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/15/just-a-test-post-from-blogdown/</guid>
+      <description>So, Yihui Xie gifted the RStats world with another presentation surface. Now you can easily produce Hugo generated blogs right from RStudio! Oh, and it&amp;rsquo;s pretty great.
+There are a few bloggers blogging on blogs about this blog generator, but if you&amp;rsquo;ve got the basics of github down you might just go to https://bookdown.org/yihui/blogdown/.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/page/about/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
+      <description> I’M TONY. I connect business leaders to information security programs through quantitative risk analysis and assessment.
+Also, a fan of the National Park Service.
+OSCP, CISSP, CISA, CRISC </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/page/contact/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>/page/contact/</guid>
+      <description>Contact Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description>
+    </item>
+    
+    <item>
+      <title>Quantitative Information Risk Training Using R | 1-Day</title>
+      <link>/training/training/</link>
+      <pubDate>Mon, 15 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>/training/training/</guid>
+      <description> Quantitative Information Risk Training Using R | 1-Day Training dates TBA.
+Foundations of Risk  What is Risk? Breaking The Matrix Becoming a Quantitative Risk Apologist  Estimation and Calibration  How to Estimate ANYTHING  Hands-on R Basics  Quick Introduction to RStudio Navigating Vectors and Data Frames Probability Distributions Mode Estimation Monte Carlo How to Rock ggplot2 Like an Expert (Without Being One)  Advanced Concepts  Risk Aggregation  Risk Management  Cognitive Bias  </description>
     </item>
     
   </channel>

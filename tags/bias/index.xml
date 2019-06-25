@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bias on Tony On Risk</title>
-    <link>/tags/bias/index.xml</link>
-    <description>Recent content in Bias on Tony On Risk</description>
+    <title>bias on Tony On Risk</title>
+    <link>/tags/bias/</link>
+    <description>Recent content in bias on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/bias/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bias/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Is Zero-Sum Thinking Affecting Your Risk Decision?</title>
@@ -15,18 +18,7 @@
       <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/27/zero-sum-bias/</guid>
-      <description>&lt;p&gt;One of the challenges we embrace in my line of work is the attempt to identify risk convergence and opportunities for risk reduction across multiple scenarios.  It’s not uncommon for these opportunities to cut across business functions or risk assets.  When I find these points of convergence I start looking for adjustments that reduce risk exposure and simultaneously improve the customer experience.  If you can squeeze some cost savings out while you’re at it, that’s a banner day!&lt;/p&gt;
-
-&lt;p&gt;Let me give you an example.  You have multiple applications that aren’t managed by active directory, &lt;em&gt;but could be&lt;/em&gt;.  Every one of them maintains their own credential service provider.  Users are frustrated by memorizing multiple secrets or are choosing easier secrets to memorize.  Costs of resets are high for systems that aren’t frequently used.  What security improvement is gained by doing this?  Pushing these applications into integrated management could provide a &lt;em&gt;triple-win&lt;/em&gt; situation, cost reduction, customer satisfier and increased security.&lt;/p&gt;
-
-&lt;p&gt;Anyway, risk and infosec shouldn’t be about our winning causing the organization losing.   Sometimes adding friction, is just adding friction.&lt;/p&gt;
-
-&lt;p&gt;One way that we perpetuate zero-sum thinking is in continuing to say “it’s always a trade-off” without being specific about what it is we’re trading.  If we implement control x, it will result in reduced happiness for y.  While this may be true in a given situation (I’ve been around long enough to know some things are going to be painful), it certainly is not true “always”.  There isn’t a finite supply of customer happiness or a resource limitation on what creative controls can be implemented (effectively anyway).&lt;/p&gt;
-
-&lt;p&gt;Naturally, when situations are thought of as zero-sum, the ingrained competitiveness encourages both sides to be less cooperative.  If you’re trying to manage up the probability of failing at the initiative increases.&lt;/p&gt;
-
-&lt;p&gt;If you’re a risk communicator it’s your job to not fall into a zero-sum bias trap and to diffuse the other side if they already have.  &lt;em&gt;&lt;strong&gt;Good luck!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>One of the challenges we embrace in my line of work is the attempt to identify risk convergence and opportunities for risk reduction across multiple scenarios. It’s not uncommon for these opportunities to cut across business functions or risk assets. When I find these points of convergence I start looking for adjustments that reduce risk exposure and simultaneously improve the customer experience. If you can squeeze some cost savings out while you’re at it, that’s a banner day!</description>
     </item>
     
   </channel>

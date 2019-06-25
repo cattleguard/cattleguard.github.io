@@ -9,7 +9,7 @@ It’s important to consider the stakes (pun intended), when “enriching” a d
 That said, I wanted to get an idea of gender diversity in competitive steak eating competition.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.19" />
+        <meta name="generator" content="Hugo 0.55.6" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Competitive Steak Eating and Gender">
@@ -25,14 +25,17 @@ That said, I wanted to get an idea of gender diversity in competitive steak eati
     </head>
     <body>
         
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-46268936-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-46268936-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 
@@ -111,7 +114,9 @@ ga('send', 'pageview');
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>Before we get too far down the trail on this, I’ll warn readers that this is a pink and blue post. It’s simple prediction using an interesting R package.</p>
+    
+
+<p>Before we get too far down the trail on this, I’ll warn readers that this is a pink and blue post. It’s simple prediction using an interesting R package.</p>
 <p>It’s important to consider the stakes (pun intended), when “enriching” a dataset with information that might introduce bias. Here, inaccuracies can occur by simple misspelling or just a slightly higher probability for the years selected…or other things.</p>
 <p>That said, I wanted to get an idea of gender diversity in competitive steak eating competition. So, here we go.</p>
 <p>We’re leveraging the <a href="https://github.com/ropensci/gender">rOpenSci Gender Package</a> which attempts to predict gender off of an individuals name based on historical data from sources such as the U.S. Social Security Administration, Census Bureau, etc.</p>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data on Tony On Risk</title>
-    <link>/tags/data/index.xml</link>
+    <link>/tags/data/</link>
     <description>Recent content in Data on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Data Cleaning Practice Pt1 - Steak Stats</title>
@@ -15,27 +18,9 @@
       <pubDate>Fri, 17 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/17/data-cleaning-practice-pt1/</guid>
-      <description>&lt;p&gt;Our family is in the habit of heading west.  As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two.  I&amp;rsquo;ve even stopped into the &lt;a href=&#34;https://www.bigtexan.com/&#34;&gt;Big Texan&lt;/a&gt; once for breakfast.&lt;/p&gt;
-
-&lt;p&gt;For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.&lt;/p&gt;
-
-&lt;p&gt;An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.&lt;/p&gt;
-
-&lt;p&gt;They argued.  I fired up rvest.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/cattleguard/9a6536222af4bd9a8964cdf0602141a4&#34;&gt;Here&amp;rsquo;s a gist leveraging rvest to create a dataset from the Hall of Fame.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we have a great starting point for answering some questions, but you may notice a few issues.  It&amp;rsquo;s almost like this contest is for fun or something.  It&amp;rsquo;s as if settling an office debate, R style was not a primary goal.&lt;/p&gt;
-
-&lt;p&gt;Pretty much every column needs to be cleaned up.  My current workflow is to use grep() with invert = TRUE to show everything that doesn&amp;rsquo;t match my expected pattern.  Here&amp;rsquo;s an example: &lt;code&gt;grep(&amp;quot;^[0-9]{1,3}$&amp;quot;, big.texan.recordbook$age, value = TRUE, invert = TRUE)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;So, here&amp;rsquo;s my attempt at &lt;a href=&#34;https://gist.githubusercontent.com/cattleguard/2274938cd22f05c364f7eaddfec83f7c/raw/c0f049d5e6e29e8238b867d465c497d5e69e0a28/big_texan_clean.R&#34;&gt;cleanup&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This appeared to be close enough for our purposes.  I always enjoy this type of freestyle practice.  I did pick up a TIL function along the way: &lt;code&gt;gsubfn()&lt;/code&gt; which allows you to take your regex capture group and then apply a function to it.  I used this to address the kg conversion in the weight column.  I feel like there&amp;rsquo;s probably a &lt;code&gt;%&amp;gt;%&lt;/code&gt; equivalent and I&amp;rsquo;d love to see an example if you&amp;rsquo;ve got the time.&lt;/p&gt;
-
-&lt;p&gt;Now, I just post beefy stats from the dataset.
-&lt;img src=&#34;/post/bigtexan/avg_age.png&#34; alt=&#34;average age&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Our family is in the habit of heading west. As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two. I&amp;rsquo;ve even stopped into the Big Texan once for breakfast.
+For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.
+An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.</description>
     </item>
     
   </channel>

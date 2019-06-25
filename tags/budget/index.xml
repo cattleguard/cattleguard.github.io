@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Budget on Tony On Risk</title>
-    <link>/tags/budget/index.xml</link>
-    <description>Recent content in Budget on Tony On Risk</description>
+    <title>budget on Tony On Risk</title>
+    <link>/tags/budget/</link>
+    <description>Recent content in budget on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/budget/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/budget/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>3 Keys for Successful Products and Programs Before You Even Start</title>
@@ -15,60 +18,10 @@
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/15/product-and-program-success-before-you-start/</guid>
-      <description>
-
-&lt;p&gt;If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.&lt;/p&gt;
-
-&lt;p&gt;If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.&lt;/p&gt;
-
-&lt;p&gt;So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment?  Don’t like that one?  The budget incinerator?&lt;/p&gt;
-
-&lt;p&gt;Let’s take a look at applying &lt;a href=&#34;http://blog.gardeviance.org/2015/02/an-introduction-to-wardley-value-chain.html&#34;&gt;value chain concepts&lt;/a&gt; while examining some of the external pressures.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-3-key-characteristics&#34;&gt;The 3 Key Characteristics&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Visibility&lt;/li&gt;
-&lt;li&gt;State of Commoditization&lt;/li&gt;
-&lt;li&gt;Time Horizon for Payback&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
-
-&lt;p&gt;There’s a spectrum of visibility when it comes to projects.  It may be that we have a security tool that has visibility internal to only the infosec team.  These are tools that serve a purpose for infosec, but aren’t leveraged by general IT Operations and generally stay out of the way of the user.&lt;/p&gt;
-
-&lt;p&gt;From there we have tools that are either leveraged by IT Ops or affect their workflows and further along still, tools that affect the workflows of non-IT users.&lt;/p&gt;
-
-&lt;p&gt;As you pass through each boundary you’ll typically pick up additional requirements, consequences and increase the need for a clear, organized communication plan.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean that you have less chance of failure in low visibility deployments.  In fact, it might be quite the opposite if there is no consequence or expected outcomes.  Infosec might be purchasing toys for which they are accountable only to themselves when extracting value and then fail to do so.&lt;/p&gt;
-
-&lt;p&gt;This may also inform the potential blast radius if failure were to occur.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-of-commoditization&#34;&gt;State of Commoditization&lt;/h2&gt;
-
-&lt;p&gt;The continuum of commoditization is an important one to consider when attempting to nail down what human capital you have to spend on which projects.  Individuals and the skills they bring matter.&lt;/p&gt;
-
-&lt;p&gt;Projects that are highly commoditized like firewalls or anti-malware are typically easier to resource than say building out an IAM program or GRC.&lt;/p&gt;
-
-&lt;p&gt;More customization and integration increases the need for having the right people involved throughout initial implementation and sustainment.&lt;/p&gt;
-
-&lt;h2 id=&#34;time-horizon-for-payback&#34;&gt;Time Horizon for Payback&lt;/h2&gt;
-
-&lt;p&gt;So, sometimes a team gets a resource that has a very specific skill.  This may be in a field that is hard to continuously staff (e.g. appsec, red team, IR).&lt;/p&gt;
-
-&lt;p&gt;When you have someone like this, considering how much you’re willing to spend on tooling which may lay fallow following their exit is important.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean you can’t resource in these areas, it just means that the window for making it valuable is short, or put another way, dependent on specific personnel retention.&lt;/p&gt;
-
-&lt;p&gt;The good news is, many of these highly skilled resources don’t need a ton of commercial tooling.&lt;/p&gt;
-
-&lt;h2 id=&#34;closing&#34;&gt;Closing&lt;/h2&gt;
-
-&lt;p&gt;This of course isn’t applicable to everyone.  If your organization’s business is infosec, the needs of that situation and personnel pool are likely different.&lt;/p&gt;
-
-&lt;p&gt;These are just some thoughts for orgs that are trying to track and resource capability across multiple domains.&lt;/p&gt;
-</description>
+      <description>If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.
+If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.
+So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment? Don’t like that one? The budget incinerator?
+Let’s take a look at applying value chain concepts while examining some of the external pressures.</description>
     </item>
     
   </channel>

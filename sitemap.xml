@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/2019/06/02/extreme-value-theory/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/risk/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/statistics/</loc>
+    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/capability-maturity-models/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
   
   <url>
     <loc>/2019/01/16/likert-capability-maturity-models/</loc>
     <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/infosec/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/management/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -12,8 +72,32 @@
   </url>
   
   <url>
+    <loc>/tags/cors/</loc>
+    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2018/04/28/dorking-around-with-cors-and-golang/</loc>
     <lastmod>2018-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/appsec/</loc>
+    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -27,13 +111,55 @@
   </url>
   
   <url>
+    <loc>/tags/r-packages/</loc>
+    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/steak/</loc>
+    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2018/01/03/lets-learn-apache-drill-together/</loc>
     <lastmod>2018-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>/tags/data-science/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/drill/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/12/31/speed-it-up/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/podcast/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ruby/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data/</loc>
+    <lastmod>2017-11-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -47,8 +173,20 @@
   </url>
   
   <url>
+    <loc>/tags/budget/</loc>
+    <lastmod>2017-11-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/08/27/sarcastic-programming/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vr/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -57,13 +195,31 @@
   </url>
   
   <url>
+    <loc>/tags/information-security-management/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/06/27/zero-sum-bias/</loc>
     <lastmod>2017-06-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>/tags/bias/</loc>
+    <lastmod>2017-06-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2017/06/25/coffee-guide/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/coffee/</loc>
+    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -74,6 +230,12 @@
   <url>
     <loc>/2017/05/19/sankey/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dataviz/</loc>
+    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -92,168 +254,19 @@
   </url>
   
   <url>
-    <loc>/training/training/</loc>
-    <lastmod>2009-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/appsec/</loc>
-    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/bias/</loc>
-    <lastmod>2017-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/budget/</loc>
-    <lastmod>2017-11-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/capability-maturity-models/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/coffee/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/cors/</loc>
-    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/data/</loc>
-    <lastmod>2017-11-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/data-science/</loc>
-    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/dataviz/</loc>
-    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/drill/</loc>
-    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/go/</loc>
-    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2018-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/information-security-management/</loc>
-    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/infosec/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/management/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/page/</loc>
     <lastmod>2015-04-03T02:13:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/podcast/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r-packages/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/risk/</loc>
-    <lastmod>2017-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ruby/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/steak/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/training/training/</loc>
+    <lastmod>2009-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/training/</loc>
     <lastmod>2009-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/vr/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

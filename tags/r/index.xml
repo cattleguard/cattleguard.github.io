@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Tony On Risk</title>
-    <link>/tags/r/index.xml</link>
+    <link>/tags/r/</link>
     <description>Recent content in R on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Feel Slightly Better About Your Capability Maturity Model Work</title>
@@ -15,46 +18,8 @@
       <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/01/16/likert-capability-maturity-models/</guid>
-      <description>&lt;p&gt;During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.&lt;/p&gt;
-&lt;p&gt;Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state. Sometimes, to delight our audience we might put these averages into a radar plot. It’s not a good thing to do, but we might. I have.&lt;/p&gt;
-&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;a/b0nLPfR&#34;&gt;
-&lt;a href=&#34;//imgur.com/b0nLPfR&#34;&gt;Radar O’Reilly on Drums&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;I was using the &lt;code&gt;fmsb&lt;/code&gt; package to do this.&lt;/p&gt;
-&lt;p&gt;I never really felt great about it. Any time we start to do math on ordinal values we drift into absurdity.&lt;/p&gt;
-&lt;p&gt;Then I started to think, we really just need to &lt;em&gt;show&lt;/em&gt; the responses! Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.&lt;/p&gt;
-&lt;p&gt;What a novel idea.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
-library(dplyr)
-library(ggplot2)
-
-Section &amp;lt;- c(&amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;)
-Level &amp;lt;- c(3, 3, 2, 4, 2, 1, 1, 1, 2)
-cmm &amp;lt;- data.frame(Section, Level)
-
-cmm_level_grouped &amp;lt;- cmm %&amp;gt;%
-  mutate(max = max(Level)) %&amp;gt;%
-  mutate(min = min(Level)) %&amp;gt;% group_by(Section, Level) %&amp;gt;% mutate(n = n())
-
-cmm_level_grouped$Section &amp;lt;- factor(cmm_level_grouped$Section, levels = rev(unique(cmm_level_grouped$Section)))
-
-# https://github.com/tidyverse/ggplot2/issues/1666
-
-theplot &amp;lt;- ggplot(cmm_level_grouped, aes(Level, Section)) + geom_line(aes(group = Section))
-theplot &amp;lt;- theplot + geom_point(aes(color = Section, alpha = .75, size = cmm_level_grouped$n * 15)) + scale_size_area()
-theplot &amp;lt;- theplot + theme_minimal() + 
-  theme(
-   panel.grid.major.x = element_blank(),
-    panel.grid.minor = element_blank(),
-    legend.position = &amp;quot;none&amp;quot;
-  ) + labs(x = &amp;quot;Responses FY18&amp;quot;, y = &amp;quot;&amp;quot;) + xlim(0, 5) + theme(axis.title = element_text(size = 12), axis.text.y = element_text(size = 12))
-
-print(theplot)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/likert-capability-maturity-models_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;So, this is really not a big deal and maybe people are doing this, but I haven’t seen it. In the wild I’m seeing averages, where we really want to see modes and ranges.&lt;/p&gt;
-&lt;p&gt;This applies equally well to Likert surveys.&lt;/p&gt;
-</description>
+      <description>During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.
+Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state.</description>
     </item>
     
     <item>
@@ -63,55 +28,8 @@ print(theplot)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/07/12/counter-factual-infosec/</guid>
-      <description>&lt;p&gt;Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.&lt;/p&gt;
-&lt;p&gt;Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates. Now you’re a risk management mad scientist with a knack for catchy blog titles!&lt;/p&gt;
-&lt;p&gt;Before going any further I recommend checking out &lt;a href=&#34;https://youtu.be/GTgZfCltMm8&#34;&gt;this video.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Let’s think of taking action (control, policy, etc.) as an intervening moment. We split reality into what would have happened without our action and what happens now that we’ve taken action. The theoretically less secure state and the theoretically more secure state.&lt;/p&gt;
-&lt;p&gt;Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.&lt;/p&gt;
-&lt;p&gt;A sudden drop in the response variable alone may not owe it’s explanation to our intervention.&lt;/p&gt;
-&lt;p&gt;I know all this talk of counter factual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at &lt;code&gt;summary(impact, &amp;quot;report&amp;quot;)&lt;/code&gt;). Generating alternate realities is now one of my most endorsed LinkedIN skills.&lt;/p&gt;
-&lt;p&gt;So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach and it’s &lt;strong&gt;&lt;em&gt;“effect”&lt;/em&gt;&lt;/strong&gt; using a couple of unaffected retailers as predictors. &lt;em&gt;This isn’t a great example, there are likely a bucket of confounding factors that make this less than convincing, but it will at least illustrate usage.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;First make sure you have the CausalImpact installed. &lt;code&gt;install.packages(&amp;quot;CausalImpact&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CausalImpact)
-library(quantmod)
-library(ggplot2)
-library(zoo)
-
-# Symbols for Target, Walmart, and Costco
-symbols.of.interest &amp;lt;- c(&amp;quot;TGT&amp;quot;, &amp;quot;WMT&amp;quot;, &amp;quot;COST&amp;quot;)
-
-prices &amp;lt;- new.env()
-
-# Ticker prices are for weekdays only, so in order to use dates in pre/post we have to fix the index.
-allDates &amp;lt;- seq.Date(
-       min(as.Date(&amp;quot;2013-01-01&amp;quot;)),
-       max(as.Date(&amp;quot;2014-12-31&amp;quot;)),
-       &amp;quot;day&amp;quot;)
-
-getSymbols(symbols.of.interest, from = as.Date(&amp;quot;2013-01-01&amp;quot;), to = as.Date(&amp;quot;2014-12-31&amp;quot;), env = prices, auto.assign = T)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;[1] “TGT” “WMT” “COST”&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
-# December 18, 2013 the news of Target&amp;#39;s mega-breach was made public
-
-pre.period &amp;lt;- as.Date(c(&amp;quot;2013-01-02&amp;quot;, &amp;quot;2013-12-19&amp;quot;))
-post.period &amp;lt;- as.Date(c(&amp;quot;2013-12-20&amp;quot;, &amp;quot;2014-12-30&amp;quot;))
-
-retail.stocks &amp;lt;- merge(prices$TGT$TGT.Close, prices$WMT$WMT.Close, prices$COST$COST.Close)
-
-# make a zoo out of the complete dates
-complete.days &amp;lt;- zoo(allDates, order.by = allDates)
-big.join &amp;lt;- merge.zoo(complete.days, retail.stocks, all = TRUE, fill = NA)
-big.join &amp;lt;- big.join[,colnames(big.join) != &amp;quot;complete.days&amp;quot;]
-# we can&amp;#39;t have NA in our response variable column, so we take the Google advice of approximating the value
-big.join &amp;lt;- na.approx(big.join)
-
-impact &amp;lt;- CausalImpact(big.join, pre.period, post.period)
-plot(impact)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Thinking on what telemetry needs to be instrumented and collected to help convince us of our effectiveness and populate our time series is a powerful way to approach action.&lt;/p&gt;
-&lt;p&gt;I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.&lt;/p&gt;
-&lt;p&gt;Thanks to Google and as always everyone keeping it going on StackOverflow.&lt;/p&gt;
-</description>
+      <description>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.
+Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates.</description>
     </item>
     
     <item>
@@ -120,27 +38,9 @@ plot(impact)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Fri, 17 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/17/data-cleaning-practice-pt1/</guid>
-      <description>&lt;p&gt;Our family is in the habit of heading west.  As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two.  I&amp;rsquo;ve even stopped into the &lt;a href=&#34;https://www.bigtexan.com/&#34;&gt;Big Texan&lt;/a&gt; once for breakfast.&lt;/p&gt;
-
-&lt;p&gt;For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.&lt;/p&gt;
-
-&lt;p&gt;An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.&lt;/p&gt;
-
-&lt;p&gt;They argued.  I fired up rvest.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/cattleguard/9a6536222af4bd9a8964cdf0602141a4&#34;&gt;Here&amp;rsquo;s a gist leveraging rvest to create a dataset from the Hall of Fame.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we have a great starting point for answering some questions, but you may notice a few issues.  It&amp;rsquo;s almost like this contest is for fun or something.  It&amp;rsquo;s as if settling an office debate, R style was not a primary goal.&lt;/p&gt;
-
-&lt;p&gt;Pretty much every column needs to be cleaned up.  My current workflow is to use grep() with invert = TRUE to show everything that doesn&amp;rsquo;t match my expected pattern.  Here&amp;rsquo;s an example: &lt;code&gt;grep(&amp;quot;^[0-9]{1,3}$&amp;quot;, big.texan.recordbook$age, value = TRUE, invert = TRUE)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;So, here&amp;rsquo;s my attempt at &lt;a href=&#34;https://gist.githubusercontent.com/cattleguard/2274938cd22f05c364f7eaddfec83f7c/raw/c0f049d5e6e29e8238b867d465c497d5e69e0a28/big_texan_clean.R&#34;&gt;cleanup&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This appeared to be close enough for our purposes.  I always enjoy this type of freestyle practice.  I did pick up a TIL function along the way: &lt;code&gt;gsubfn()&lt;/code&gt; which allows you to take your regex capture group and then apply a function to it.  I used this to address the kg conversion in the weight column.  I feel like there&amp;rsquo;s probably a &lt;code&gt;%&amp;gt;%&lt;/code&gt; equivalent and I&amp;rsquo;d love to see an example if you&amp;rsquo;ve got the time.&lt;/p&gt;
-
-&lt;p&gt;Now, I just post beefy stats from the dataset.
-&lt;img src=&#34;/post/bigtexan/avg_age.png&#34; alt=&#34;average age&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Our family is in the habit of heading west. As such, we&amp;rsquo;ve passed through Amarillo, TX a time or two. I&amp;rsquo;ve even stopped into the Big Texan once for breakfast.
+For miles down I-40 you&amp;rsquo;ll see billboards for this restaurant and brewery advertising a free 72oz steak, if you can eat it.
+An office debate erupted amongst two of my colleagues over just what types of people end up beating the beast.</description>
     </item>
     
   </channel>

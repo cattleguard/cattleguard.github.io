@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Information Security Management on Tony On Risk</title>
-    <link>/tags/information-security-management/index.xml</link>
-    <description>Recent content in Information Security Management on Tony On Risk</description>
+    <title>information security management on Tony On Risk</title>
+    <link>/tags/information-security-management/</link>
+    <description>Recent content in information security management on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/information-security-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/information-security-management/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>If You’re Going to Fail To Scale, Don’t - Part II</title>
@@ -15,36 +18,9 @@
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/15/fail-to-scale-part2/</guid>
-      <description>
-
-&lt;h5 id=&#34;first-if-you-haven-t-read-part-i-https-cattleguard-github-io-2017-05-30-fail-to-scale-part1-here-s-the-link-now-on-to-part-ii&#34;&gt;First, if you haven&amp;rsquo;t read &lt;a href=&#34;https://cattleguard.github.io/2017/05/30/fail-to-scale-part1/&#34;&gt;Part I&lt;/a&gt; here&amp;rsquo;s the link.  Now, on to Part II.&lt;/h5&gt;
-
-&lt;h1 id=&#34;if-you-re-going-to-fail-to-scale-don-t-part-ii&#34;&gt;If You’re Going to Fail To Scale, Don’t - Part II&lt;/h1&gt;
-
-&lt;p&gt;People hate to wait.&lt;/p&gt;
-
-&lt;p&gt;In Kaiser Fung’s book &lt;em&gt;Numbers Rule Your World&lt;/em&gt; he discusses two congestion problem case studies.  One relates to the grueling wait times at Disney attractions.  The other is a study on ramp metering in Minneapolis.&lt;/p&gt;
-
-&lt;p&gt;Now, if you’re not familiar with ramp metering here’s the gist.  A stoplight is placed at the end of an on ramp which regulates how many cars are allowed onto a highway at a given time.  The idea being that the number of required slowdowns and wrecks decreases as cars have appropriate distance.&lt;/p&gt;
-
-&lt;p&gt;I experienced this in LA and found it consistent with the study, in that the result was a &lt;em&gt;perceived&lt;/em&gt; more pleasant drive.  Far more pleasant I’d say than the morning commute here in Oklahoma City.&lt;/p&gt;
-
-&lt;p&gt;Waiting sucks.  Unreliable waits suck more.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/Fail_to_scale_part2_files/figure_html/congested.png&#34; alt=&#34;congested&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you only have capacity to deliver for the little green dots, maybe it’s time to consider letting the orange and red guys continue about their business.&lt;/p&gt;
-
-&lt;p&gt;What you &lt;strong&gt;DO NOT&lt;/strong&gt; want to do is deadline all of the dots to rush the gate at the same time and watch them pile up in a fiery mess.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/Fail_to_scale_part2_files/figure_html/not_congested.png&#34; alt=&#34;not congested&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There is a cost to queuing and it’s not necessarily a soft cost.  Meter the assets you want to address in a way that avoids collisions and allows those that would be endlessly waiting to continue on with business.&lt;/p&gt;
-
-&lt;p&gt;This may require treating an asset group as an internal statement of work that is approved on the interval.&lt;/p&gt;
-
-&lt;p&gt;Don’t be afraid to model reality, alter perception, under promise and over deliver.  Oh, and go get Kaiser’s book, it’s a pretty fun read.&lt;/p&gt;
-</description>
+      <description>First, if you haven&amp;rsquo;t read Part I here&amp;rsquo;s the link. Now, on to Part II. If You’re Going to Fail To Scale, Don’t - Part II People hate to wait.
+In Kaiser Fung’s book Numbers Rule Your World he discusses two congestion problem case studies. One relates to the grueling wait times at Disney attractions. The other is a study on ramp metering in Minneapolis.
+Now, if you’re not familiar with ramp metering here’s the gist.</description>
     </item>
     
     <item>
@@ -53,32 +29,9 @@
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/30/fail-to-scale-part1/</guid>
-      <description>&lt;p&gt;Businesses that don’t deliver, don’t survive.  Why should your information security program?&lt;/p&gt;
-
-&lt;p&gt;The organization has decided to spin up an information security program and you’re in charge.&lt;/p&gt;
-
-&lt;p&gt;You’ve heard of &lt;em&gt;$framework&lt;/em&gt; and you declare adoption with less thought or ceremony than adopting a puppy.  You decide that to support &lt;em&gt;$framework&lt;/em&gt; you can write almost any nonsense and establish policy and process.  You’ve got a champion with a corner office and things are going swell.  You’re about to pull the big lever and let slip the dogs of war.&lt;/p&gt;
-
-&lt;p&gt;How sure are you that you can handle what you’ve built?&lt;/p&gt;
-
-&lt;p&gt;If your customers are placing orders and you don’t have inventory you’ve got two options.  Put them on a wait list or reject the order.   Neither instills great confidence.&lt;/p&gt;
-
-&lt;p&gt;Now, imagine that the customer was forced at gunpoint to place the first order and in a week they’ll be forced to place another one.&lt;/p&gt;
-
-&lt;p&gt;Now think for a minute about any process control gate that you’ve put in place by policy or governance.  What is the velocity and volume of items that need to come through that gate and what is the program’s capacity to handle them?&lt;/p&gt;
-
-&lt;p&gt;How many items can you handle per week?  You’ve got 52 weeks a year minus paid time off and sick days per FTE.  Now how many items do you have queuing?  What does that come to?  What degradation plan is in place for the loss of an FTE?&lt;/p&gt;
-
-&lt;p&gt;There are clear problems with running your service offering at 100% when replacement can take months and some organizations are sponging up multiples of that.  Most often this is the result of seeking coverage without considering cost.&lt;/p&gt;
-
-&lt;p&gt;The overused Euler diagram applies if you picked “fast and cheap” it’s probably not going to be very good.  If it&amp;rsquo;s a gate that everything has to pass through, it needs to be at least nearly-automated.&lt;/p&gt;
-
-&lt;p&gt;For time intensive, high quality efforts think boutique not big box.  You may have a valuable service offering, but its a tool to improve only those assets that are mission critical.  When you invest the time of these scarce resources you want to be sure that you’re gaining a net positive and the asset targeted is significantly more expensive than the assessment.&lt;/p&gt;
-
-&lt;p&gt;Thats all for now.  We’ll dig into congestion in part II.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;“When you want to hurry something, that means that you no longer care about it and want to get on to other things.” - Robert M. Pirsig in Zen and The Art of Motorcycle Maintenance&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>Businesses that don’t deliver, don’t survive. Why should your information security program?
+The organization has decided to spin up an information security program and you’re in charge.
+You’ve heard of $framework and you declare adoption with less thought or ceremony than adopting a puppy. You decide that to support $framework you can write almost any nonsense and establish policy and process. You’ve got a champion with a corner office and things are going swell.</description>
     </item>
     
   </channel>

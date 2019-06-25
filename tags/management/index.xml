@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Management on Tony On Risk</title>
-    <link>/tags/management/index.xml</link>
-    <description>Recent content in Management on Tony On Risk</description>
+    <title>management on Tony On Risk</title>
+    <link>/tags/management/</link>
+    <description>Recent content in management on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/management/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Feel Slightly Better About Your Capability Maturity Model Work</title>
@@ -15,46 +18,8 @@
       <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/01/16/likert-capability-maturity-models/</guid>
-      <description>&lt;p&gt;During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.&lt;/p&gt;
-&lt;p&gt;Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state. Sometimes, to delight our audience we might put these averages into a radar plot. It’s not a good thing to do, but we might. I have.&lt;/p&gt;
-&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;a/b0nLPfR&#34;&gt;
-&lt;a href=&#34;//imgur.com/b0nLPfR&#34;&gt;Radar O’Reilly on Drums&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;I was using the &lt;code&gt;fmsb&lt;/code&gt; package to do this.&lt;/p&gt;
-&lt;p&gt;I never really felt great about it. Any time we start to do math on ordinal values we drift into absurdity.&lt;/p&gt;
-&lt;p&gt;Then I started to think, we really just need to &lt;em&gt;show&lt;/em&gt; the responses! Like, you know, actually show the range of where people agree on a level and how varied the perspectives might be for any given facet.&lt;/p&gt;
-&lt;p&gt;What a novel idea.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
-library(dplyr)
-library(ggplot2)
-
-Section &amp;lt;- c(&amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Execution Visibility&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Personnel&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;, &amp;quot;Governance&amp;quot;)
-Level &amp;lt;- c(3, 3, 2, 4, 2, 1, 1, 1, 2)
-cmm &amp;lt;- data.frame(Section, Level)
-
-cmm_level_grouped &amp;lt;- cmm %&amp;gt;%
-  mutate(max = max(Level)) %&amp;gt;%
-  mutate(min = min(Level)) %&amp;gt;% group_by(Section, Level) %&amp;gt;% mutate(n = n())
-
-cmm_level_grouped$Section &amp;lt;- factor(cmm_level_grouped$Section, levels = rev(unique(cmm_level_grouped$Section)))
-
-# https://github.com/tidyverse/ggplot2/issues/1666
-
-theplot &amp;lt;- ggplot(cmm_level_grouped, aes(Level, Section)) + geom_line(aes(group = Section))
-theplot &amp;lt;- theplot + geom_point(aes(color = Section, alpha = .75, size = cmm_level_grouped$n * 15)) + scale_size_area()
-theplot &amp;lt;- theplot + theme_minimal() + 
-  theme(
-   panel.grid.major.x = element_blank(),
-    panel.grid.minor = element_blank(),
-    legend.position = &amp;quot;none&amp;quot;
-  ) + labs(x = &amp;quot;Responses FY18&amp;quot;, y = &amp;quot;&amp;quot;) + xlim(0, 5) + theme(axis.title = element_text(size = 12), axis.text.y = element_text(size = 12))
-
-print(theplot)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/likert-capability-maturity-models_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;So, this is really not a big deal and maybe people are doing this, but I haven’t seen it. In the wild I’m seeing averages, where we really want to see modes and ranges.&lt;/p&gt;
-&lt;p&gt;This applies equally well to Likert surveys.&lt;/p&gt;
-</description>
+      <description>During the course of your information security management and reporting you may find yourself in need of a tool for soliciting feedback to assess program operational capabilities. It may be useful to employ a Capability Maturity Model to gauge the emotional current state of a given practice.
+Once you’ve gathered responses, you have to decide what to do with them. It’s not uncommon to average out the responses and use that as an indication of level state.</description>
     </item>
     
     <item>
@@ -63,55 +28,8 @@ print(theplot)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/07/12/counter-factual-infosec/</guid>
-      <description>&lt;p&gt;Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.&lt;/p&gt;
-&lt;p&gt;Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates. Now you’re a risk management mad scientist with a knack for catchy blog titles!&lt;/p&gt;
-&lt;p&gt;Before going any further I recommend checking out &lt;a href=&#34;https://youtu.be/GTgZfCltMm8&#34;&gt;this video.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Let’s think of taking action (control, policy, etc.) as an intervening moment. We split reality into what would have happened without our action and what happens now that we’ve taken action. The theoretically less secure state and the theoretically more secure state.&lt;/p&gt;
-&lt;p&gt;Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.&lt;/p&gt;
-&lt;p&gt;A sudden drop in the response variable alone may not owe it’s explanation to our intervention.&lt;/p&gt;
-&lt;p&gt;I know all this talk of counter factual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at &lt;code&gt;summary(impact, &amp;quot;report&amp;quot;)&lt;/code&gt;). Generating alternate realities is now one of my most endorsed LinkedIN skills.&lt;/p&gt;
-&lt;p&gt;So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach and it’s &lt;strong&gt;&lt;em&gt;“effect”&lt;/em&gt;&lt;/strong&gt; using a couple of unaffected retailers as predictors. &lt;em&gt;This isn’t a great example, there are likely a bucket of confounding factors that make this less than convincing, but it will at least illustrate usage.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;First make sure you have the CausalImpact installed. &lt;code&gt;install.packages(&amp;quot;CausalImpact&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CausalImpact)
-library(quantmod)
-library(ggplot2)
-library(zoo)
-
-# Symbols for Target, Walmart, and Costco
-symbols.of.interest &amp;lt;- c(&amp;quot;TGT&amp;quot;, &amp;quot;WMT&amp;quot;, &amp;quot;COST&amp;quot;)
-
-prices &amp;lt;- new.env()
-
-# Ticker prices are for weekdays only, so in order to use dates in pre/post we have to fix the index.
-allDates &amp;lt;- seq.Date(
-       min(as.Date(&amp;quot;2013-01-01&amp;quot;)),
-       max(as.Date(&amp;quot;2014-12-31&amp;quot;)),
-       &amp;quot;day&amp;quot;)
-
-getSymbols(symbols.of.interest, from = as.Date(&amp;quot;2013-01-01&amp;quot;), to = as.Date(&amp;quot;2014-12-31&amp;quot;), env = prices, auto.assign = T)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;[1] “TGT” “WMT” “COST”&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
-# December 18, 2013 the news of Target&amp;#39;s mega-breach was made public
-
-pre.period &amp;lt;- as.Date(c(&amp;quot;2013-01-02&amp;quot;, &amp;quot;2013-12-19&amp;quot;))
-post.period &amp;lt;- as.Date(c(&amp;quot;2013-12-20&amp;quot;, &amp;quot;2014-12-30&amp;quot;))
-
-retail.stocks &amp;lt;- merge(prices$TGT$TGT.Close, prices$WMT$WMT.Close, prices$COST$COST.Close)
-
-# make a zoo out of the complete dates
-complete.days &amp;lt;- zoo(allDates, order.by = allDates)
-big.join &amp;lt;- merge.zoo(complete.days, retail.stocks, all = TRUE, fill = NA)
-big.join &amp;lt;- big.join[,colnames(big.join) != &amp;quot;complete.days&amp;quot;]
-# we can&amp;#39;t have NA in our response variable column, so we take the Google advice of approximating the value
-big.join &amp;lt;- na.approx(big.join)
-
-impact &amp;lt;- CausalImpact(big.join, pre.period, post.period)
-plot(impact)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/counter-factual-infosec_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Thinking on what telemetry needs to be instrumented and collected to help convince us of our effectiveness and populate our time series is a powerful way to approach action.&lt;/p&gt;
-&lt;p&gt;I know quite well that my naïveté is likely on full display for serious data scientists and statisticians. Please feel free to drop me a note with clarifications and corrections. I very much enjoy learning on these topics.&lt;/p&gt;
-&lt;p&gt;Thanks to Google and as always everyone keeping it going on StackOverflow.&lt;/p&gt;
-</description>
+      <description>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.
+Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates.</description>
     </item>
     
     <item>
@@ -120,60 +38,10 @@ plot(impact)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/15/product-and-program-success-before-you-start/</guid>
-      <description>
-
-&lt;p&gt;If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.&lt;/p&gt;
-
-&lt;p&gt;If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.&lt;/p&gt;
-
-&lt;p&gt;So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment?  Don’t like that one?  The budget incinerator?&lt;/p&gt;
-
-&lt;p&gt;Let’s take a look at applying &lt;a href=&#34;http://blog.gardeviance.org/2015/02/an-introduction-to-wardley-value-chain.html&#34;&gt;value chain concepts&lt;/a&gt; while examining some of the external pressures.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-3-key-characteristics&#34;&gt;The 3 Key Characteristics&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Visibility&lt;/li&gt;
-&lt;li&gt;State of Commoditization&lt;/li&gt;
-&lt;li&gt;Time Horizon for Payback&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
-
-&lt;p&gt;There’s a spectrum of visibility when it comes to projects.  It may be that we have a security tool that has visibility internal to only the infosec team.  These are tools that serve a purpose for infosec, but aren’t leveraged by general IT Operations and generally stay out of the way of the user.&lt;/p&gt;
-
-&lt;p&gt;From there we have tools that are either leveraged by IT Ops or affect their workflows and further along still, tools that affect the workflows of non-IT users.&lt;/p&gt;
-
-&lt;p&gt;As you pass through each boundary you’ll typically pick up additional requirements, consequences and increase the need for a clear, organized communication plan.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean that you have less chance of failure in low visibility deployments.  In fact, it might be quite the opposite if there is no consequence or expected outcomes.  Infosec might be purchasing toys for which they are accountable only to themselves when extracting value and then fail to do so.&lt;/p&gt;
-
-&lt;p&gt;This may also inform the potential blast radius if failure were to occur.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-of-commoditization&#34;&gt;State of Commoditization&lt;/h2&gt;
-
-&lt;p&gt;The continuum of commoditization is an important one to consider when attempting to nail down what human capital you have to spend on which projects.  Individuals and the skills they bring matter.&lt;/p&gt;
-
-&lt;p&gt;Projects that are highly commoditized like firewalls or anti-malware are typically easier to resource than say building out an IAM program or GRC.&lt;/p&gt;
-
-&lt;p&gt;More customization and integration increases the need for having the right people involved throughout initial implementation and sustainment.&lt;/p&gt;
-
-&lt;h2 id=&#34;time-horizon-for-payback&#34;&gt;Time Horizon for Payback&lt;/h2&gt;
-
-&lt;p&gt;So, sometimes a team gets a resource that has a very specific skill.  This may be in a field that is hard to continuously staff (e.g. appsec, red team, IR).&lt;/p&gt;
-
-&lt;p&gt;When you have someone like this, considering how much you’re willing to spend on tooling which may lay fallow following their exit is important.&lt;/p&gt;
-
-&lt;p&gt;This doesn’t mean you can’t resource in these areas, it just means that the window for making it valuable is short, or put another way, dependent on specific personnel retention.&lt;/p&gt;
-
-&lt;p&gt;The good news is, many of these highly skilled resources don’t need a ton of commercial tooling.&lt;/p&gt;
-
-&lt;h2 id=&#34;closing&#34;&gt;Closing&lt;/h2&gt;
-
-&lt;p&gt;This of course isn’t applicable to everyone.  If your organization’s business is infosec, the needs of that situation and personnel pool are likely different.&lt;/p&gt;
-
-&lt;p&gt;These are just some thoughts for orgs that are trying to track and resource capability across multiple domains.&lt;/p&gt;
-</description>
+      <description>If you’ve been an information security practitioner for more than a few years, you’ve likely witnessed your share of disappointing purchases, implementations and initiatives.
+If you’ve been charged with managing multiple information security projects, you might have experienced a torrent of failure.
+So, why are some initiatives destined for glory while others board the bullet train to the Abyss of Embarrassment? Don’t like that one? The budget incinerator?
+Let’s take a look at applying value chain concepts while examining some of the external pressures.</description>
     </item>
     
   </channel>

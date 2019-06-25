@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dataviz on Tony On Risk</title>
-    <link>/tags/dataviz/index.xml</link>
-    <description>Recent content in Dataviz on Tony On Risk</description>
+    <title>dataviz on Tony On Risk</title>
+    <link>/tags/dataviz/</link>
+    <description>Recent content in dataviz on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Get Sankey!
@@ -16,176 +19,12 @@ Sankey diagrams for infosec</title>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/19/sankey/</guid>
-      <description>&lt;p&gt;Yesterday, a tweet caught my eye.&lt;/p&gt;
-&lt;p&gt;It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.&lt;/p&gt;
-&lt;p&gt;It was the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/sankey#Configuration_Options&#34;&gt;Sankey Chart&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/sankey_files/figure-html/twittersankey2.png&#34; alt=&#34;tweet from @wendynather&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;tweet from &lt;span class=&#34;citation&#34;&gt;@wendynather&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;You can view the original tweet &lt;a href=&#34;https://twitter.com/jwgoerlich/status/865262781100167169&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.&lt;/p&gt;
-&lt;p&gt;Visualization done well &lt;strong&gt;CAN’T&lt;/strong&gt; make all the difference, but it can make a little difference. Moreover, there are some relationships, linear layers of abstraction, that are particularly well suited for display by Sankey diagram.&lt;/p&gt;
-&lt;p&gt;So, let’s play with them in the googleVis package for R. There are other packages that should be able to produce Sankey charts, but none appeared to be as aesthetically pleasing out of the box (or with lower effort applied at least).&lt;/p&gt;
-&lt;p&gt;First make sure you have googleVis installed. &lt;code&gt;install.packages(&amp;quot;googleVis&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The first thing of note is that we need to have the data frame such that there is a column of start nodes and a column of end nodes. gvisSankey() will create all of the layers necessary to accommodate the links. For example, if A -&amp;gt; B and B -&amp;gt; C, gvisSankey() will create the flow from A-&amp;gt;B-&amp;gt;C.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(googleVis)
-options(gvis.plot.tag=&amp;#39;chart&amp;#39;)
-
-# Create some edges
-flowing.threat.model &amp;lt;- data.frame(From = c(&amp;quot;Web App Vuln (XSS)&amp;quot;, &amp;quot;Web App Vuln (XSS)&amp;quot;, &amp;quot;Phishing Email&amp;quot;, &amp;quot;Default Creds&amp;quot;, &amp;quot;Control 1&amp;quot;, &amp;quot;Control 2&amp;quot;,&amp;quot;Control 3&amp;quot;, &amp;quot;Control 4&amp;quot;,&amp;quot;Default Creds&amp;quot;,&amp;quot;Control 5&amp;quot;),
-                                   To = c(&amp;quot;Control 1&amp;quot;, &amp;quot;Control 2&amp;quot;, &amp;quot;Control 3&amp;quot;, &amp;quot;Control 4&amp;quot;, &amp;quot;Application security&amp;quot;, &amp;quot;Security monitoring&amp;quot;,&amp;quot;Security monitoring&amp;quot;, &amp;quot;Configuration management&amp;quot;,&amp;quot;Control 5&amp;quot;,&amp;quot;Security monitoring&amp;quot;),
-                                Weight = c(rep(1,10))) # This last one is just setting uniform weight across each link
-
-# Plot your Sankey!
-
-Sankey &amp;lt;- gvisSankey(flowing.threat.model, from=&amp;quot;From&amp;quot;, to=&amp;quot;To&amp;quot;, weight=&amp;quot;Weight&amp;quot;,
-                     options=list(
-                       sankey=&amp;quot;{link: {color: { fill: &amp;#39;#cccccc&amp;#39;, fillOpacity: 80 } },
-                       node: { color: { fill: &amp;#39;#a61d4c&amp;#39; }, nodePadding:40,
-                       label: { color: &amp;#39;#000000&amp;#39;, bold:true } }}&amp;quot;, width = 800))
-
-plot(Sankey)&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- Sankey generated in R 3.3.3 by googleVis 0.6.2 package --&gt;
-&lt;!-- Fri Nov 17 22:35:26 2017 --&gt;
-&lt;!-- jsHeader --&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
- 
-// jsData 
-function gvisDataSankeyID16f52f3ce38a () {
-var data = new google.visualization.DataTable();
-var datajson =
-[
- [
-&#34;Web App Vuln (XSS)&#34;,
-&#34;Control 1&#34;,
-1
-],
-[
-&#34;Web App Vuln (XSS)&#34;,
-&#34;Control 2&#34;,
-1
-],
-[
-&#34;Phishing Email&#34;,
-&#34;Control 3&#34;,
-1
-],
-[
-&#34;Default Creds&#34;,
-&#34;Control 4&#34;,
-1
-],
-[
-&#34;Control 1&#34;,
-&#34;Application security&#34;,
-1
-],
-[
-&#34;Control 2&#34;,
-&#34;Security monitoring&#34;,
-1
-],
-[
-&#34;Control 3&#34;,
-&#34;Security monitoring&#34;,
-1
-],
-[
-&#34;Control 4&#34;,
-&#34;Configuration management&#34;,
-1
-],
-[
-&#34;Default Creds&#34;,
-&#34;Control 5&#34;,
-1
-],
-[
-&#34;Control 5&#34;,
-&#34;Security monitoring&#34;,
-1
-] 
-];
-data.addColumn(&#39;string&#39;,&#39;From&#39;);
-data.addColumn(&#39;string&#39;,&#39;To&#39;);
-data.addColumn(&#39;number&#39;,&#39;Weight&#39;);
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartSankeyID16f52f3ce38a() {
-var data = gvisDataSankeyID16f52f3ce38a();
-var options = {};
-options[&#34;width&#34;] = 800;
-options[&#34;height&#34;] = 400;
-options[&#34;sankey&#34;] = {link: {color: { fill: &#39;#cccccc&#39;, fillOpacity: 80 } },
-                       node: { color: { fill: &#39;#a61d4c&#39; }, nodePadding:40,
-                       label: { color: &#39;#000000&#39;, bold:true } }};
-
-    var chart = new google.visualization.Sankey(
-    document.getElementById(&#39;SankeyID16f52f3ce38a&#39;)
-    );
-    chart.draw(data,options);
-    
-
-}
-  
- 
-// jsDisplayChart
-(function() {
-var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = &#34;sankey&#34;;
-  
-// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-var i, newPackage = true;
-for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
-if (pkgs[i] === chartid)
-newPackage = false;
-}
-if (newPackage)
-  pkgs.push(chartid);
-  
-// Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyID16f52f3ce38a);
-})();
-function displayChartSankeyID16f52f3ce38a() {
-  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-  window.clearTimeout(window.__gvisLoad);
-  // The timeout is set to 100 because otherwise the container div we are
-  // targeting might not be part of the document yet
-  window.__gvisLoad = setTimeout(function() {
-  var pkgCount = pkgs.length;
-  google.load(&#34;visualization&#34;, &#34;1&#34;, { packages:pkgs, callback: function() {
-  if (pkgCount != pkgs.length) {
-  // Race condition where another setTimeout call snuck in after us; if
-  // that call added a package, we must not shift its callback
-  return;
-}
-while (callbacks.length &gt; 0)
-callbacks.shift()();
-} });
-}, 100);
-}
- 
-// jsFooter
-&lt;/script&gt;
-&lt;!-- jsChart --&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi?callback=displayChartSankeyID16f52f3ce38a&#34;&gt;&lt;/script&gt;
-&lt;!-- divChart --&gt;
-&lt;div id=&#34;SankeyID16f52f3ce38a&#34; style=&#34;width: 800; height: 400;&#34;&gt;
-
-&lt;/div&gt;
-&lt;p&gt;That’s it! The creation of the diagram isn’t particularly hard. The genius part is coming up with the ideas you’d like to represent.&lt;/p&gt;
-&lt;p&gt;For more awesome network and Sankey action check out &lt;a href=&#34;http://personal.tcu.edu/kylewalker/interactive-flow-visualization-in-r.html&#34;&gt;Kyle Walker, Phd’s post on Interactive flow visualization in R&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;update-8817&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Update 8/8/17&lt;/h4&gt;
-&lt;p&gt;I’ve been using the networkD3 package demonstrated in Kyle Walker’s post. It’s slightly more involved when it comes to link creation, but I think the final product is much more publication ready.&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Yesterday, a tweet caught my eye.
+It was something that I know I’d seen before, but it somehow had escaped my memory as to what it was called or how it was constructed. Well, it bugged me enough that I had to track it down.
+It was the Sankey Chart.
+tweet from @wendynather
+ You can view the original tweet here.
+As I am currently neck deep in writing an annual risk report it’d be easy for me to agree with the thought.</description>
     </item>
     
   </channel>

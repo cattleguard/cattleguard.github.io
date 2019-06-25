@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vr on Tony On Risk</title>
-    <link>/tags/vr/index.xml</link>
-    <description>Recent content in Vr on Tony On Risk</description>
+    <title>VR on Tony On Risk</title>
+    <link>/tags/vr/</link>
+    <description>Recent content in VR on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/vr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/vr/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Kickstarting Conversation With Sarcastic Programming</title>
@@ -15,22 +18,8 @@
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/08/27/sarcastic-programming/</guid>
-      <description>&lt;p&gt;While killing time on Twitter the other day a Techlahoma tweet featuring WebVR and A-Frame grabbed my attention.  If you know me, I’ve been excited about VR and AR for sometime  (despite not having any VR or AR capable equipment).  So, a color changing sphere that bounces is still fairly fun for me.&lt;/p&gt;
-
-&lt;p&gt;A-Frame makes creating WebVR experiences extremely accessible.  This could be great for artists and those who might otherwise miss out on the medium.&lt;/p&gt;
-
-&lt;p&gt;For me, I’m always looking for the use case. If I can’t readily find one, I like to reflect on the absurdity of the field.  Is there some cheeky application for the technology?&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s in that spirit, that I present to you an immersive risk experience like no other…&lt;a href=&#34;http://a-frame-risk-thing.glitch.me/&#34;&gt;A-Frame Risk Thing&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/post/sarcastic/riskVR.gif&#34; alt=&#34;riskVR.gif&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyway, using ordinal matrices to communicate risk is generally bad even if experienced at 3m X 3m&amp;hellip;larger than life.  I’d refer you to Cox’s Risk Matrix Theorem for basic reasons why.  &lt;a href=&#34;https://eight2late.wordpress.com/2009/07/01/cox%E2%80%99s-risk-matrix-theorem-and-its-implications-for-project-risk-management/&#34;&gt;Cox’s risk matrix theorem and its implications for project risk management | Eight to Late&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So, now we have another way to present non-information. ;)&lt;/p&gt;
-
-&lt;p&gt;Making toys is one of the great joys of tech.  Have fun.&lt;/p&gt;
-</description>
+      <description>While killing time on Twitter the other day a Techlahoma tweet featuring WebVR and A-Frame grabbed my attention. If you know me, I’ve been excited about VR and AR for sometime (despite not having any VR or AR capable equipment). So, a color changing sphere that bounces is still fairly fun for me.
+A-Frame makes creating WebVR experiences extremely accessible. This could be great for artists and those who might otherwise miss out on the medium.</description>
     </item>
     
   </channel>

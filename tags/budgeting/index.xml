@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Budgeting on Tony On Risk</title>
+    <link>/tags/budgeting/</link>
+    <description>Recent content in Budgeting on Tony On Risk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/budgeting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Budget is a Poor Proxy For Risk Appetite</title>
+      <link>/2019/05/02/why-budget-is-a-poor-proxy-for-risk-appetite/</link>
+      <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/02/why-budget-is-a-poor-proxy-for-risk-appetite/</guid>
+      <description>This tweet got me thinking.
+I wasn’t at the conference (much FOMO), so I certainly don’t know the context. Not to mention that this may have just been quotable. At any rate, it was somewhat thought provoking, as lately I’ve been considering the spectrum of data maturity and indicators acting as a proxy for another value somewhere on that spectrum.
+I doubt we’re supposed to think that the risk appetite is the budget.</description>
+    </item>
+    
+  </channel>
+</rss>

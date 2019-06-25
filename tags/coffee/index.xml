@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coffee on Tony On Risk</title>
-    <link>/tags/coffee/index.xml</link>
-    <description>Recent content in Coffee on Tony On Risk</description>
+    <title>coffee on Tony On Risk</title>
+    <link>/tags/coffee/</link>
+    <description>Recent content in coffee on Tony On Risk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <atom:link href="/tags/coffee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/coffee/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Tony&#39;s Coffee Guide</title>
@@ -15,38 +18,10 @@
       <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/25/coffee-guide/</guid>
-      <description>
-
-&lt;p&gt;I drink quite a bit of coffee.  It&amp;rsquo;s true.&lt;/p&gt;
-
-&lt;p&gt;Occasionally it comes up in conversation.  It occurs that someone is bored with their beans and wants to class up their caffeine delivery.  Maybe this is you.&lt;/p&gt;
-
-&lt;p&gt;Well, here are some of my favorites as of late.  Check them out.&lt;/p&gt;
-
-&lt;h2 id=&#34;top-picks&#34;&gt;Top Picks&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The best espresso that may ever enter your face comes out of San Jose, CA.  Gamut from Chromatic won&amp;rsquo;t let you down with this consistently delicious espresso.  &lt;a href=&#34;http://www.chromaticcoffee.com/gamut-espresso/&#34;&gt;http://www.chromaticcoffee.com/gamut-espresso/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Novel is doing wonderful things.  They keep a tight rotation, so there&amp;rsquo;s always something new and nothing specific to name, but I haven&amp;rsquo;t been let down.  Also, their 2lb bags are a steal. &lt;a href=&#34;https://www.novelcoffeeroasters.com/&#34;&gt;https://www.novelcoffeeroasters.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Onyx Coffee Lab out of Bentonville, AR is absolutely killing it.  They&amp;rsquo;ve got an amazing space and do pretty much everything really well.  Worth a stop if you&amp;rsquo;re in the area.  Worth a try if you just want to order online.  Plus, they offer a new level of transparency in  &lt;a href=&#34;purchasing&#34;&gt;http://sprudge.com/point-sale-tranparency-reporting-onyx-coffees-new-website-118712.html&lt;/a&gt;. &lt;a href=&#34;https://onyxcoffeelab.com/&#34;&gt;https://onyxcoffeelab.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;1000 Faces is a little hit and miss.  They&amp;rsquo;ve brought forth a formidable Guji and if you can catch them when they&amp;rsquo;re running Suke Quto it&amp;rsquo;s worth an order.  The espressos, William &amp;amp; Maria, and Misty Valley I think of as an unremarkable, ok. &lt;a href=&#34;http://www.1000facescoffee.com/&#34;&gt;http://www.1000facescoffee.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;KLLR keeps getting better and better.  They have a single origin sun-dried Ethiopia right now that is mouth wateringly good. &lt;a href=&#34;https://kllrcoffee.com/&#34;&gt;https://kllrcoffee.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Populace puts out some really nice Ethiopians.  I&amp;rsquo;ve had their Guji and a Peruvian, I may end up checking out their cold brew blend at some point.  They&amp;rsquo;re reasonably priced and don&amp;rsquo;t have much to worry about on the shipping end.   &lt;a href=&#34;https://populace.coffee/&#34;&gt;https://populace.coffee/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;location-specific&#34;&gt;Location Specific&lt;/h2&gt;
-
-&lt;h4 id=&#34;updated-09-09-2018&#34;&gt;updated 09/09/2018&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Estes Park, CO&lt;/strong&gt; Inkwell is the place to be for a cup of coffee in the Rockies.  I recommend getting juice or water at breakfast and then swinging by for a cup before hitting the trails. &lt;a href=&#34;http://inkwellbrew.com/&#34;&gt;http://inkwellbrew.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Las Vegas, NV - The Strip&lt;/strong&gt; So, this one might be useful for conference goers and summer campers.  There&amp;rsquo;s only one near-3rd-wave style coffee joint on the strip.  It&amp;rsquo;s Sambalatte &lt;a href=&#34;http://sambalatte.com/&#34;&gt;http://sambalatte.com/&lt;/a&gt; and it&amp;rsquo;s inside the Monte Carlo.  They&amp;rsquo;ve got chemex, V60, Kalita and steampunk.  They have a reasonably good Guji.  Plus, the fact that it&amp;rsquo;s in the Monte Carlo means that you can ride the tram from Aria/Crystals or Bellagio with little issue, making it fairly accessible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Springfield, MO&lt;/strong&gt; On our trip out to Springfield we tried both &lt;a href=&#34;http://www.kingdom-coffee.com/&#34;&gt;Kingdom Coffee&lt;/a&gt; and &lt;a href=&#34;http://thecoffeeethic.com/&#34;&gt;The Coffee Ethic&lt;/a&gt;.  Both have a nice space to enjoy a cup, but in my opinion Kingdom is the place to go if you have to choose one.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tulsa, OK&lt;/strong&gt; Get over to Cirque.  You won&amp;rsquo;t regret it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I&amp;rsquo;ll continue to keep my notes here, but I don&amp;rsquo;t plan on spamming the RSS with updates.  Check back as needed.&lt;/p&gt;
-</description>
+      <description>I drink quite a bit of coffee. It&amp;rsquo;s true.
+Occasionally it comes up in conversation. It occurs that someone is bored with their beans and wants to class up their caffeine delivery. Maybe this is you.
+Well, here are some of my favorites as of late. Check them out.
+Top Picks  The best espresso that may ever enter your face comes out of San Jose, CA. Gamut from Chromatic won&amp;rsquo;t let you down with this consistently delicious espresso.</description>
     </item>
     
   </channel>

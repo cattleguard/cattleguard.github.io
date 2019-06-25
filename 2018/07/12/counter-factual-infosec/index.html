@@ -7,7 +7,7 @@
         <meta name="description" content="Be The Change You Want to See, And Know If You Are">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.19" />
+        <meta name="generator" content="Hugo 0.55.6" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="How To Apply Google&#39;s CausalImpact Package to Analyze Infosec Intervention">
@@ -21,14 +21,17 @@
     </head>
     <body>
         
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-46268936-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-46268936-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
 
@@ -109,7 +112,10 @@ ga('send', 'pageview');
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.</p>
+    
+
+
+<p>Google released their CausalImpact package a few years ago and when they did my mind started racing with ideas for information security and information risk applications.</p>
 <p>Imagine if you could propose a control, policy change or process improvement with an expected effect on a response variable, which would lead you to purposefully defining a way to measure intervention outcomes. Not bad. You go on to determine a number of covariates. Now you’re a risk management mad scientist with a knack for catchy blog titles!</p>
 <p>Before going any further I recommend checking out <a href="https://youtu.be/GTgZfCltMm8">this video.</a></p>
 <p>Let’s think of taking action (control, policy, etc.) as an intervening moment. We split reality into what would have happened without our action and what happens now that we’ve taken action. The theoretically less secure state and the theoretically more secure state.</p>
