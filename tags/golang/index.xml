@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sat, 28 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playing With Buffalo - Part 0.2</title>
+      <link>/2019/08/10/buffalo-notes-pt1/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/10/buffalo-notes-pt1/</guid>
+      <description>All notes are referencing buffalo 0.14.8 on Ubuntu.
+One thing I&amp;rsquo;ve noticed is that the plugin framework may not be playing as described in the documentation. For example, installing the auth plugin.
+buffalo plugins install github.com/gobuffalo/buffalo-auth
+is supposed to, by my understanding, update the buffalo-plugins.toml file and go get the plugin for install. My experience however was that the command updated buffalo-plugins.toml, but did not install. Following tutorials and trying the g (generator) will result in an error: ERRO[0004] [PLUGIN] error loading plugin /home/username/go/bin/buffalo-auth: signal: killed</description>
+    </item>
     
     <item>
       <title>Dorking Around with CORS</title>
