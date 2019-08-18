@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resources for Combining Expert Opinions</title>
+      <link>/2019/08/18/resources-for-expert-opinion-pooling/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/18/resources-for-expert-opinion-pooling/</guid>
+      <description>Methods for combining expert opinions for use in the creation of probability distributions in risk analysis is a hot topic right now. At least as hot as any quantitative information risk topic can get. I thought it might be helpful to bang out a quick post with some links and notes on the topic.
+Here are a few resources where one might find answers or a starting point.
+Some are inclined to simply average the results of expert parameter elicitation.</description>
+    </item>
     
     <item>
       <title>Playing With Buffalo - Part 0.2</title>
@@ -214,9 +225,10 @@ There are a few bloggers blogging on blogs about this blog generator, but if you
       <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
       
       <guid>/page/about/</guid>
-      <description> I’M TONY. I connect business leaders to information security programs through quantitative risk analysis and assessment.
+      <description> HI, I&amp;rsquo;M TONY. I specialize in expert-level information risk and information security program strategy in team settings, individual contributor, and trusted advisor roles.
+I chase the dream of infosec that &amp;ldquo;pays for itself&amp;rdquo;.
 Also, a fan of the National Park Service.
-OSCP, CISSP, CISA, CRISC </description>
+OSCP, CISSP, CISA, CRISC, CTPRP National Park Service Site Visits  Arches National Park Brown vs. Board of Education National Historic Site Bryce Canyon National Park Canyonlands National Park (2X) Capital Reef National Park Channel Islands National Park Chickasaw National Recreation Area Crater Lake National Park Grand Canyon National Park (South Rim) Great Sand Dunes National Park Lincoln Memorial Oklahoma City National Memorial Pea Ridge National Military Park Petrified Forest National Park (2X) Redwoods National Park (2X) Rocky Mountains National Park (3X) Washington Monument Zion National Park  </description>
     </item>
     
     <item>

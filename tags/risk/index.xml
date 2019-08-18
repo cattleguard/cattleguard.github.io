@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/risk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resources for Combining Expert Opinions</title>
+      <link>/2019/08/18/resources-for-expert-opinion-pooling/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/18/resources-for-expert-opinion-pooling/</guid>
+      <description>Methods for combining expert opinions for use in the creation of probability distributions in risk analysis is a hot topic right now. At least as hot as any quantitative information risk topic can get. I thought it might be helpful to bang out a quick post with some links and notes on the topic.
+Here are a few resources where one might find answers or a starting point.
+Some are inclined to simply average the results of expert parameter elicitation.</description>
+    </item>
     
     <item>
       <title>Let&#39;s Talk About Extreme Value Theory</title>

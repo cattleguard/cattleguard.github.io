@@ -3,26 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/2019/08/10/buffalo-notes-pt1/</loc>
-    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+    <loc>/2019/08/18/resources-for-expert-opinion-pooling/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sme/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/risk/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2019/08/10/buffalo-notes-pt1/</loc>
+    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -40,12 +57,6 @@
   <url>
     <loc>/2019/06/02/extreme-value-theory/</loc>
     <lastmod>2019-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/risk/</loc>
-    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
