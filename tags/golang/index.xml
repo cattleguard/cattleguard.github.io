@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on Tony On Risk</title>
+    <title>golang on Scenario 1</title>
     <link>/tags/golang/</link>
-    <description>Recent content in golang on Tony On Risk</description>
+    <description>Recent content in golang on Scenario 1</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playing With Buffalo - Part 0.3</title>
+      <link>/2019/08/23/buffalo-notes-pt2/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/23/buffalo-notes-pt2/</guid>
+      <description>All notes are referencing buffalo 0.14.8 on Ubuntu.
+Using buffalo generate resource myresourcename generated an actions file with an undefined: T i18n.Translator in the flash message template. No big deal and the generators are still pretty delightful.
+No Templates Box Defined So, out of the gate I was receiving an error that no TemplatesBox was defined when making a request to /. At first I thought I needed to read up on templating and maybe I had screwed up the default index.</description>
+    </item>
     
     <item>
       <title>Playing With Buffalo - Part 0.2</title>

@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tony On Risk</title>
+    <title>Scenario 1</title>
     <link>/</link>
-    <description>Recent content on Tony On Risk</description>
+    <description>Recent content on Scenario 1</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playing With Buffalo - Part 0.3</title>
+      <link>/2019/08/23/buffalo-notes-pt2/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/23/buffalo-notes-pt2/</guid>
+      <description>All notes are referencing buffalo 0.14.8 on Ubuntu.
+Using buffalo generate resource myresourcename generated an actions file with an undefined: T i18n.Translator in the flash message template. No big deal and the generators are still pretty delightful.
+No Templates Box Defined So, out of the gate I was receiving an error that no TemplatesBox was defined when making a request to /. At first I thought I needed to read up on templating and maybe I had screwed up the default index.</description>
+    </item>
     
     <item>
       <title>Resources for Combining Expert Opinions</title>
@@ -226,9 +237,10 @@ There are a few bloggers blogging on blogs about this blog generator, but if you
       
       <guid>/page/about/</guid>
       <description> HI, I&amp;rsquo;M TONY. I specialize in expert-level information risk and information security program strategy in team settings, individual contributor, and trusted advisor roles.
-I chase the dream of infosec that &amp;ldquo;pays for itself&amp;rdquo;.
+Chasing the dream of information security that pays for itself.
 Also, a fan of the National Park Service.
-OSCP, CISSP, CISA, CRISC, CTPRP National Park Service Site Visits  Arches National Park Brown vs. Board of Education National Historic Site Bryce Canyon National Park Canyonlands National Park (2X) Capital Reef National Park Channel Islands National Park Chickasaw National Recreation Area Crater Lake National Park Grand Canyon National Park (South Rim) Great Sand Dunes National Park Lincoln Memorial Oklahoma City National Memorial Pea Ridge National Military Park Petrified Forest National Park (2X) Redwoods National Park (2X) Rocky Mountains National Park (3X) Washington Monument Zion National Park  </description>
+OSCP, CISSP, CISA, CRISC, CTPRP 
+National Park Service Visits  Arches National Park Brown vs. Board of Education National Historic Site Bryce Canyon National Park Canyonlands National Park (2X) Capitol Reef National Park Cedar Breaks National Monument Channel Islands National Park Chickasaw National Recreation Area Crater Lake National Park Grand Canyon National Park (South Rim) Great Sand Dunes National Park Lincoln Memorial Oklahoma City National Memorial Pea Ridge National Military Park Petrified Forest National Park (2X) Redwoods National Park (2X) Rocky Mountains National Park (3X) Washington Monument Zion National Park  </description>
     </item>
     
     <item>
