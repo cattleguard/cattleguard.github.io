@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Professional Development</title>
+      <link>/2019/10/11/professional-development/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/10/11/professional-development/</guid>
+      <description>As I was listening to Go Time podcast ep. 99 - Hiring and nurturing junior developers on the way into the office and noting the parallels to the &amp;ldquo;cyber-security talent shortage&amp;rdquo;, I kept thinking about the inconvenient truth of how and why hiring junior talent isn&amp;rsquo;t generally incentivized.
+I think what we&amp;rsquo;re really missing here is a focus on transaction cost (economics), time horizon (economics), and ability to architect expectations for career progression holistically.</description>
+    </item>
     
     <item>
       <title>Playing With Buffalo - Part 0.3</title>

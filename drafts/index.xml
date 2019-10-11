@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Scenario 1</title>
+    <link>/drafts/</link>
+    <description>Recent content in Drafts on Scenario 1</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Sun, 22 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/drafts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FAIR Connected</title>
+      <link>/drafts/fair-connected/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/drafts/fair-connected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Professional Development</title>
+      <link>/drafts/professional-development/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/drafts/professional-development/</guid>
+      <description>As I was listening to Go Time podcast ep. 99 - Hiring and nurturing junior developers on the way into the office and noting the parallels to the &amp;ldquo;cyber-security talent shortage&amp;rdquo;, I kept thinking about the inconvenient truth of how and why hiring junior talent isn&amp;rsquo;t incentivized.
+I think what we&amp;rsquo;re really missing here is transaction cost (economics), time horizon (economics), and ability to architect expectations for career progression holistically.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Professional Development</title>
+      <link>/2019/10/11/professional-development/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/10/11/professional-development/</guid>
+      <description>As I was listening to Go Time podcast ep. 99 - Hiring and nurturing junior developers on the way into the office and noting the parallels to the &amp;ldquo;cyber-security talent shortage&amp;rdquo;, I kept thinking about the inconvenient truth of how and why hiring junior talent isn&amp;rsquo;t generally incentivized.
+I think what we&amp;rsquo;re really missing here is a focus on transaction cost (economics), time horizon (economics), and ability to architect expectations for career progression holistically.</description>
+    </item>
     
     <item>
       <title>Playing With Buffalo - Part 0.3</title>
@@ -240,7 +250,7 @@ There are a few bloggers blogging on blogs about this blog generator, but if you
 Chasing the dream of information security that pays for itself.
 Also, a fan of the National Park Service.
 OSCP, CISSP, CISA, CRISC, CTPRP 
-National Park Service Visits  Arches National Park Brown vs. Board of Education National Historic Site Bryce Canyon National Park Canyonlands National Park (2X) Capitol Reef National Park Cedar Breaks National Monument Channel Islands National Park Chickasaw National Recreation Area Crater Lake National Park Grand Canyon National Park (South Rim) Great Sand Dunes National Park Lincoln Memorial Oklahoma City National Memorial Pea Ridge National Military Park Petrified Forest National Park (2X) Redwoods National Park (2X) Rocky Mountains National Park (3X) Washington Monument Zion National Park  </description>
+National Park Service Visits  Arches National Park Brown vs. Board of Education National Historic Site Bryce Canyon National Park Canyonlands National Park (2X) Capitol Reef National Park Cedar Breaks National Monument Channel Islands National Park Chickasaw National Recreation Area Crater Lake National Park Grand Canyon National Park (South Rim) Great Sand Dunes National Park Lincoln Memorial Oklahoma City National Memorial Pea Ridge National Military Park Petrified Forest National Park (2X) Redwoods National Park (2X) Rocky Mountains National Park (3X) Sunset Crater National Monument Washington Monument Zion National Park  </description>
     </item>
     
     <item>
