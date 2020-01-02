@@ -4,19 +4,36 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2020/01/01/tweets-by-hour/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dataviz/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/twitter/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -273,12 +290,6 @@
   <url>
     <loc>/2017/05/19/sankey/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/dataviz/</loc>
-    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

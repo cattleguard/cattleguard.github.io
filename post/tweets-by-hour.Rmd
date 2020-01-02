@@ -1,0 +1,54 @@
+---
+title: "Tweets By The Hour"
+summary: "rtweet, dplyr, and ggplot2"
+author: "Tony Towry"
+date: '2020-01-01'
+tags:
+- dataviz
+- twitter
+categories: 
+- R
+---
+
+A few days ago [@kearneymw tweeted](https://twitter.com/kearneymw/status/1209130912463478788) about ggplot2::coord_polar() as a way to visualize tweet timing and discern bots from humans.  
+
+```{r echo=FALSE}
+blogdown::shortcode('tweet', '1209130912463478788')
+```
+
+This of course has it's issues as a bot detection method.
+
+Still, I thought it might be fun to use `rtweet` and plot my active times on Twitter in a similar way.  This example bins the tweets by the hour (UTC) in which they were created.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
+```
+
+```{r}
+library(rtweet)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+
+tml <- get_timeline("anthonytowry", n = 3200)
+
+# For this one we're going to discard retweets and focus on 2019
+tml <- tml %>% filter(is.na(retweet_created_at)) %>% filter(created_at >= "2019-01-01" & created_at <= "2019-12-31")
+hourtweets <- ts_data(tml, by = "hours")
+hourtweets$hours <- format(as.POSIXct(strptime(hourtweets$time, "%Y-%m-%d %H:%M:%S")) ,format = "%H:%M")
+
+by_hours <- hourtweets %>% group_by(hours) %>% summarise(count = sum(n))
+
+ggplot(data=by_hours, aes(x=hours, y=count)) + ggtitle("Tweets by Time of Day", subtitle = "Twitter Office Hours") + geom_point(colour="#4ca3dd", size = 2) + 
+    coord_polar() + theme_minimal() + xlab("") + 
+    ylab("Distance Legend") 
+
+# Shout out and thank you to:
+print(citation("rtweet"), style = "text")
+print(citation("dplyr"), style = "text")
+print(citation("ggplot2"), style = "text")
+print(citation("ggthemes"), style = "text")
+
+```
+
