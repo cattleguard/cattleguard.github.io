@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Which Programming Language Should I Learn?</title>
+      <link>/2020/01/13/which-programming-language-should-i-learn/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/13/which-programming-language-should-i-learn/</guid>
+      <description>A student asked me what are the best programming languages for them to learn, if they are interested in #CyberSecurity? What say you, #Security peeps?
+&amp;mdash; Helen Patton (@OSUCISOHelen) January 11, 2020  Short answer python.
+What if you want to overthink it a bit though.
+The TIOBE Index bases it&amp;rsquo;s pulse off a number of inputs including YouTube, Baidu, Bing, and Google searches. Your mileage may vary, but this is still a useful clue for you regarding the rising and falling in popularity for any given language of interest.</description>
+    </item>
     
     <item>
       <title>Tweets By The Hour</title>
@@ -279,16 +291,6 @@ National Park Service Visits  Arches National Park Brown vs. Board of Education 
       
       <guid>/page/contact/</guid>
       <description>Contact Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description>
-    </item>
-    
-    <item>
-      <title>Quantitative Information Risk Training Using R | 1-Day</title>
-      <link>/training/training/</link>
-      <pubDate>Mon, 15 Jun 2009 00:00:00 +0000</pubDate>
-      
-      <guid>/training/training/</guid>
-      <description> Quantitative Information Risk Training Using R | 1-Day Training dates TBA.
-Foundations of Risk  What is Risk? Breaking The Matrix Becoming a Quantitative Risk Apologist  Estimation and Calibration  How to Estimate ANYTHING  Hands-on R Basics  Quick Introduction to RStudio Navigating Vectors and Data Frames Probability Distributions Mode Estimation Monte Carlo How to Rock ggplot2 Like an Expert (Without Being One)  Advanced Concepts  Risk Aggregation  Risk Management  Cognitive Bias  </description>
     </item>
     
   </channel>

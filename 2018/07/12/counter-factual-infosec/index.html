@@ -121,9 +121,10 @@ if (!doNotTrack) {
 <p>Let’s think of taking action (control, policy, etc.) as an intervening moment. We split reality into what would have happened without our action and what happens now that we’ve taken action. The theoretically less secure state and the theoretically more secure state.</p>
 <p>Here’s one example. You implement a policy to reduce a type of ticket coming into the service desk. You have a pre-period before the intervention (prior to policy in place) and post-intervention (policy in place and operating). You have the count of the target ticket type over time and a likely covariate might be the volume of all other ticket types over that same period.</p>
 <p>A sudden drop in the response variable alone may not owe it’s explanation to our intervention.</p>
-<p>I know all this talk of counter factual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at <code>summary(impact, &quot;report&quot;)</code>). Generating alternate realities is now one of my most endorsed LinkedIN skills.</p>
+<p>I know all this talk of counter factual computation, blah blah, might feel a bit uncomfortable, but Google tried their best to make this dead simple to start playing with (just look at <code>summary(impact, "report")</code>). Generating alternate realities is now one of my most endorsed LinkedIN skills.</p>
 <p>So, let’s go beat a dead horse and take a look at the pre and post-period for the Target breach and it’s <strong><em>“effect”</em></strong> using a couple of unaffected retailers as predictors. <em>This isn’t a great example, there are likely a bucket of confounding factors that make this less than convincing, but it will at least illustrate usage.</em></p>
-<p>First make sure you have the CausalImpact installed. <code>install.packages(&quot;CausalImpact&quot;&quot;)</code></p>
+<p>First make sure you have the CausalImpact installed.
+<code>install.packages("CausalImpact"")</code></p>
 <pre class="r"><code>library(CausalImpact)
 library(quantmod)
 library(ggplot2)

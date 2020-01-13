@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Scenario 1</title>
+    <link>/tags/programming/</link>
+    <description>Recent content in programming on Scenario 1</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Which Programming Language Should I Learn?</title>
+      <link>/2020/01/13/which-programming-language-should-i-learn/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/13/which-programming-language-should-i-learn/</guid>
+      <description>A student asked me what are the best programming languages for them to learn, if they are interested in #CyberSecurity? What say you, #Security peeps?
+&amp;mdash; Helen Patton (@OSUCISOHelen) January 11, 2020  Short answer python.
+What if you want to overthink it a bit though.
+The TIOBE Index bases it&amp;rsquo;s pulse off a number of inputs including YouTube, Baidu, Bing, and Google searches. Your mileage may vary, but this is still a useful clue for you regarding the rising and falling in popularity for any given language of interest.</description>
+    </item>
+    
+  </channel>
+</rss>
