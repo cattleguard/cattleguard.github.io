@@ -7,22 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Which Programming Language Should I Learn?</title>
-      <link>/2020/01/13/which-programming-language-should-i-learn/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/01/13/which-programming-language-should-i-learn/</guid>
-      <description>A student asked me what are the best programming languages for them to learn, if they are interested in #CyberSecurity? What say you, #Security peeps?
-&amp;mdash; Helen Patton (@OSUCISOHelen) January 11, 2020  Short answer python.
-What if you want to overthink it a bit though.
-The TIOBE Index bases it&amp;rsquo;s pulse off a number of inputs including YouTube, Baidu, Bing, and Google searches. Your mileage may vary, but this is still a useful clue for you regarding the rising and falling in popularity for any given language of interest.</description>
-    </item>
     
     <item>
       <title>Tweets By The Hour</title>
