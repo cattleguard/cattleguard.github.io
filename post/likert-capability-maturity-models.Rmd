@@ -68,3 +68,9 @@ print(theplot)
 So, this is really not a big deal and maybe people are doing this, but I haven't seen it.  In the wild I'm seeing averages, where we really want to see modes and ranges.
 
 This applies equally well to Likert surveys.
+
+## Update 5/12/2020 ##
+Somewhat related, the ideas being explored in maturity mapping are quite interesting and worth your time.
+```{r echo=FALSE}
+blogdown::shortcode('tweet','1259515023774420994')
+```

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vulnerabilities on Cattleguard Blog</title>
+    <link>/tags/vulnerabilities/</link>
+    <description>Recent content in vulnerabilities on Cattleguard Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/vulnerabilities/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Padding Oracle Attack Notes</title>
+      <link>/2020/05/17/padding-oracle-attack-notes/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/17/padding-oracle-attack-notes/</guid>
+      <description>Photo by dylan nolte on Unsplash - ::cropped:: 
+I&amp;rsquo;m not too proud to admit that I&amp;rsquo;ve let a padding oracle vulnerability go unexploited in the past. Time had run out and it was documented and easily patched without the need for a PoC.
+Well, I ran into this on a CTF challenge recently and this time I was determined to see something work.
+I first tried mocking something up in Ruby using Poracle.</description>
+    </item>
+    
+  </channel>
+</rss>
