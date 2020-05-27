@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on Cattleguard Blog</title>
+    <link>/tags/devops/</link>
+    <description>Recent content in devops on Cattleguard Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>My Name</copyright>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jenkins, My First Pipeline</title>
+      <link>/2020/05/27/jenkins/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/27/jenkins/</guid>
+      <description>Maybe it&amp;rsquo;s more of a crazy straw than a pipeline. It&amp;rsquo;s certainly more fun than useful at the moment.
+I know, it&amp;rsquo;s 2020 and there are other CI/CD tools out there. Slicker tools. I don&amp;rsquo;t really know any of them. So, why Jenkins? Jenkins has been around, it supports a lot of build types and stages, and my unscientific research of querying the job listings on Indeed.com and LinkedIn.com show it to still be pretty well owning the market.</description>
+    </item>
+    
+  </channel>
+</rss>

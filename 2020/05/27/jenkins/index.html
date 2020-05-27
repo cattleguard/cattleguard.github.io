@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Jenkins, My First Pipeline &middot; Tony Towry</title>
+        <meta name="description" content="Trials and Tribulation">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.55.6" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Jenkins, My First Pipeline">
+<meta property="og:description" content="Trials and Tribulation">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/2020/05/27/jenkins/">
+        <link rel="stylesheet" href="/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-46268936-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Cattleguard Blog" href="/">Cattleguard Blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/anthonytowry">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/cattleguard/">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/tony-towry-99581515/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:anthonytowry@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Tony&#39;s Coffee Guide" href="/2017/06/25/coffee-guide/">Tony&#39;s Coffee Guide</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Jenkins, My First Pipeline</h1>
+    
+        <p class="post-description" itemprop="description">Trials and Tribulation</p>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2020-05-27" itemprop="datePublished">Wed, May 27, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://www.linkedin.com/in/tony-towry-99581515/" itemprop="url" rel="author"> Anthony Towry</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+        <img class="post-featured-image" src="/post/images/waterslide.jpg">
+    
+
+    <p>Maybe it&rsquo;s more of a crazy straw than a pipeline. It&rsquo;s certainly more fun than useful at the moment.</p>
+
+<p>I know, it&rsquo;s 2020 and there are other CI/CD tools out there. Slicker tools. I don&rsquo;t really know any of them. So, why Jenkins? Jenkins has been around, it supports a lot of build types and stages, and my unscientific research of querying the job listings on Indeed.com and <a href="https://www.linkedin.com/jobs/search/?keywords=jenkins">LinkedIn.com</a> show it to still be pretty well owning the market.</p>
+
+<p>Additionally, I also have a project I&rsquo;m working on currently that involves a react ui talking to a golang echo framework API. This toy project is something I know well and something that should build. This gave me a point of focus to explore with.</p>
+
+<p>So, the first thing that I did was follow the <a href="https://www.jenkins.io/doc/book/installing/">Jenkins install instructions</a> from the jenkins.io book. If you follow these instructions you&rsquo;ll end up running Jenkins in Docker as part of a Docker-in-Docker or <em>dind</em> setup. This turns out to be less than ideal, but something I didn&rsquo;t discover until I had implemented multiple stages and it was becoming more obvious that it was going to be a permanent pain point.</p>
+
+<p>First issues also seen here:</p>
+
+<ul>
+<li><a href="https://stackoverflow.com/questions/44830663/docker-container-networking-with-docker-in-docker">SO</a></li>
+<li><a href="https://github.com/moby/moby/issues/4481">GitHub moby issue</a></li>
+</ul>
+
+<p>Using the standard Jenkins agent for docker with a dind setup runs the build container &ldquo;inside&rdquo; the Jenkins container. But, as I and several others found, connecting to that inner container is non-obvious. I came across the <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">&ldquo;Do Not Use Docker-in-Docker for CI&rdquo; post</a> early, but I thought there must be a sensible way. As I learned a little more and reread the post I realized that there was not.</p>
+
+<p>My recommendation is to follow <a href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">jpetazzo&rsquo;s advice</a> when it comes to how you want Jenkins to build your code in a container. The only other issue I had was <a href="https://stackoverflow.com/questions/51342810/how-to-fix-dial-unix-var-run-docker-sock-connect-permission-denied-when-gro"><code>docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock</code></a> so click the link and do the fix by Nashon paz.</p>
+
+<p>Along the way I did actually get to see some green lights and play a while. Which was cool.</p>
+
+<p>I almost immediately didn&rsquo;t care for the Pipeline Builder Wizard and preferred to work directly with the Jenkinsfile. Maybe this will change, but I can&rsquo;t imagine how at the moment. For being a wizard, the builder ui and options I found opaque as a newcomer. It&rsquo;s easier for me to go stage by stage researching my options as I go.</p>
+
+<p>I found this short video fairly helpful 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/pE89647F36c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+
+<p>Now I have a skeletal pipeline for the react piece. I think next I&rsquo;ll try integrating some open source security tools. Stay tuned.</p>
+
+<p><img src="/post/images/skeleton-pipeline.JPG" alt="skeleton.JPG" /></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/ci/cd/">ci/cd</a>, 
+            
+                <a href="/tags/devops/">devops</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Jenkins%2c%20My%20First%20Pipeline&url=%2f2020%2f05%2f27%2fjenkins%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2020%2f05%2f27%2fjenkins%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Cattleguard Blog" href="/">Cattleguard Blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
+
