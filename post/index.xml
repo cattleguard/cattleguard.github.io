@@ -18,7 +18,8 @@
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/05/27/jenkins/</guid>
-      <description>*Photo by [Lhu Shi Hui](https://unsplash.com/@lhushihui) on Unsplash*  Maybe it&amp;rsquo;s more of a crazy straw than a pipeline. It&amp;rsquo;s certainly more fun than useful at the moment.
+      <description>Photo by Lhu Shi Hui on Unsplash 
+Maybe it&amp;rsquo;s more of a crazy straw than a pipeline. It&amp;rsquo;s certainly more fun than useful at the moment.
 I know, it&amp;rsquo;s 2020 and there are other CI/CD tools out there. Slicker tools. I don&amp;rsquo;t really know any of them. So, why Jenkins? Jenkins has been around, it supports a lot of build types and stages, and my unscientific research of querying the job listings on Indeed.</description>
     </item>
     
