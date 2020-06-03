@@ -3,22 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cattleguard Blog &middot; Tony Towry</title>
-        <meta name="description" content="Information Risk | Application Security | Product Management | Data | Other Stuff">
+        <title>Super Simple Factor Analysis for Information Risk (FAIR) in R &middot; Tony Towry</title>
+        <meta name="description" content="Using purrr and split">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.55.6" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Cattleguard Blog">
-<meta property="og:description" content="Information Risk | Application Security | Product Management | Data | Other Stuff">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/">
+        <meta property="og:title" content="Super Simple Factor Analysis for Information Risk (FAIR) in R">
+<meta property="og:description" content="Using purrr and split">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/2020/06/03/simplified-fair/">
         <link rel="stylesheet" href="/dist/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-            <link href="/index.xml" rel="alternate" type="application/rss+xml">
         
     </head>
     <body>
@@ -93,131 +91,111 @@ if (!doNotTrack) {
             <div id="container">
 
 
-<div id="post-index" class="container">
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Super Simple Factor Analysis for Information Risk (FAIR) in R</h1>
     
-    <header class="post-header">
-        <h1 class="post-title">Cattleguard Blog</h1>
-        <p>Information Risk | Application Security | Product Management | Data | Other Stuff</p>
-    </header>
+        <p class="post-description" itemprop="description">Using purrr and split</p>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2020-06-03" itemprop="datePublished">Wed, Jun 3, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://www.linkedin.com/in/tony-towry-99581515/" itemprop="url" rel="author"> Tony Towry</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+        <img class="post-featured-image" src="/post/images/fair-quickly.jpg">
+    
+
+    
 
 
-    <ol class="post-list">
-        
-        
-            <li class="post-stub">
-    <a href="/2018/07/12/counter-factual-infosec/">
-        <h4 class="post-stub-title">How To Apply Google&#39;s CausalImpact Package to Analyze Infosec Intervention</h4>
-        
-            <p class="post-stub-description">Be The Change You Want to See, And Know If You Are</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2018/04/28/dorking-around-with-cors-and-golang/">
-        <h4 class="post-stub-title">Dorking Around with CORS</h4>
-        
-            <p class="post-stub-description">Your Friday Night Just Got Exciting</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2018/04/11/how-to-proxy-go-http/">
-        <h4 class="post-stub-title">How to Proxy Go net/http</h4>
-        
-            <p class="post-stub-description">Getting it over to ZAP</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2018/02/20/gender-package-and-the-big-texan/">
-        <h4 class="post-stub-title">Competitive Steak Eating and Gender</h4>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2018/01/03/lets-learn-apache-drill-together/">
-        <h4 class="post-stub-title">Let&#39;s Learn Apache Drill Together</h4>
-        
-            <p class="post-stub-description">My Running Notebook for Drill Nuggets</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2017/12/31/speed-it-up/">
-        <h4 class="post-stub-title">I&#39;m a iPod Classic Man</h4>
-        
-            <p class="post-stub-description">How to Up the Tempo of Your Podcasts With Sox</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2017/11/17/data-cleaning-practice-pt1/">
-        <h4 class="post-stub-title">Data Cleaning Practice Pt1 - Steak Stats</h4>
-        
-            <p class="post-stub-description">The Big Texan 72oz Hall of Fame</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2017/11/15/product-and-program-success-before-you-start/">
-        <h4 class="post-stub-title">3 Keys for Successful Products and Programs Before You Even Start</h4>
-        
-            <p class="post-stub-description">Applying Value Chain Concepts to Infosec Service Resourcing</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2017/08/27/sarcastic-programming/">
-        <h4 class="post-stub-title">Kickstarting Conversation With Sarcastic Programming</h4>
-        
-            <p class="post-stub-description">Have fun exploring.</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="/2017/07/15/fail-to-scale-part2/">
-        <h4 class="post-stub-title">If You’re Going to Fail To Scale, Don’t - Part II</h4>
-        
-            <p class="post-stub-description">A warning against infosec gates.</p>
-        
-        
-    </a>
-</li>
-        
-    </ol>
+<p>As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.</p>
+<pre class="r"><code>library(tidyverse)
+library(mc2d)
 
-    <div class="post-navigation">
+estimates &lt;- data.frame(onto=c(&quot;TEF&quot;,&quot;Vuln&quot;,&quot;Magnitude&quot;), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)
+# Just a test data.frame with min mode max and shape.
+# &gt; estimates
+#       onto   minZ modeZ    maxZ shapeZ
+# 1       TEF   0.10 2e-01 4.0e-01      4
+# 2      Vuln   0.25 4e-01 7.5e-01      4
+# 3 Magnitude 100.00 1e+03 1.0e+04      2
+
+FAIRsims &lt;- data.frame()
+
+#purrr rpert with named vectors
+FAIRsims &lt;- estimates %&gt;%
+  split(.$onto) %&gt;%
+  map(~ rpert(n=100,.x$minZ,.x$modeZ,.x$maxZ,.x$shapeZ)) 
+
+LEF &lt;- FAIRsims$TEF * FAIRsims$Vuln
+FAIRsims$ARE &lt;- LEF * FAIRsims$Magnitude
+
+print(summary(LEF))
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+## 0.03884 0.07427 0.09222 0.09624 0.11139 0.19484
+print(summary(FAIRsims$Magnitude))
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   130.5  1253.6  2115.4  2769.7  3830.3  8987.8
+print(summary(FAIRsims$ARE))
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   12.51  111.01  210.41  275.36  365.81 1059.38
+
+boxplot(FAIRsims$ARE, xlab=&quot;Exposure&quot;)</code></pre>
+<p><img src="/post/simplified-fair_files/figure-html/unnamed-chunk-1-1.png" width="1152" />
+I’d say that’s concise. <code>estimates</code> of course could be loaded from a spreadsheet, db, whatever. Something easy to fill-out and keep organized, but once there’s a dataframe it’s no problem. From here building out beautiful <code>ggplot2</code> graphs or writing the rationale around it in RMarkdown is relatively straightforward and only limited by the analysts creativity.</p>
+<p>I’ve really enjoyed information risk analysis and everything that came with it. The community. The conversations. The thinking.</p>
+<p>Thanks to the everyone who helped me along the way!</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/risk/">risk</a>, 
+            
+                <a href="/tags/infosec/">infosec</a>, 
+            
+                <a href="/tags/r/">R</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Super%20Simple%20Factor%20Analysis%20for%20Information%20Risk%20%28FAIR%29%20in%20R&url=%2f2020%2f06%2f03%2fsimplified-fair%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
         
 
-    <nav class="pagination" role="navigation">
-        <span class="page-number">Page 2 of 3</span>
         
-            <a class="newer-posts" href="/">&larr; Newer Posts</a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2f2020%2f06%2f03%2fsimplified-fair%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
         
-        
-            <a class="older-posts" href="/page/3/">Older Posts &rarr;</a>
-        
-    </nav>
 
+        
+        
     </div>
+</footer>
+
+        
+    </article>
 </div>
 
             </div>
@@ -250,3 +228,4 @@ if (!doNotTrack) {
         <script src="/js/scripts.js"></script>
     </body>
 </html>
+

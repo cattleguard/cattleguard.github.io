@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/infosec/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Super Simple Factor Analysis for Information Risk (FAIR) in R</title>
+      <link>/2020/06/03/simplified-fair/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/06/03/simplified-fair/</guid>
+      <description>As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.
+library(tidyverse)library(mc2d)estimates &amp;lt;- data.frame(onto=c(&amp;quot;TEF&amp;quot;,&amp;quot;Vuln&amp;quot;,&amp;quot;Magnitude&amp;quot;), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)# Just a test data.frame with min mode max and shape.# &amp;gt; estimates# onto minZ modeZ maxZ shapeZ# 1 TEF 0.</description>
+    </item>
     
     <item>
       <title>Feel Slightly Better About Your Capability Maturity Model Work</title>

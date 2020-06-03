@@ -1,0 +1,59 @@
+---
+title: "Super Simple Factor Analysis for Information Risk (FAIR) in R"
+description: "Using purrr and split"
+author: "Tony Towry"
+date: '2020-06-03'
+image: "/post/images/fair-quickly.jpg"
+tags:
+- risk
+- infosec
+- R
+categories: 
+- R
+- infosec
+- risk
+fig_width: 6 
+fig_height: 15 
+---
+
+As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=TRUE)
+knitr::opts_chunk$set(fig.width=12, fig.height=3) 
+```
+
+```{r fig.height=6}
+library(tidyverse)
+library(mc2d)
+
+estimates <- data.frame(onto=c("TEF","Vuln","Magnitude"), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)
+# Just a test data.frame with min mode max and shape.
+# > estimates
+#       onto   minZ modeZ    maxZ shapeZ
+# 1       TEF   0.10 2e-01 4.0e-01      4
+# 2      Vuln   0.25 4e-01 7.5e-01      4
+# 3 Magnitude 100.00 1e+03 1.0e+04      2
+
+FAIRsims <- data.frame()
+
+#purrr rpert with named vectors
+FAIRsims <- estimates %>%
+  split(.$onto) %>%
+  map(~ rpert(n=100,.x$minZ,.x$modeZ,.x$maxZ,.x$shapeZ)) 
+
+LEF <- FAIRsims$TEF * FAIRsims$Vuln
+FAIRsims$ARE <- LEF * FAIRsims$Magnitude
+
+print(summary(LEF))
+print(summary(FAIRsims$Magnitude))
+print(summary(FAIRsims$ARE))
+
+boxplot(FAIRsims$ARE, xlab="Exposure")
+```
+I'd say that's concise. `estimates` of course could be loaded from a spreadsheet, db, whatever. Something easy to fill-out and keep organized, but once there's a dataframe it's no problem. From here building out beautiful `ggplot2` graphs or writing the rationale around it in RMarkdown is relatively straightforward and only limited by the analysts creativity.
+
+I've really enjoyed information risk analysis and everything that came with it. The community. The conversations. The thinking.
+
+Thanks to the everyone who helped me along the way!
