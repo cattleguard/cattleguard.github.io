@@ -125,7 +125,7 @@ if (!doNotTrack) {
 <pre class="r"><code>library(tidyverse)
 library(mc2d)
 
-estimates &lt;- data.frame(onto=c(&quot;TEF&quot;,&quot;Vuln&quot;,&quot;Magnitude&quot;), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)
+estimates &lt;- data.frame( onto = c(&quot;TEF&quot;, &quot;Vuln&quot;, &quot;Magnitude&quot;), minZ = c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ = c(4, 4, 2), stringsAsFactors = FALSE)
 # Just a test data.frame with min mode max and shape.
 # &gt; estimates
 #       onto   minZ modeZ    maxZ shapeZ
@@ -138,20 +138,20 @@ FAIRsims &lt;- data.frame()
 #purrr rpert with named vectors
 FAIRsims &lt;- estimates %&gt;%
   split(.$onto) %&gt;%
-  map(~ rpert(n=100,.x$minZ,.x$modeZ,.x$maxZ,.x$shapeZ)) 
+  map(~ rpert(n = 100, .x$minZ, .x$modeZ, .x$maxZ, .x$shapeZ)) 
 
 LEF &lt;- FAIRsims$TEF * FAIRsims$Vuln
 FAIRsims$ARE &lt;- LEF * FAIRsims$Magnitude
 
 print(summary(LEF))
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-## 0.04388 0.06791 0.08744 0.09242 0.10951 0.17079
+## 0.03332 0.07030 0.08729 0.09155 0.11036 0.22469
 print(summary(FAIRsims$Magnitude))
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   228.5  1477.1  2736.1  3136.3  4570.3  9060.7
+##   142.9  1451.5  2885.6  3149.8  4563.8  7940.0
 print(summary(FAIRsims$ARE))
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   20.44  132.67  223.07  289.59  404.76 1160.06</code></pre>
+##   12.63  104.69  223.41  300.66  459.67 1300.85</code></pre>
 <p>I’d say that’s concise. <code>estimates</code> of course could be loaded from a spreadsheet, db, whatever. Something easy to fill-out and keep organized, but once there’s a dataframe it’s no problem. From here building out beautiful <code>ggplot2</code> graphs or writing the rationale around it in RMarkdown is relatively straightforward and only limited by the analysts creativity.</p>
 <p>I’ve really enjoyed information risk analysis and everything that came with it. The community. The conversations. The thinking.</p>
 <p>Thanks to the everyone who helped me along the way!</p>

@@ -29,7 +29,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=3)
 library(tidyverse)
 library(mc2d)
 
-estimates <- data.frame(onto=c("TEF","Vuln","Magnitude"), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)
+estimates <- data.frame( onto = c("TEF", "Vuln", "Magnitude"), minZ = c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ = c(4, 4, 2), stringsAsFactors = FALSE)
 # Just a test data.frame with min mode max and shape.
 # > estimates
 #       onto   minZ modeZ    maxZ shapeZ
@@ -42,7 +42,7 @@ FAIRsims <- data.frame()
 #purrr rpert with named vectors
 FAIRsims <- estimates %>%
   split(.$onto) %>%
-  map(~ rpert(n=100,.x$minZ,.x$modeZ,.x$maxZ,.x$shapeZ)) 
+  map(~ rpert(n = 100, .x$minZ, .x$modeZ, .x$maxZ, .x$shapeZ)) 
 
 LEF <- FAIRsims$TEF * FAIRsims$Vuln
 FAIRsims$ARE <- LEF * FAIRsims$Magnitude
