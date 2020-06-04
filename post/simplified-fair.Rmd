@@ -15,6 +15,7 @@ categories:
 fig_width: 6 
 fig_height: 15 
 ---
+ <div style="font-size:small;"> :::cropped version::: of a Photo by [Annie Spratt](https://unsplash.com/@anniespratt) on Unsplash </div><br/>
 
 As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.
 
@@ -49,8 +50,6 @@ FAIRsims$ARE <- LEF * FAIRsims$Magnitude
 print(summary(LEF))
 print(summary(FAIRsims$Magnitude))
 print(summary(FAIRsims$ARE))
-
-boxplot(FAIRsims$ARE, xlab="Exposure")
 ```
 I'd say that's concise. `estimates` of course could be loaded from a spreadsheet, db, whatever. Something easy to fill-out and keep organized, but once there's a dataframe it's no problem. From here building out beautiful `ggplot2` graphs or writing the rationale around it in RMarkdown is relatively straightforward and only limited by the analysts creativity.
 

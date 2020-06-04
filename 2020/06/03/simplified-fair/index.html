@@ -117,6 +117,10 @@ if (!doNotTrack) {
     
 
 
+<div style="font-size:small;">
+:::cropped version::: of a Photo by <a href="https://unsplash.com/@anniespratt">Annie Spratt</a> on Unsplash
+</div>
+<p><br/></p>
 <p>As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.</p>
 <pre class="r"><code>library(tidyverse)
 library(mc2d)
@@ -141,17 +145,14 @@ FAIRsims$ARE &lt;- LEF * FAIRsims$Magnitude
 
 print(summary(LEF))
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-## 0.03884 0.07427 0.09222 0.09624 0.11139 0.19484
+## 0.04388 0.06791 0.08744 0.09242 0.10951 0.17079
 print(summary(FAIRsims$Magnitude))
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   130.5  1253.6  2115.4  2769.7  3830.3  8987.8
+##   228.5  1477.1  2736.1  3136.3  4570.3  9060.7
 print(summary(FAIRsims$ARE))
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   12.51  111.01  210.41  275.36  365.81 1059.38
-
-boxplot(FAIRsims$ARE, xlab=&quot;Exposure&quot;)</code></pre>
-<p><img src="/post/simplified-fair_files/figure-html/unnamed-chunk-1-1.png" width="1152" />
-I’d say that’s concise. <code>estimates</code> of course could be loaded from a spreadsheet, db, whatever. Something easy to fill-out and keep organized, but once there’s a dataframe it’s no problem. From here building out beautiful <code>ggplot2</code> graphs or writing the rationale around it in RMarkdown is relatively straightforward and only limited by the analysts creativity.</p>
+##   20.44  132.67  223.07  289.59  404.76 1160.06</code></pre>
+<p>I’d say that’s concise. <code>estimates</code> of course could be loaded from a spreadsheet, db, whatever. Something easy to fill-out and keep organized, but once there’s a dataframe it’s no problem. From here building out beautiful <code>ggplot2</code> graphs or writing the rationale around it in RMarkdown is relatively straightforward and only limited by the analysts creativity.</p>
 <p>I’ve really enjoyed information risk analysis and everything that came with it. The community. The conversations. The thinking.</p>
 <p>Thanks to the everyone who helped me along the way!</p>
 

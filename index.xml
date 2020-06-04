@@ -18,8 +18,9 @@
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/06/03/simplified-fair/</guid>
-      <description>As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.
-library(tidyverse)library(mc2d)estimates &amp;lt;- data.frame(onto=c(&amp;quot;TEF&amp;quot;,&amp;quot;Vuln&amp;quot;,&amp;quot;Magnitude&amp;quot;), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)# Just a test data.frame with min mode max and shape.# &amp;gt; estimates# onto minZ modeZ maxZ shapeZ# 1 TEF 0.</description>
+      <description>:::cropped version::: of a Photo by Annie Spratt on Unsplash
+As I move on to other things for a while, I wanted to leave just one more example of how you might be able to test-drive FAIR using R in a stripped down form.
+library(tidyverse)library(mc2d)estimates &amp;lt;- data.frame(onto=c(&amp;quot;TEF&amp;quot;,&amp;quot;Vuln&amp;quot;,&amp;quot;Magnitude&amp;quot;), minZ=c(.1, .25, 100), modeZ = c(.2, .4, 1000), maxZ = c(.4, .75, 10000), shapeZ=c(4,4,2), stringsAsFactors = FALSE)# Just a test data.</description>
     </item>
     
     <item>
