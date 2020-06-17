@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jenkins with ZAP - Part I</title>
+      <link>/2020/06/16/jenkins-and-zap-part-i/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/06/16/jenkins-and-zap-part-i/</guid>
+      <description>Photo by Steve Johnson on Unsplash 
+So, I tried quite a few things that didn&amp;rsquo;t work when integrating ZAP into Jenkins. Many of these were due to a general lack of knowledge with Jenkins. Some were due to holding on to personal objectives such as knowing that I was using the ZAP owasp/zap2docker-weekly:latest docker image.
+I liked having each npm stage broken out for debugging purposes (though this seems to be not much of an issue right now since each step is broken out in Blue Ocean), but wasn&amp;rsquo;t sure what to do to keep it all in one container and then pop-out to a new ZAP container in parallel at the end.</description>
+    </item>
     
     <item>
       <title>Super Simple Factor Analysis for Information Risk (FAIR) in R</title>

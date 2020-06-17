@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ci/cd</title>
+      <link>/tags/ci/cd/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>/tags/devops/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/devops/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>R</title>
@@ -36,24 +54,6 @@
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/risk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ci/cd</title>
-      <link>/tags/ci/cd/</link>
-      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ci/cd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devops</title>
-      <link>/tags/devops/</link>
-      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/devops/</guid>
       <description></description>
     </item>
     

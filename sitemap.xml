@@ -4,13 +4,36 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/2020/06/16/jenkins-and-zap-part-i/</loc>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2020-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ci/cd/</loc>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/devops/</loc>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -23,12 +46,6 @@
   <url>
     <loc>/2020/06/03/simplified-fair/</loc>
     <lastmod>2020-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-06-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -46,18 +63,6 @@
   <url>
     <loc>/2020/05/27/jenkins/</loc>
     <lastmod>2020-05-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ci/cd/</loc>
-    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/devops/</loc>
-    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
